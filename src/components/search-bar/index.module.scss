@@ -215,6 +215,12 @@
   border: 1px solid $divider;
   border-radius: $border-radius-sm;
   overflow: hidden;
+  transition: opacity 0.15s;
+}
+
+.radiusGroupDisabled {
+  opacity: 0.35;
+  pointer-events: none;
 }
 
 .radiusBtn {

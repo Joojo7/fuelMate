@@ -54,7 +54,7 @@ export default function StationDetail() {
         <table className={`table table-sm table-borderless ${styles["hours-table"]}`}>
           <tbody>
             {DAY_LABELS.map((label, i) => {
-              const val = station.hours[DAY_KEYS[i]];
+              const val = station.hours?.[DAY_KEYS[i]];
               return (
                 <tr key={label}>
                   <td className={styles["day-label"]}>{label}</td>
@@ -64,7 +64,7 @@ export default function StationDetail() {
             })}
           </tbody>
         </table>
-        {!station.hours.mon && !station.open24Hours && (
+        {!station.hours?.mon && !station.open24Hours && (
           <div className={styles["hours-warning"]}>
             Hours not available — please call to confirm
           </div>

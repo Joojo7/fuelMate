@@ -16,7 +16,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip);
 
 const FUEL_TYPES: { key: string; label: string; match: (f: string) => boolean }[] = [
   { key: "ulp", label: "ULP", match: (f) => /unlead|ulp|91|e10/i.test(f) && !/premium|ultimate/i.test(f) },
-  { key: "dsl", label: "DSL", match: (f) => /diesel/i.test(f) },
+  { key: "dsl", label: "DSL", match: (f) => /diesel/i.test(f) && !/premium|ultimate/i.test(f) },
   { key: "prm", label: "PRM", match: (f) => /premium|ultimate|95|98/i.test(f) },
   { key: "ev", label: "EV", match: (f) => /pulse|ev|charg/i.test(f) },
   { key: "lpg", label: "LPG", match: (f) => /lpg|autogas/i.test(f) },
@@ -39,6 +39,7 @@ export default function HudStats() {
 
   const activeFilterCount = useMemo(() => {
     return (
+      (filters.brand?.length || 0) +
       (filters.region?.length || 0) +
       filters.fuels.length +
       filters.ev.length +

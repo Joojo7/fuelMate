@@ -31,6 +31,19 @@
   color: $primary;
 }
 
+.brand-tag {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid;
+  border-radius: $border-radius-sm;
+  padding: 0 4px;
+  vertical-align: middle;
+}
+
 .station-location {
   font-size: 0.7rem;
   color: $sub;

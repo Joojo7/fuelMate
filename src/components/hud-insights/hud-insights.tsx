@@ -22,43 +22,34 @@ ChartJS.register(
   RadialLinearScale, PointElement, LineElement, Filler, Tooltip
 );
 
+// Match against normalized generic amenity/fuel names
 const AMENITY_CATEGORIES: { label: string; match: (a: string) => boolean }[] = [
-  { label: "Food", match: (a) => /cafe|coffee|food|hungry|uber/i.test(a) },
-  { label: "EV", match: (a) => /pulse|ev|charg/i.test(a) },
-  { label: "Wash", match: (a) => /wash|vacuum|jet/i.test(a) },
-  { label: "ATM", match: (a) => /atm/i.test(a) },
-  { label: "Truck", match: (a) => /truck|rigid|b-double|road train|high flow/i.test(a) },
-  { label: "WiFi", match: (a) => /wifi/i.test(a) },
-  { label: "Toilet", match: (a) => /toilet|shower/i.test(a) },
-  { label: "Loyalty", match: (a) => /reward|smartfuel|bpme/i.test(a) },
+  { label: "Food", match: (a) => ["Cafe", "Fast Food", "Food Store", "Delivery"].includes(a) },
+  { label: "EV", match: (a) => a === "EV Charging" },
+  { label: "Wash", match: (a) => ["Car Wash", "Hand Wash", "Jet Wash", "Vacuum"].includes(a) },
+  { label: "ATM", match: (a) => a === "ATM" },
+  { label: "Truck", match: (a) => ["Truck Parking", "High Flow Diesel"].includes(a) },
+  { label: "WiFi", match: (a) => a === "WiFi" },
+  { label: "Toilet", match: (a) => ["Toilets", "Shower"].includes(a) },
+  { label: "Loyalty", match: (a) => ["Brand Loyalty", "Mobile Payment"].includes(a) },
+  { label: "Lube", match: (a) => ["Lube Service", "Service Bay"].includes(a) },
 ];
-
-const AU_STATES = ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT"];
 
 const FONT = "'JetBrains Mono', monospace";
 
 export default function HudInsights() {
   const { filteredStations, userLocation, mapCenter } = useApp();
 
-  // Regional counts
+  // Regional counts — dynamically built from station data
   const regionData = useMemo(() => {
     const counts: Record<string, number> = {};
-    for (const st of AU_STATES) counts[st] = 0;
-    let nzCount = 0;
     for (const s of filteredStations) {
-      if (AU_STATES.includes(s.state)) {
-        counts[s.state]++;
-      } else {
-        nzCount++;
-      }
+      const region = s.state || "Unknown";
+      counts[region] = (counts[region] || 0) + 1;
     }
-    const labels = [...AU_STATES];
-    const data = AU_STATES.map((st) => counts[st]);
-    if (nzCount > 0) {
-      labels.push("NZ");
-      data.push(nzCount);
-    }
-    return { labels, data };
+    // Sort by count descending, cap at 12 for readability
+    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 12);
+    return { labels: sorted.map(([l]) => l), data: sorted.map(([, v]) => v) };
   }, [filteredStations]);
 
   // Amenity counts

@@ -1,21 +1,26 @@
+export type CountryCode = "AU" | "MY";
+
 export interface Station {
   id: string;
   name: string;
-  shopUnitNo: string;
+  brand: string;
+  country_code: string;
+  lat: number;
+  lng: number;
   address: string;
   city: string;
   state: string;
   postcode: string;
   country: string;
-  lat: number;
-  lng: number;
   telephone: string;
-  locationId: string;
-  bpmeEnabled: boolean;
-  open24Hours: boolean;
-  hours: WeeklyHours;
   fuels: string[];
   amenities: string[];
+  payments: string[];
+  open24Hours: boolean;
+  hours: WeeklyHours | null;
+  openStatusRaw?: string;
+  nextStatusChange?: string;
+  websiteUrl?: string;
   status?: StationStatus;
   distance?: number;
 }
@@ -33,6 +38,7 @@ export interface WeeklyHours {
 export type StationStatus = "open" | "closing-soon" | "closed" | "unknown";
 
 export interface Filters {
+  brand: string[];
   region: string[];
   fuels: string[];
   ev: string[];
@@ -52,59 +58,95 @@ export interface TripStop {
   isOpen: boolean;
 }
 
-export const FUEL_OPTIONS = [
-  "Unleaded", "Premium Unleaded", "BP Ultimate Unleaded",
-  "Unleaded with Ethanol (E10)", "Diesel", "BP Ultimate Diesel",
-  "BP Autogas", "Adblue Packaged", "Adblue Pumped", "LPG bottles",
+// ─── Country / Brand config ─────────────────────────
+
+export const COUNTRY_OPTIONS: { code: CountryCode; label: string; center: [number, number]; zoom: number }[] = [
+  { code: "AU", label: "Australia / NZ", center: [-25.2744, 133.7751], zoom: 5 },
+  { code: "MY", label: "Malaysia", center: [4.2105, 101.9758], zoom: 7 },
 ];
 
-export const EV_OPTIONS = ["bp pulse", "EV Charging"];
+export const BRAND_OPTIONS: Record<CountryCode, string[]> = {
+  AU: ["bp"],
+  MY: ["shell", "caltex", "caltex-workshop"],
+};
+
+// Brand display names (for filter labels)
+export const BRAND_LABELS: Record<string, string> = {
+  bp: "BP",
+  shell: "Shell",
+  caltex: "Caltex",
+  "caltex-workshop": "Caltex Workshop",
+};
+
+// Brand colors — primary, secondary, accent
+export const BRAND_COLORS: Record<string, { primary: string; secondary: string; accent: string }> = {
+  bp: { primary: "#009b3a", secondary: "#ffcc00", accent: "#ffffff" },           // BP green, yellow shield
+  shell: { primary: "#fbce07", secondary: "#dd1d21", accent: "#ffffff" },        // Shell yellow, red pecten
+  caltex: { primary: "#00a5b5", secondary: "#e21836", accent: "#ffffff" },       // Caltex teal, red star
+  "caltex-workshop": { primary: "#00a5b5", secondary: "#e21836", accent: "#f5a623" }, // Same + orange wrench accent
+};
+
+// ─── Per-country filter options ─────────────────────
+
+export const REGION_OPTIONS_BY_COUNTRY: Record<CountryCode, string[]> = {
+  AU: [
+    "NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT",
+    "Northland", "Auckland", "Waikato", "Bay of Plenty", "Gisborne",
+    "Hawke's Bay", "Taranaki", "Manawatu-Whanganui", "Wellington",
+    "Nelson", "Marlborough", "West Coast", "Canterbury", "Otago", "Southland",
+  ],
+  MY: [
+    "Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan",
+    "Pahang", "Perak", "Perlis", "Penang", "Sabah", "Sarawak",
+    "Selangor", "Terengganu", "Kuala Lumpur", "Putrajaya", "Labuan",
+  ],
+};
+
+// Generic fuel options (used in filter UI — shown for all countries)
+export const FUEL_OPTIONS = [
+  "Unleaded 91", "Unleaded 95", "Unleaded 98", "E10",
+  "Diesel", "Premium Diesel",
+  "LPG / Autogas", "AdBlue", "LPG Bottles",
+  "EV Charging", "Kerosene", "Engine Oil", "Fuel Additive",
+];
+
+export const EV_OPTIONS = ["EV Charging"];
 
 export const FOOD_DRINK_OPTIONS = [
-  "Wildbean Cafe", "Barista Coffee", "Fast Food",
-  "Takeaway Food Offer", "Food Offer Instore",
-  "David Jones Food", "Couch Food", "Hungry As", "Good Mood Food", "Uber Eats",
+  "Cafe", "Fast Food", "Food Store", "Delivery",
 ];
 
 export const VEHICLE_SERVICE_OPTIONS = [
-  "Car Wash", "Hand Wash", "Air/Water", "Jet Wash", "Vacuum", "Trailer Hire",
+  "Car Wash", "Hand Wash", "Air/Water", "Jet Wash", "Vacuum",
+  "Lube Service", "Service Bay", "Tyres & Batteries",
 ];
 
 export const TRUCK_OPTIONS = [
-  "Truck Parking", "Truck Driver Lounge", "Rigid Access",
-  "B-double Access", "Road Train Access", "High Flow Diesel",
-  "Ultra High Flow Diesel", "Weigh Bridge",
-  "Truck Suitable Site", "Truck Only", "National Diesel Offer",
+  "Truck Parking", "High Flow Diesel",
 ];
 
 export const CONVENIENCE_OPTIONS = [
-  "ATM", "Gift Card", "Toilets", "Shower", "Washing Machine", "Wifi",
-  "Western Union", "LPG Bottle Swap",
+  "ATM", "Convenience Store", "Toilets", "Shower", "WiFi",
+  "Parking", "Disabled Access", "Premium Lounge", "AC Lounge",
 ];
 
 export const LOYALTY_OPTIONS = [
-  "BP Rewards", "AA Smartfuel", "Bpme Enabled",
-  "BP Rewards – earn only", "BP Rewards Unlocked", "BP Rewards Unlocked Shop",
-  "BP Rewards Fuel Offer", "BP Rewards Shop Offer", "PAYBACK", "AHG",
+  "Brand Loyalty", "Pay at Pump", "Self Service", "Full Service",
+  "Mobile Payment", "Credit Card", "Fleet Card",
 ];
 
 export const SITE_TYPE_OPTIONS = [
-  "Unattended Site", "Motorway Site", "BPMePlus Participating Site",
+  "24 Hour", "Motorway", "Unattended",
 ];
 
 export const ACCESSIBILITY_OPTIONS = [
-  "Disabled Facilities", "Recycling Facilities",
-];
-
-export const REGION_OPTIONS = [
-  "NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT",
-  "Auckland", "Wellington", "Canterbury", "Waikato",
-  "Bay of Plenty", "Otago", "Hawke's Bay", "Northland",
+  "Disabled Access",
 ];
 
 export const SEARCH_RADIUS_OPTIONS = [5, 10, 25, 50, 100];
 
 export const STATE_TIMEZONES: Record<string, string> = {
+  // Australia
   NSW: "Australia/Sydney",
   VIC: "Australia/Melbourne",
   QLD: "Australia/Brisbane",
@@ -113,7 +155,7 @@ export const STATE_TIMEZONES: Record<string, string> = {
   TAS: "Australia/Hobart",
   NT: "Australia/Darwin",
   ACT: "Australia/Sydney",
-  // NZ regions all use Pacific/Auckland
+  // NZ
   Auckland: "Pacific/Auckland",
   Wellington: "Pacific/Auckland",
   Canterbury: "Pacific/Auckland",
@@ -122,6 +164,8 @@ export const STATE_TIMEZONES: Record<string, string> = {
   Otago: "Pacific/Auckland",
   "Hawke's Bay": "Pacific/Auckland",
   Manawatu: "Pacific/Auckland",
+  "Manawatu-Whanganui": "Pacific/Auckland",
+  "Other NZ": "Pacific/Auckland",
   Taranaki: "Pacific/Auckland",
   Northland: "Pacific/Auckland",
   Southland: "Pacific/Auckland",
@@ -130,24 +174,36 @@ export const STATE_TIMEZONES: Record<string, string> = {
   Gisborne: "Pacific/Auckland",
   "West Coast": "Pacific/Auckland",
   Tasman: "Pacific/Auckland",
-  // NZ suburb-level state fields from CSV
   Linwood: "Pacific/Auckland",
   Ilam: "Pacific/Auckland",
   "New Brighton": "Pacific/Auckland",
   Albany: "Pacific/Auckland",
   Harewood: "Pacific/Auckland",
+  // Malaysia
+  Johor: "Asia/Kuala_Lumpur",
+  Kedah: "Asia/Kuala_Lumpur",
+  Kelantan: "Asia/Kuala_Lumpur",
+  Melaka: "Asia/Kuala_Lumpur",
+  "Negeri Sembilan": "Asia/Kuala_Lumpur",
+  Pahang: "Asia/Kuala_Lumpur",
+  Perak: "Asia/Kuala_Lumpur",
+  Perlis: "Asia/Kuala_Lumpur",
+  Penang: "Asia/Kuala_Lumpur",
+  Sabah: "Asia/Kuala_Lumpur",
+  Sarawak: "Asia/Kuala_Lumpur",
+  Selangor: "Asia/Kuala_Lumpur",
+  Terengganu: "Asia/Kuala_Lumpur",
+  "Kuala Lumpur": "Asia/Kuala_Lumpur",
+  Putrajaya: "Asia/Kuala_Lumpur",
+  Labuan: "Asia/Kuala_Lumpur",
 };
 
 export const ALL_AMENITY_COLUMNS = [
-  "Unlead", "Premium Unleaded", "BP Ultimate Unleaded",
-  "Unleaded with Ethanol (E10)", "Diesel", "BP Ultimate Diesel",
-  "BP Autogas", "Adblue Packaged", "Adblue Pumped", "LPG bottles",
-  "bp pulse", "AdBlue", "AA Smartfuel", "EV Charging", "Truck Diesel",
-  "ATM", "Gift Card", "Food Offer Instore", "Takeaway Food Offer",
-  "Fast Food", "Barista Coffee", "Wildbean Cafe", "Toilets", "Shower",
-  "Washing Machine", "Truck Driver Lounge", "Truck Parking",
-  "Rigid Access", "B-double Access", "Road Train Access",
-  "High Flow Diesel", "Ultra High Flow Diesel", "Weigh Bridge",
-  "Hand Wash", "Car Wash", "Trailer Hire", "BP Rewards",
-  "Bpme Enabled", "Air/Water", "Jet Wash", "Vacuum", "Wifi",
+  ...FUEL_OPTIONS,
+  ...FOOD_DRINK_OPTIONS,
+  ...VEHICLE_SERVICE_OPTIONS,
+  ...TRUCK_OPTIONS,
+  ...CONVENIENCE_OPTIONS,
+  ...LOYALTY_OPTIONS,
+  ...SITE_TYPE_OPTIONS,
 ];

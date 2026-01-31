@@ -2,14 +2,15 @@
 
 import React, { useDeferredValue } from "react";
 import { useApp } from "@/context/AppContext";
+import { BRAND_LABELS, BRAND_COLORS } from "@/lib/types";
 import { getTimeUntilClose, getNextOpenTime } from "@/lib/stationUtils";
 import styles from "./index.module.scss";
 
 const QUICK_FILTERS: { label: string; fuelKey?: string; evKey?: string }[] = [
-  { label: "Unleaded", fuelKey: "Unleaded" },
+  { label: "Unleaded", fuelKey: "Unleaded 91" },
   { label: "Diesel", fuelKey: "Diesel" },
-  { label: "Premium", fuelKey: "Premium Unleaded" },
-  { label: "EV", evKey: "bp pulse" },
+  { label: "Premium", fuelKey: "Unleaded 98" },
+  { label: "EV", evKey: "EV Charging" },
 ];
 
 function getFuelClass(fuel: string): string {
@@ -22,16 +23,19 @@ function getFuelClass(fuel: string): string {
 }
 
 function getFuelLabel(fuel: string): string {
-  if (fuel === "Unlead" || fuel === "Unleaded 91" || fuel === "BP 91") return "ULP";
-  if (fuel === "Premium Unleaded" || fuel === "Premium Unleaded 95" || fuel === "BP 95") return "Premium";
-  if (fuel === "BP Ultimate Unleaded" || fuel === "Ultimate Unleaded 98") return "Ultimate";
-  if (fuel === "Unleaded with Ethanol (E10)" || fuel === "e10") return "E10";
-  if (fuel === "Diesel" || fuel === "BP Diesel") return "Diesel";
-  if (fuel === "BP Ultimate Diesel" || fuel === "Ultimate Diesel") return "Ult. Diesel";
-  if (fuel === "BP Autogas" || fuel === "LPG Automotive") return "LPG";
-  if (fuel.includes("Adblue") || fuel.includes("AdBlue")) return "AdBlue";
-  if (fuel === "LPG bottles" || fuel === "LPG Bottle Fill") return "LPG Bottles";
-  if (fuel === "bp pulse") return "EV";
+  if (fuel === "Unleaded 91") return "ULP 91";
+  if (fuel === "Unleaded 95") return "ULP 95";
+  if (fuel === "Unleaded 98") return "ULP 98";
+  if (fuel === "E10") return "E10";
+  if (fuel === "Diesel") return "Diesel";
+  if (fuel === "Premium Diesel") return "Prem. Diesel";
+  if (fuel === "LPG / Autogas") return "LPG";
+  if (fuel === "AdBlue") return "AdBlue";
+  if (fuel === "LPG Bottles") return "LPG Bottles";
+  if (fuel === "EV Charging") return "EV";
+  if (fuel === "Kerosene") return "Kerosene";
+  if (fuel === "Engine Oil") return "Oil";
+  if (fuel === "Fuel Additive") return "Additive";
   return fuel;
 }
 
@@ -111,6 +115,15 @@ export default function StationList() {
                 <div className={styles["station-name"]}>
                   <span className={styles["station-index"]}>STA-{String(idx + 1).padStart(3, "0")}</span>
                   {s.name}
+                  <span
+                    className={styles["brand-tag"]}
+                    style={{
+                      color: BRAND_COLORS[s.brand]?.primary || "#666",
+                      borderColor: `${BRAND_COLORS[s.brand]?.primary || "#666"}44`,
+                    }}
+                  >
+                    {BRAND_LABELS[s.brand] || s.brand}
+                  </span>
                 </div>
                 <div className={styles["station-location"]}>
                   {s.city}, {s.state} {s.postcode}

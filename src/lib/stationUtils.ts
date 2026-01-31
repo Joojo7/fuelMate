@@ -7,6 +7,13 @@ function getNowInTimezone(tz: string): Date {
   return new Date(str);
 }
 
+function getTimezone(station: Station): string {
+  if (STATE_TIMEZONES[station.state]) return STATE_TIMEZONES[station.state];
+  if (station.country_code === "NZ" || station.country === "New Zealand") return "Pacific/Auckland";
+  if (station.country_code === "MY" || station.country === "Malaysia") return "Asia/Kuala_Lumpur";
+  return "Australia/Sydney";
+}
+
 function parseTimeRange(range: string): { open: number; close: number } | null {
   if (!range || range.toLowerCase() === "closed") return null;
   const match = range.match(/(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})/);
@@ -19,7 +26,27 @@ function parseTimeRange(range: string): { open: number; close: number } | null {
 export function getStationStatus(station: Station): StationStatus {
   if (station.open24Hours) return "open";
 
-  const tz = STATE_TIMEZONES[station.state] || "Australia/Sydney";
+  // Shell-style: use openStatusRaw + nextStatusChange
+  if (station.openStatusRaw) {
+    const raw = station.openStatusRaw;
+    if (raw === "twenty_four_hour") return "open";
+    if (raw === "closed") return "closed";
+    if (raw === "open") {
+      if (station.nextStatusChange) {
+        const changeTime = new Date(station.nextStatusChange).getTime();
+        const now = Date.now();
+        const diffMin = (changeTime - now) / 60000;
+        if (diffMin > 0 && diffMin <= 30) return "closing-soon";
+      }
+      return "open";
+    }
+    return "unknown";
+  }
+
+  // BP/Caltex-style: use weekly hours
+  if (!station.hours) return "unknown";
+
+  const tz = getTimezone(station);
   const now = getNowInTimezone(tz);
   const dayKey = DAY_KEYS[now.getDay()];
   const hoursStr = station.hours[dayKey];
@@ -32,7 +59,6 @@ export function getStationStatus(station: Station): StationStatus {
   const currentMinutes = now.getHours() * 60 + now.getMinutes();
   let { open, close } = parsed;
 
-  // Handle midnight wraparound (e.g., 00:00-23:59)
   if (close <= open) close += 24 * 60;
   const adjustedCurrent = currentMinutes < open ? currentMinutes + 24 * 60 : currentMinutes;
 
@@ -46,7 +72,22 @@ export function getStationStatus(station: Station): StationStatus {
 export function getTimeUntilClose(station: Station): string | null {
   if (station.open24Hours) return "Open 24 hours";
 
-  const tz = STATE_TIMEZONES[station.state] || "Australia/Sydney";
+  if (station.openStatusRaw) {
+    if (station.openStatusRaw === "twenty_four_hour") return "Open 24 hours";
+    if (station.openStatusRaw === "open" && station.nextStatusChange) {
+      const diffMin = (new Date(station.nextStatusChange).getTime() - Date.now()) / 60000;
+      if (diffMin > 0) {
+        const h = Math.floor(diffMin / 60);
+        const m = Math.round(diffMin % 60);
+        return h > 0 ? `Closes in ${h}h ${m}m` : `Closes in ${m}m`;
+      }
+    }
+    return null;
+  }
+
+  if (!station.hours) return null;
+
+  const tz = getTimezone(station);
   const now = getNowInTimezone(tz);
   const dayKey = DAY_KEYS[now.getDay()];
   const hoursStr = station.hours[dayKey];
@@ -69,7 +110,9 @@ export function getTimeUntilClose(station: Station): string | null {
 
 export function getNextOpenTime(station: Station): string | null {
   if (station.open24Hours) return null;
-  const tz = STATE_TIMEZONES[station.state] || "Australia/Sydney";
+  if (!station.hours) return null;
+
+  const tz = getTimezone(station);
   const now = getNowInTimezone(tz);
 
   for (let d = 0; d < 7; d++) {
@@ -125,24 +168,8 @@ export function filterByRadius(
   );
 }
 
-// Fuel equivalence groups: if any name in a group is in the station's fuels, it matches
-const FUEL_EQUIVALENTS: Record<string, string[]> = {
-  "Unleaded": ["Unlead", "Unleaded 91", "BP 91"],
-  "Premium Unleaded": ["Premium Unleaded", "BP 95", "Premium Unleaded 95"],
-  "BP Ultimate Unleaded": ["BP Ultimate Unleaded", "Ultimate Unleaded 98"],
-  "Diesel": ["Diesel", "BP Diesel"],
-  "BP Ultimate Diesel": ["BP Ultimate Diesel", "Ultimate Diesel"],
-};
-
-function fuelMatches(filterName: string, stationFuels: string[]): boolean {
-  const equivalents = FUEL_EQUIVALENTS[filterName];
-  if (equivalents) {
-    return equivalents.some((e) => stationFuels.includes(e)) || stationFuels.includes(filterName);
-  }
-  return stationFuels.includes(filterName);
-}
-
 export function applyFilters(stations: Station[], filters: Filters): Station[] {
+  const brandSelected = filters.brand || [];
   const regionSelected = filters.region || [];
   const allSelected = [
     ...filters.fuels,
@@ -155,20 +182,18 @@ export function applyFilters(stations: Station[], filters: Filters): Station[] {
     ...(filters.siteType || []),
     ...(filters.accessibility || []),
   ];
-  if (allSelected.length === 0 && regionSelected.length === 0) return stations;
+  if (allSelected.length === 0 && regionSelected.length === 0 && brandSelected.length === 0) return stations;
 
   return stations.filter((s) => {
+    if (brandSelected.length > 0 && !brandSelected.includes(s.brand)) {
+      return false;
+    }
     if (regionSelected.length > 0 && !regionSelected.includes(s.state)) {
       return false;
     }
     if (allSelected.length === 0) return true;
     const all = [...s.fuels, ...s.amenities];
-    return allSelected.every((f) => {
-      if (filters.fuels.includes(f)) {
-        return fuelMatches(f, s.fuels);
-      }
-      return all.includes(f);
-    });
+    return allSelected.every((f) => all.includes(f));
   });
 }
 
@@ -181,12 +206,14 @@ export function searchStations(stations: Station[], query: string): Station[] {
       s.city.toLowerCase().includes(q) ||
       s.postcode.includes(q) ||
       s.state.toLowerCase().includes(q) ||
-      s.address.toLowerCase().includes(q)
+      s.address.toLowerCase().includes(q) ||
+      s.brand.toLowerCase().includes(q)
   );
 }
 
 export function isOpenAtTime(station: Station, date: Date): boolean {
   if (station.open24Hours) return true;
+  if (!station.hours) return false;
   const dayKey = DAY_KEYS[date.getDay()];
   const hoursStr = station.hours[dayKey];
   const parsed = parseTimeRange(hoursStr);

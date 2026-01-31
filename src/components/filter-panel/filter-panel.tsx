@@ -6,7 +6,8 @@ import { useApp } from "@/context/AppContext";
 import {
   Filters, FUEL_OPTIONS, EV_OPTIONS, FOOD_DRINK_OPTIONS,
   VEHICLE_SERVICE_OPTIONS, TRUCK_OPTIONS, CONVENIENCE_OPTIONS, LOYALTY_OPTIONS,
-  SITE_TYPE_OPTIONS, ACCESSIBILITY_OPTIONS, REGION_OPTIONS,
+  SITE_TYPE_OPTIONS, ACCESSIBILITY_OPTIONS, REGION_OPTIONS_BY_COUNTRY, BRAND_OPTIONS,
+  BRAND_LABELS, BRAND_COLORS,
 } from "@/lib/types";
 import styles from "./index.module.scss";
 
@@ -59,7 +60,7 @@ function FilterGroup({
 }
 
 export default function FilterPanel({ onClose }: { onClose: () => void }) {
-  const { filters, setFilters, showAll, setShowAll } = useApp();
+  const { filters, setFilters, showAll, setShowAll, activeCountry, allStations } = useApp();
 
   const update = (key: keyof Filters, val: string[]) => {
     setFilters({ ...filters, [key]: val });
@@ -67,11 +68,18 @@ export default function FilterPanel({ onClose }: { onClose: () => void }) {
 
   const clearAll = () => {
     setFilters({
-      region: [], fuels: [], ev: [], foodDrink: [], vehicleServices: [],
+      brand: [], region: [], fuels: [], ev: [], foodDrink: [], vehicleServices: [],
       truckAmenities: [], convenience: [], loyalty: [],
       siteType: [], accessibility: [],
     });
   };
+
+  const brandOptions = BRAND_OPTIONS[activeCountry] || [];
+  // Build region options: hardcoded list + extra regions from current country's data only
+  const baseRegions = REGION_OPTIONS_BY_COUNTRY[activeCountry] || [];
+  const countryStations = allStations.filter((s) => s.country_code === activeCountry || (activeCountry === "AU" && (s.country_code === "AU" || s.country_code === "NZ")));
+  const dataRegions = Array.from(new Set(countryStations.map((s) => s.state).filter(Boolean)));
+  const regionOptions: string[] = [...baseRegions, ...dataRegions.filter((r) => !baseRegions.includes(r))];
 
   return (
     <div className={styles["filter-container"]}>
@@ -95,7 +103,40 @@ export default function FilterPanel({ onClose }: { onClose: () => void }) {
             {!showAll ? "ON" : "OFF"}
           </button>
         </div>
-        <FilterGroup title="REGION" options={REGION_OPTIONS} selected={filters.region || []} onChange={(v) => update("region", v)} defaultOpen />
+        {brandOptions.length > 1 && (
+          <div className="mb-2">
+            <div className={styles["group-header"]} style={{ cursor: "default" }}>
+              <span>BRAND{(filters.brand || []).length > 0 && (
+                <span className={styles["group-count"]}>{(filters.brand || []).length}</span>
+              )}</span>
+            </div>
+            <div className="d-flex flex-wrap gap-1 pt-1 pb-1">
+              {brandOptions.map((b) => {
+                const isActive = (filters.brand || []).includes(b);
+                const bc = BRAND_COLORS[b];
+                return (
+                  <button
+                    key={b}
+                    onClick={() => {
+                      const cur = filters.brand || [];
+                      update("brand", cur.includes(b) ? cur.filter((x) => x !== b) : [...cur, b]);
+                    }}
+                    className="tm-chip clickable"
+                    style={isActive && bc ? {
+                      background: `${bc.primary}22`,
+                      color: bc.primary,
+                      borderColor: `${bc.primary}66`,
+                      boxShadow: `0 0 6px ${bc.primary}33`,
+                    } : undefined}
+                  >
+                    {BRAND_LABELS[b] || b}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+        <FilterGroup title="REGION" options={regionOptions} selected={filters.region || []} onChange={(v) => update("region", v)} defaultOpen />
         <FilterGroup title="FUEL TYPE" options={FUEL_OPTIONS} selected={filters.fuels} onChange={(v) => update("fuels", v)} />
         <FilterGroup title="EV" options={EV_OPTIONS} selected={filters.ev} onChange={(v) => update("ev", v)} />
         <FilterGroup title="FOOD & DRINK" options={FOOD_DRINK_OPTIONS} selected={filters.foodDrink} onChange={(v) => update("foodDrink", v)} />

@@ -5,15 +5,28 @@ import { MapContainer, TileLayer, Marker, Popup, useMap, CircleMarker, Circle, u
 import { MoonIcon, SunIcon } from "@phosphor-icons/react";
 import L from "leaflet";
 import { useApp } from "@/context/AppContext";
-import { Station } from "@/lib/types";
+import { Station, BRAND_COLORS, BRAND_LABELS } from "@/lib/types";
 import { haversineDistance } from "@/lib/stationUtils";
 import styles from "./index.module.scss";
 
-// Phosphor GasPump bold SVG path (viewBox 0 0 256 256)
-const GAS_PUMP_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a0a0a" viewBox="0 0 256 256"><path d="M241,69.66,221.66,50.34a8,8,0,0,0-11.32,11.32L229.66,81A8,8,0,0,1,232,86.63V168a8,8,0,0,1-16,0V128a24,24,0,0,0-24-24H176V56a24,24,0,0,0-24-24H72A24,24,0,0,0,48,56V208H32a8,8,0,0,0,0,16H192a8,8,0,0,0,0-16H176V120h16a8,8,0,0,1,8,8v40a24,24,0,0,0,48,0V86.63A23.85,23.85,0,0,0,241,69.66ZM64,56a8,8,0,0,1,8-8h80a8,8,0,0,1,8,8v72a8,8,0,0,1-8,8H72a8,8,0,0,1-8-8Z"/></svg>`;
+// ─── Brand logo SVGs (small, 14×14) ────────────────
+const BRAND_LOGO_SVG: Record<string, string> = {
+  // BP: green shield with "bp" text
+  bp: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#009b3a"/><text x="7" y="9.5" font-size="6" font-weight="bold" fill="#ffcc00" text-anchor="middle" font-family="sans-serif">bp</text></svg>`,
+  // Shell: yellow pecten shape
+  shell: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1 L9 5 L13 5 L10 8 L11 12 L7 10 L3 12 L4 8 L1 5 L5 5 Z" fill="#fbce07" stroke="#dd1d21" stroke-width="0.8"/></svg>`,
+  // Caltex: red star on teal
+  caltex: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#00a5b5"/><path d="M7 2 L8.2 5.5 L12 5.5 L9 7.8 L10 11.5 L7 9 L4 11.5 L5 7.8 L2 5.5 L5.8 5.5 Z" fill="#e21836"/></svg>`,
+  // Caltex Workshop: wrench icon on teal
+  "caltex-workshop": `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#00a5b5"/><path d="M4 3.5C4.8 2.7 6 2.5 7 3L5.5 4.5L5.5 6L7 6L8.5 4.5C9 5.5 8.8 6.7 8 7.5L10.5 10C10.8 10.3 10.8 10.8 10.5 11.1L10.1 11.5C9.8 11.8 9.3 11.8 9 11.5L6.5 9C5.7 9.8 4.5 10 3.5 9.5L5 8L5 6.5L3.5 6.5L2 8C1.5 7 1.7 5.8 2.5 5L4 3.5Z" fill="#f5a623"/></svg>`,
+};
 
-function createStationIcon(color: string, size = 30) {
+// Default gas pump for unknown brands
+const GAS_PUMP_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#0a0a0a" viewBox="0 0 256 256"><path d="M241,69.66,221.66,50.34a8,8,0,0,0-11.32,11.32L229.66,81A8,8,0,0,1,232,86.63V168a8,8,0,0,1-16,0V128a24,24,0,0,0-24-24H176V56a24,24,0,0,0-24-24H72A24,24,0,0,0,48,56V208H32a8,8,0,0,0,0,16H192a8,8,0,0,0,0-16H176V120h16a8,8,0,0,1,8,8v40a24,24,0,0,0,48,0V86.63A23.85,23.85,0,0,0,241,69.66ZM64,56a8,8,0,0,1,8-8h80a8,8,0,0,1,8,8v72a8,8,0,0,1-8,8H72a8,8,0,0,1-8-8Z"/></svg>`;
+
+function createStationIcon(color: string, brand?: string, size = 30) {
   const pinH = size + 10;
+  const logoSvg = brand && BRAND_LOGO_SVG[brand] ? BRAND_LOGO_SVG[brand] : GAS_PUMP_SVG;
   return L.divIcon({
     className: "",
     html: `<div style="
@@ -29,7 +42,7 @@ function createStationIcon(color: string, size = 30) {
         box-shadow:0 0 12px ${color}88, 0 2px 6px rgba(0,0,0,0.5);
         display:flex;align-items:center;justify-content:center;
       ">
-        <div style="transform:rotate(45deg);display:flex;">${GAS_PUMP_SVG}</div>
+        <div style="transform:rotate(45deg);display:flex;">${logoSvg}</div>
       </div>
       <div style="
         width:6px;height:6px;
@@ -60,12 +73,30 @@ function createPinIcon(color: string, label: string) {
   });
 }
 
-const icons: Record<string, L.DivIcon> = {
-  open: createStationIcon("#00ff41"),
-  "closing-soon": createStationIcon("#ffd700"),
-  closed: createStationIcon("#ff0033"),
-  unknown: createStationIcon("#666666"),
-};
+// Cache brand+status icon combos
+const iconCache = new Map<string, L.DivIcon>();
+
+function getStationIcon(brand: string, status: string): L.DivIcon {
+  const key = `${brand}:${status}`;
+  if (iconCache.has(key)) return iconCache.get(key)!;
+
+  const brandColor = BRAND_COLORS[brand]?.primary;
+  let color: string;
+  if (status === "closed") {
+    color = "#ff0033";
+  } else if (status === "closing-soon") {
+    color = "#ffd700";
+  } else if (status === "unknown") {
+    color = brandColor || "#666666";
+  } else {
+    // open — use brand color if available, otherwise green
+    color = brandColor || "#00ff41";
+  }
+
+  const icon = createStationIcon(color, brand);
+  iconCache.set(key, icon);
+  return icon;
+}
 
 const originIcon = createPinIcon("#00cc33", "A");
 const destinationIcon = createPinIcon("#ff3344", "B");
@@ -223,7 +254,7 @@ function RecenterMap({ center, zoom }: { center: [number, number]; zoom: number 
 
 function StationMarker({ station }: { station: Station }) {
   const { setSelectedStation } = useApp();
-  const icon = icons[station.status || "unknown"];
+  const icon = getStationIcon(station.brand, station.status || "unknown");
 
   const statusClass =
     station.status === "open" ? styles["status-open"] :
@@ -238,6 +269,16 @@ function StationMarker({ station }: { station: Station }) {
     >
       <Popup>
         <strong className={styles["popup-name"]}>{station.name}</strong>
+        <span style={{
+          marginLeft: 6,
+          fontSize: "0.6rem",
+          fontWeight: 700,
+          color: BRAND_COLORS[station.brand]?.primary || "#666",
+          textTransform: "uppercase" as const,
+          letterSpacing: "0.05em",
+        }}>
+          {BRAND_LABELS[station.brand] || station.brand}
+        </span>
         <br />
         <span className={styles["popup-location"]}>
           {station.city}, {station.state} {station.postcode}

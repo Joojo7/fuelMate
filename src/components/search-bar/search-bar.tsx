@@ -18,6 +18,7 @@ export default function SearchBar() {
     allStations, setSearchQuery, setSelectedStation,
     setMapCenter, setMapZoom, showAll, setShowAll,
     searchRadius, setSearchRadius, setSearchCircle,
+    radiusEnabled, setRadiusEnabled,
   } = useApp();
 
   const [input, setInput] = useState("");
@@ -165,13 +166,20 @@ export default function SearchBar() {
           ALL
         </button>
 
-        {/* Radius selector */}
-        <div className={styles.radiusGroup}>
+        {/* Radius toggle + selector */}
+        <button
+          className={`${styles.toggleBtn} ${radiusEnabled ? styles.toggleBtnActive : ""}`}
+          onClick={() => setRadiusEnabled(!radiusEnabled)}
+          title={radiusEnabled ? "Disable radius filter" : "Enable radius filter"}
+        >
+          RAD
+        </button>
+        <div className={`${styles.radiusGroup} ${!radiusEnabled ? styles.radiusGroupDisabled : ""}`}>
           {RADIUS_OPTIONS.map((r) => (
             <button
               key={r}
-              className={`${styles.radiusBtn} ${searchRadius === r ? styles.radiusBtnActive : ""}`}
-              onClick={() => setSearchRadius(r)}
+              className={`${styles.radiusBtn} ${searchRadius === r && radiusEnabled ? styles.radiusBtnActive : ""}`}
+              onClick={() => { setSearchRadius(r); setRadiusEnabled(true); }}
             >
               {r}
             </button>

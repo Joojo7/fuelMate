@@ -1,9 +1,9 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo, ReactNode } from "react";
-import { Station, Filters, StationStatus } from "@/lib/types";
-import { fetchStations } from "@/lib/parseCSV";
-import { getStationStatus, applyFilters, searchStations, sortByDistance, filterByRadius } from "@/lib/stationUtils";
+import { Station, Filters, StationStatus, CountryCode, COUNTRY_OPTIONS } from "@/lib/types";
+import { fetchCountryStations } from "@/lib/dataLoader";
+import { getStationStatus, applyFilters, searchStations, sortByDistance, filterByRadius, haversineDistance } from "@/lib/stationUtils";
 
 export interface TripPoint {
   lat: number;
@@ -19,11 +19,13 @@ interface AppState {
   filters: Filters;
   searchQuery: string;
   showAll: boolean;
+  radiusEnabled: boolean;
   searchRadius: number;
   userLocation: { lat: number; lng: number } | null;
   loading: boolean;
   mapCenter: [number, number];
   mapZoom: number;
+  activeCountry: CountryCode;
   tripPickMode: "origin" | "destination" | null;
   tripOrigin: TripPoint | null;
   tripDestination: TripPoint | null;
@@ -37,11 +39,13 @@ interface AppContextValue extends AppState {
   setFilters: (f: Filters) => void;
   setSearchQuery: (q: string) => void;
   setShowAll: (v: boolean) => void;
+  setRadiusEnabled: (v: boolean) => void;
   setSearchRadius: (r: number) => void;
   setUserLocation: (loc: { lat: number; lng: number } | null) => void;
   setMapCenter: (c: [number, number]) => void;
   setMapZoom: (z: number) => void;
   refreshStatus: () => void;
+  setActiveCountry: (c: CountryCode) => void;
   setTripPickMode: (m: "origin" | "destination" | null) => void;
   setTripOrigin: (p: TripPoint | null) => void;
   setTripDestination: (p: TripPoint | null) => void;
@@ -52,42 +56,56 @@ interface AppContextValue extends AppState {
 const AppContext = createContext<AppContextValue | null>(null);
 
 const EMPTY_FILTERS: Filters = {
-  region: [], fuels: [], ev: [], foodDrink: [], vehicleServices: [],
+  brand: [], region: [], fuels: [], ev: [], foodDrink: [], vehicleServices: [],
   truckAmenities: [], convenience: [], loyalty: [],
   siteType: [], accessibility: [],
 };
 
+function getInitialCountry(): CountryCode {
+  if (typeof window === "undefined") return "AU";
+  return (localStorage.getItem("pitstop-country") as CountryCode) || "AU";
+}
+
 export function AppProvider({ children }: { children: ReactNode }) {
+  const [activeCountry, setActiveCountryState] = useState<CountryCode>(getInitialCountry);
   const [allStations, setAllStations] = useState<Station[]>([]);
   const [selectedStation, setSelectedStation] = useState<Station | null>(null);
   const [favourites, setFavourites] = useState<string[]>([]);
   const [filters, setFiltersState] = useState<Filters>(EMPTY_FILTERS);
   const [searchQuery, setSearchQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
+  const [radiusEnabled, setRadiusEnabled] = useState(true);
   const [searchRadius, setSearchRadius] = useState(25);
   const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [loading, setLoading] = useState(true);
-  const [mapCenter, setMapCenter] = useState<[number, number]>([-25.2744, 133.7751]);
-  const [mapZoom, setMapZoom] = useState(5);
+  const [mapCenter, setMapCenter] = useState<[number, number]>(() => {
+    const opt = COUNTRY_OPTIONS.find((c) => c.code === getInitialCountry());
+    return opt ? opt.center : [-25.2744, 133.7751];
+  });
+  const [mapZoom, setMapZoom] = useState(() => {
+    const opt = COUNTRY_OPTIONS.find((c) => c.code === getInitialCountry());
+    return opt ? opt.zoom : 5;
+  });
   const [tripPickMode, setTripPickMode] = useState<"origin" | "destination" | null>(null);
   const [tripOrigin, setTripOrigin] = useState<TripPoint | null>(null);
   const [tripDestination, setTripDestination] = useState<TripPoint | null>(null);
   const [searchCircle, setSearchCircle] = useState<{ lat: number; lng: number; radius: number } | null>(null);
   const [tripStops, setTripStops] = useState<Station[]>([]);
 
-  // Load favourites and filters from localStorage
+  // Load favourites from localStorage (filters are NOT restored — they are country-specific)
   useEffect(() => {
     try {
       const savedFavs = localStorage.getItem("fuelmate-favourites");
       if (savedFavs) setFavourites(JSON.parse(savedFavs));
-      const savedFilters = localStorage.getItem("fuelmate-filters");
-      if (savedFilters) setFiltersState(JSON.parse(savedFilters));
     } catch {}
   }, []);
 
-  // Load stations
+  // Load stations when country changes
   useEffect(() => {
-    fetchStations().then((stations) => {
+    setLoading(true);
+    setAllStations([]);
+    setSelectedStation(null);
+    fetchCountryStations(activeCountry).then((stations) => {
       const withStatus = stations.map((s) => ({
         ...s,
         status: getStationStatus(s) as StationStatus,
@@ -95,6 +113,19 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setAllStations(withStatus);
       setLoading(false);
     }).catch(() => setLoading(false));
+  }, [activeCountry]);
+
+  const setActiveCountry = useCallback((c: CountryCode) => {
+    setActiveCountryState(c);
+    localStorage.setItem("pitstop-country", c);
+    const opt = COUNTRY_OPTIONS.find((o) => o.code === c);
+    if (opt) {
+      setMapCenter(opt.center);
+      setMapZoom(opt.zoom);
+    }
+    // Reset filters on country change
+    setFiltersState(EMPTY_FILTERS);
+    setSearchQuery("");
   }, []);
 
   // Detect user location
@@ -133,10 +164,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const setFilters = useCallback((f: Filters) => {
     setFiltersState(f);
-    localStorage.setItem("fuelmate-filters", JSON.stringify(f));
   }, []);
 
-  // Compute filtered stations (memoized to avoid unnecessary re-renders)
+  // Compute filtered stations
   const filteredStations = useMemo(() => {
     let result = applyFilters(allStations, filters);
     result = searchStations(result, searchQuery);
@@ -147,7 +177,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
       );
     }
 
-    if (userLocation && !showAll) {
+    // Only apply radius filter if user is within reasonable distance of the country's center
+    const countryCenter = COUNTRY_OPTIONS.find((c) => c.code === activeCountry)?.center;
+    const userNearCountry = userLocation && countryCenter
+      ? haversineDistance(userLocation.lat, userLocation.lng, countryCenter[0], countryCenter[1]) < 3000
+      : false;
+
+    if (userNearCountry && userLocation && radiusEnabled) {
       result = filterByRadius(
         result, userLocation.lat, userLocation.lng, searchRadius
       );
@@ -158,18 +194,19 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
 
     return result;
-  }, [allStations, filters, searchQuery, showAll, userLocation, searchRadius, mapCenter]);
+  }, [allStations, filters, searchQuery, showAll, radiusEnabled, userLocation, searchRadius, mapCenter, activeCountry]);
 
   return (
     <AppContext.Provider
       value={{
         allStations, filteredStations, selectedStation, favourites,
-        filters, searchQuery, showAll, searchRadius, userLocation,
-        loading, mapCenter, mapZoom,
+        filters, searchQuery, showAll, radiusEnabled, searchRadius, userLocation,
+        loading, mapCenter, mapZoom, activeCountry,
         tripPickMode, tripOrigin, tripDestination, searchCircle, tripStops,
         setSelectedStation, toggleFavourite, setFilters,
-        setSearchQuery, setShowAll, setSearchRadius,
+        setSearchQuery, setShowAll, setRadiusEnabled, setSearchRadius,
         setUserLocation, setMapCenter, setMapZoom, refreshStatus,
+        setActiveCountry,
         setTripPickMode, setTripOrigin, setTripDestination, setSearchCircle, setTripStops,
       }}
     >

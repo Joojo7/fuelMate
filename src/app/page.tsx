@@ -11,6 +11,7 @@ import StationDetail from "@/components/station-detail";
 import StationList from "@/components/station-list";
 import TripPlanner from "@/components/trip-planner";
 import { useApp } from "@/context/AppContext";
+import { COUNTRY_OPTIONS, type CountryCode } from "@/lib/types";
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import styles from "./page.module.scss";
@@ -20,7 +21,7 @@ const MapView = dynamic(() => import("@/components/map-view"), { ssr: false });
 type Tab = "map" | "list" | "trip" | "favourites";
 
 export default function Home() {
-  const { loading, selectedStation, filteredStations, mapCenter } = useApp();
+  const { loading, selectedStation, filteredStations, mapCenter, activeCountry, setActiveCountry } = useApp();
   const [activeTab, setActiveTab] = useState<Tab>("map");
   const [showFilters, setShowFilters] = useState(false);
   const [showLeftDrawer, setShowLeftDrawer] = useState(false);
@@ -55,6 +56,15 @@ export default function Home() {
         <h1 className={`mb-0 text-primary-green text-nowrap fw-bold ${styles.brand}`}>
           [P\TST/P]
         </h1>
+        <select
+          className={styles["country-select"]}
+          value={activeCountry}
+          onChange={(e) => setActiveCountry(e.target.value as CountryCode)}
+        >
+          {COUNTRY_OPTIONS.map((c) => (
+            <option key={c.code} value={c.code}>{c.label}</option>
+          ))}
+        </select>
         <div className={`flex-grow-1 ${styles["search-wrapper"]}`}>
           <SearchBar />
         </div>
