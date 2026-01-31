@@ -6,7 +6,7 @@ import { useApp } from "@/context/AppContext";
 import {
   Filters, FUEL_OPTIONS, EV_OPTIONS, FOOD_DRINK_OPTIONS,
   VEHICLE_SERVICE_OPTIONS, TRUCK_OPTIONS, CONVENIENCE_OPTIONS, LOYALTY_OPTIONS,
-  SITE_TYPE_OPTIONS, ACCESSIBILITY_OPTIONS,
+  SITE_TYPE_OPTIONS, ACCESSIBILITY_OPTIONS, REGION_OPTIONS,
 } from "@/lib/types";
 import styles from "./index.module.scss";
 
@@ -59,7 +59,7 @@ function FilterGroup({
 }
 
 export default function FilterPanel({ onClose }: { onClose: () => void }) {
-  const { filters, setFilters } = useApp();
+  const { filters, setFilters, showAll, setShowAll } = useApp();
 
   const update = (key: keyof Filters, val: string[]) => {
     setFilters({ ...filters, [key]: val });
@@ -67,7 +67,7 @@ export default function FilterPanel({ onClose }: { onClose: () => void }) {
 
   const clearAll = () => {
     setFilters({
-      fuels: [], ev: [], foodDrink: [], vehicleServices: [],
+      region: [], fuels: [], ev: [], foodDrink: [], vehicleServices: [],
       truckAmenities: [], convenience: [], loyalty: [],
       siteType: [], accessibility: [],
     });
@@ -86,7 +86,17 @@ export default function FilterPanel({ onClose }: { onClose: () => void }) {
       </div>
 
       <div className={styles["filter-scroll"]}>
-        <FilterGroup title="FUEL TYPE" options={FUEL_OPTIONS} selected={filters.fuels} onChange={(v) => update("fuels", v)} defaultOpen />
+        <div className={`d-flex align-items-center justify-content-between mb-2 pb-2 ${styles["open-now-row"]}`}>
+          <span className={styles["open-now-label"]}>OPEN NOW</span>
+          <button
+            className={`btn-terminal ${!showAll ? "btn-terminal-filled" : ""} ${styles["open-now-btn"]}`}
+            onClick={() => setShowAll(!showAll)}
+          >
+            {!showAll ? "ON" : "OFF"}
+          </button>
+        </div>
+        <FilterGroup title="REGION" options={REGION_OPTIONS} selected={filters.region || []} onChange={(v) => update("region", v)} defaultOpen />
+        <FilterGroup title="FUEL TYPE" options={FUEL_OPTIONS} selected={filters.fuels} onChange={(v) => update("fuels", v)} />
         <FilterGroup title="EV" options={EV_OPTIONS} selected={filters.ev} onChange={(v) => update("ev", v)} />
         <FilterGroup title="FOOD & DRINK" options={FOOD_DRINK_OPTIONS} selected={filters.foodDrink} onChange={(v) => update("foodDrink", v)} />
         <FilterGroup title="VEHICLE SERVICES" options={VEHICLE_SERVICE_OPTIONS} selected={filters.vehicleServices} onChange={(v) => update("vehicleServices", v)} />

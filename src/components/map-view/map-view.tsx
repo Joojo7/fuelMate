@@ -79,14 +79,27 @@ const CARTO_ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">Ope
 function SmartTileLayer({ darkMode }: { darkMode: boolean }) {
   const [sessionToken, setSessionToken] = useState<string | null>(null);
   const [googleFailed, setGoogleFailed] = useState(false);
+  const [prevDarkMode, setPrevDarkMode] = useState(darkMode);
+
+  // Reset session when dark mode toggles so we create a new session with the right style
+  if (darkMode !== prevDarkMode) {
+    setPrevDarkMode(darkMode);
+    setSessionToken(null);
+  }
 
   useEffect(() => {
-    if (!GOOGLE_KEY || googleFailed || darkMode) return;
+    if (!GOOGLE_KEY || googleFailed) return;
     const controller = new AbortController();
+    const styles = darkMode
+      ? [{ stylers: [{ invert_lightness: true }, { saturation: -100 }, { lightness: -30 }] }]
+      : undefined;
+    const body: Record<string, unknown> = { mapType: "roadmap", language: "en-AU", region: "AU" };
+    if (styles) body.styles = styles;
+
     fetch(`https://tile.googleapis.com/v1/createSession?key=${GOOGLE_KEY}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ mapType: "roadmap", language: "en-AU", region: "AU" }),
+      body: JSON.stringify(body),
       signal: controller.signal,
     })
       .then((r) => {
@@ -98,26 +111,13 @@ function SmartTileLayer({ darkMode }: { darkMode: boolean }) {
     return () => controller.abort();
   }, [googleFailed, darkMode]);
 
-  // Dark mode always uses CARTO Dark
-  if (darkMode) {
-    return (
-      <TileLayer
-        key="carto-dark"
-        attribution={CARTO_ATTR}
-        url={CARTO_DARK_URL}
-        subdomains="abcd"
-        maxZoom={20}
-      />
-    );
-  }
-
-  // Light mode: try Google, fall back to CARTO Voyager
+  // Fall back to CARTO if Google is unavailable
   if (!GOOGLE_KEY || !sessionToken || googleFailed) {
     return (
       <TileLayer
-        key="carto-light"
+        key={darkMode ? "carto-dark" : "carto-light"}
         attribution={CARTO_ATTR}
-        url={CARTO_LIGHT_URL}
+        url={darkMode ? CARTO_DARK_URL : CARTO_LIGHT_URL}
         subdomains="abcd"
         maxZoom={20}
       />
@@ -126,7 +126,7 @@ function SmartTileLayer({ darkMode }: { darkMode: boolean }) {
 
   return (
     <TileLayer
-      key="google"
+      key={`google-${darkMode ? "dark" : "light"}`}
       attribution="&copy; Google"
       url={`https://tile.googleapis.com/v1/2dtiles/{z}/{x}/{y}?session=${sessionToken}&key=${GOOGLE_KEY}`}
       maxZoom={22}
@@ -288,6 +288,12 @@ export default function MapView() {
 
   return (
     <div className={`h-100 w-100 position-relative ${styles["map-wrapper"]}`}>
+      {/* HUD overlays */}
+      <div className={styles.crosshair} />
+      <div className={styles["coord-readout"]}>
+        LAT {mapCenter[0].toFixed(4)} | LNG {mapCenter[1].toFixed(4)}
+      </div>
+
       {tripPickMode && (
         <div className={styles["pick-banner"]}>
           Click the map to set your {tripPickMode === "origin" ? "starting point" : "destination"}

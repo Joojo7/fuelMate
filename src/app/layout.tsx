@@ -3,8 +3,8 @@ import "./globals.scss";
 import { AppProvider } from "@/context/AppContext";
 
 export const metadata: Metadata = {
-  title: "FuelMate AU — BP Station Finder & Trip Planner",
-  description: "Find BP stations across Australia, plan trips, and filter by amenities.",
+  title: "Station Finder & Trip Planner",
+  description: "Find stations across Australia, plan trips, and filter by amenities.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

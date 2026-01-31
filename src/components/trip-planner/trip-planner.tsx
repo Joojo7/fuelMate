@@ -35,10 +35,7 @@ export default function TripPlanner({ onSwitchToMap }: { onSwitchToMap?: () => v
     const { lat: eLat, lng: eLng } = tripDestination;
     const totalDist = haversineDistance(sLat, sLng, eLat, eLng);
 
-    const eligible = applyFilters(
-      allStations.filter((s) => s.status !== "closed"),
-      filters
-    );
+    const eligible = allStations;
 
     const stops: Station[] = [];
 
@@ -89,12 +86,12 @@ export default function TripPlanner({ onSwitchToMap }: { onSwitchToMap?: () => v
 
   return (
     <div className="p-3">
-      <div className="tm-section-title">Trip Planner</div>
+      <div className="tm-section-title">Mission Briefing</div>
 
       <div className="d-flex flex-column gap-2 mb-3">
         {/* Origin picker */}
         <div className={styles["point-row"]}>
-          <span className={styles["point-label"]}>From:</span>
+          <span className={styles["point-label"]}>[ALPHA]</span>
           {tripOrigin ? (
             <span className={styles["point-value"]}>{tripOrigin.label}</span>
           ) : (
@@ -110,7 +107,7 @@ export default function TripPlanner({ onSwitchToMap }: { onSwitchToMap?: () => v
 
         {/* Destination picker */}
         <div className={styles["point-row"]}>
-          <span className={styles["point-label"]}>To:</span>
+          <span className={styles["point-label"]}>[BRAVO]</span>
           {tripDestination ? (
             <span className={styles["point-value"]}>{tripDestination.label}</span>
           ) : (
@@ -168,6 +165,7 @@ export default function TripPlanner({ onSwitchToMap }: { onSwitchToMap?: () => v
                 const arrivalHours = (stop.distance || 0) / 90;
                 const arrivalTime = new Date(Date.now() + arrivalHours * 3600000);
                 const openAtArrival = isOpenAtTime(stop, arrivalTime);
+                const callsigns = ["CHARLIE", "DELTA", "ECHO", "FOXTROT", "GOLF", "HOTEL", "INDIA", "JULIET", "KILO", "LIMA"];
 
                 return (
                   <div
@@ -182,7 +180,7 @@ export default function TripPlanner({ onSwitchToMap }: { onSwitchToMap?: () => v
                     <div className="d-flex justify-content-between align-items-start">
                       <div>
                         <div className={styles["wp-name"]}>
-                          Stop {i + 1}: {stop.name}
+                          WP {callsigns[i] || `${i + 1}`}: {stop.name}
                         </div>
                         <div className={styles["wp-location"]}>{stop.city}, {stop.state}</div>
                         <div className={styles["wp-eta"]}>

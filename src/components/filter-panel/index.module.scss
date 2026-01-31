@@ -64,3 +64,20 @@
 .group-chevron-open {
   transform: rotate(180deg);
 }
+
+.open-now-row {
+  border-bottom: 1px solid $divider;
+}
+
+.open-now-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $sub;
+}
+
+.open-now-btn {
+  font-size: 0.55rem;
+  padding: 3px 12px;
+}

@@ -33,6 +33,7 @@ export interface WeeklyHours {
 export type StationStatus = "open" | "closing-soon" | "closed" | "unknown";
 
 export interface Filters {
+  region: string[];
   fuels: string[];
   ev: string[];
   foodDrink: string[];
@@ -93,6 +94,12 @@ export const SITE_TYPE_OPTIONS = [
 
 export const ACCESSIBILITY_OPTIONS = [
   "Disabled Facilities", "Recycling Facilities",
+];
+
+export const REGION_OPTIONS = [
+  "NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT",
+  "Auckland", "Wellington", "Canterbury", "Waikato",
+  "Bay of Plenty", "Otago", "Hawke's Bay", "Northland",
 ];
 
 export const SEARCH_RADIUS_OPTIONS = [5, 10, 25, 50, 100];

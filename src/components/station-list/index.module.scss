@@ -6,6 +6,23 @@
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+
+  &::before {
+    content: '[ ';
+    color: rgba(0, 255, 65, 0.3);
+  }
+  &::after {
+    content: ' ]';
+    color: rgba(0, 255, 65, 0.3);
+  }
+}
+
+.station-index {
+  font-size: 0.5rem;
+  color: rgba(0, 255, 65, 0.35);
+  font-weight: 700;
+  margin-right: 4px;
+  letter-spacing: 0.05em;
 }
 
 .station-name {

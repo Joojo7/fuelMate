@@ -11,10 +11,10 @@ export default function Favourites() {
 
   return (
     <div className="p-3">
-      <div className="tm-section-title">Saved Stations</div>
+      <div className="tm-section-title">Tracked Targets</div>
       {favStations.length === 0 ? (
         <div className={styles.empty}>
-          No saved stations yet. Tap &quot;Save&quot; on a station to add it here.
+          No targets tracked. Tap &quot;Save&quot; on a station to begin tracking.
         </div>
       ) : (
         <div className="d-flex flex-column gap-2">
@@ -30,7 +30,7 @@ export default function Favourites() {
             >
               <div className="d-flex justify-content-between align-items-start">
                 <div>
-                  <div className={styles["station-name"]}>{s.name}</div>
+                  <div className={styles["station-name"]}><span className={styles["tracked-badge"]}>[TRACKED]</span> {s.name}</div>
                   <div className={styles["station-location"]}>{s.city}, {s.state}</div>
                   <span className={`tm-badge tm-badge-${s.status || "unknown"} mt-1`}>
                     {s.status === "open" ? "Open" :

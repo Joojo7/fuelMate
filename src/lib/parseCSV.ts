@@ -1,8 +1,11 @@
 import Papa from "papaparse";
 import { Station, WeeklyHours } from "./types";
 
-const AU_CSV_URL = "/AU.csv";
-const NZ_CSV_URL = "/NZ.csv";
+const AU_CSV_URL =
+  "https://bp-prod-bparalretailapi-temp-downloads-prod.s3-eu-west-1.amazonaws.com/csvs/AU.csv";
+const NZ_CSV_URL =
+  "https://bp-prod-bparalretailapi-temp-downloads-prod.s3-eu-west-1.amazonaws.com/csvs/NZ.csv";
+
 
 const FUEL_COLUMNS_AU = [
   "Unlead", "Premium Unleaded", "BP Ultimate Unleaded",

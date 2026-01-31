@@ -52,7 +52,7 @@ interface AppContextValue extends AppState {
 const AppContext = createContext<AppContextValue | null>(null);
 
 const EMPTY_FILTERS: Filters = {
-  fuels: [], ev: [], foodDrink: [], vehicleServices: [],
+  region: [], fuels: [], ev: [], foodDrink: [], vehicleServices: [],
   truckAmenities: [], convenience: [], loyalty: [],
   siteType: [], accessibility: [],
 };

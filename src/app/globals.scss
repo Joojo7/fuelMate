@@ -214,7 +214,7 @@ html, body { height: 100%; background: $primary-background; color: $light; }
   border-radius: $border-radius-sm;
   font-size: map-get($font-sizes, 8);
   background: $sub-background;
-  color: $light;
+  color: $primary;
   border: 1px solid $divider;
   margin: 2px;
   text-transform: uppercase;
@@ -308,6 +308,10 @@ html, body { height: 100%; background: $primary-background; color: $light; }
   margin-bottom: 0.5rem;
   border-bottom: 1px solid $divider;
   padding-bottom: 4px;
+  &::before {
+    content: '// ';
+    color: rgba(0, 255, 65, 0.3);
+  }
 }
 
 // ─── 18. Station list item ───────────────────────
@@ -322,33 +326,25 @@ html, body { height: 100%; background: $primary-background; color: $light; }
   }
 }
 
-// ─── 19. Detail overlay ─────────────────────────
+// ─── 19. Detail overlay (mobile only) ───────────
 .tm-detail-overlay {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: $z-index-dropdown;
-  max-height: 70vh;
+  max-height: 50vh;
   overflow-y: auto;
   background: $secondary-background;
-  border-top: 1px solid $primary-dim;
-  box-shadow: 0 -4px 20px rgba(0, 255, 65, 0.1);
+  border-top: 2px solid $primary-dim;
+  box-shadow: 0 -4px 20px rgba(0, 255, 65, 0.15);
   padding: 1rem;
+  animation: tm-slide-up 0.25s ease-out;
 }
 
-@media (min-width: 768px) {
-  .tm-detail-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: auto;
-    width: 400px;
-    max-height: 100vh;
-    border-top: none;
-    border-left: 1px solid $primary-dim;
-  }
+@keyframes tm-slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
 }
 
 // ─── 20. Scanline effect ─────────────────────────
@@ -442,6 +438,76 @@ html, body { height: 100%; background: $primary-background; color: $light; }
 .fs-7 { font-size: map-get($font-sizes, 7) !important; }
 .fs-8 { font-size: map-get($font-sizes, 8) !important; }
 .clickable { cursor: pointer; }
+
+// ─── HUD Utilities ─────────────────────────────
+
+// HUD corner brackets
+.tm-hud-brackets {
+  position: relative;
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  &::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid rgba(0, 255, 65, 0.4);
+    border-left: 2px solid rgba(0, 255, 65, 0.4);
+  }
+  &::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid rgba(0, 255, 65, 0.4);
+    border-right: 2px solid rgba(0, 255, 65, 0.4);
+  }
+}
+
+// Faint grid overlay background
+.tm-hud-grid {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 255, 65, 0.03) 0px,
+      rgba(0, 255, 65, 0.03) 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 255, 65, 0.03) 0px,
+      rgba(0, 255, 65, 0.03) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+}
+
+// HUD data readout label
+.tm-hud-label {
+  font-size: 0.55rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(0, 255, 65, 0.5);
+}
+
+// Pulsing status dot
+.tm-pulse-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $primary;
+  box-shadow: 0 0 6px $primary;
+  animation: tm-pulse-dot 2s ease-in-out infinite;
+}
+@keyframes tm-pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px $primary; }
+  50% { opacity: 0.4; box-shadow: 0 0 2px $primary; }
+}
 
 // ─── 27. Leaflet popup dark theme ───────────────
 .leaflet-popup-content-wrapper {

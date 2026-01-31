@@ -36,6 +36,7 @@ export default function StationDetail() {
       </div>
 
       <div className="d-flex align-items-center gap-2 mb-3">
+        {station.status === "open" && <span className="tm-pulse-dot" />}
         <span className={`tm-badge tm-badge-${station.status || "unknown"}`}>{statusLabel}</span>
         {station.open24Hours && <span className="tm-badge tm-badge-24h">24H</span>}
         {timeInfo && <span className={styles["time-info"]}>{timeInfo}</span>}

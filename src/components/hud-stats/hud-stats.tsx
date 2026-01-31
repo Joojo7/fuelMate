@@ -1,0 +1,129 @@
+"use client";
+
+import { useMemo } from "react";
+import { useApp } from "@/context/AppContext";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
+import styles from "./index.module.scss";
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip);
+
+const FUEL_TYPES: { key: string; label: string; match: (f: string) => boolean }[] = [
+  { key: "ulp", label: "ULP", match: (f) => /unlead|ulp|91|e10/i.test(f) && !/premium|ultimate/i.test(f) },
+  { key: "dsl", label: "DSL", match: (f) => /diesel/i.test(f) },
+  { key: "prm", label: "PRM", match: (f) => /premium|ultimate|95|98/i.test(f) },
+  { key: "ev", label: "EV", match: (f) => /pulse|ev|charg/i.test(f) },
+  { key: "lpg", label: "LPG", match: (f) => /lpg|autogas/i.test(f) },
+  { key: "adb", label: "ADB", match: (f) => /adblue/i.test(f) },
+];
+
+export default function HudStats() {
+  const { filteredStations, allStations, filters } = useApp();
+
+  const fuelCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const ft of FUEL_TYPES) counts[ft.key] = 0;
+    for (const s of filteredStations) {
+      for (const ft of FUEL_TYPES) {
+        if (s.fuels.some(ft.match)) counts[ft.key]++;
+      }
+    }
+    return counts;
+  }, [filteredStations]);
+
+  const activeFilterCount = useMemo(() => {
+    return (
+      (filters.region?.length || 0) +
+      filters.fuels.length +
+      filters.ev.length +
+      filters.foodDrink.length +
+      filters.vehicleServices.length +
+      filters.truckAmenities.length +
+      filters.convenience.length +
+      filters.loyalty.length +
+      filters.siteType.length +
+      filters.accessibility.length
+    );
+  }, [filters]);
+
+  const chartData = useMemo(() => ({
+    labels: FUEL_TYPES.map((ft) => ft.label),
+    datasets: [
+      {
+        data: FUEL_TYPES.map((ft) => fuelCounts[ft.key]),
+        backgroundColor: "rgba(0, 255, 65, 0.6)",
+        borderColor: "#00ff41",
+        borderWidth: 1,
+        borderRadius: 2,
+        hoverBackgroundColor: "rgba(0, 255, 65, 0.85)",
+      },
+    ],
+  }), [fuelCounts]);
+
+  const chartOptions = useMemo(() => ({
+    responsive: true,
+    maintainAspectRatio: false,
+    animation: { duration: 400 } as const,
+    plugins: {
+      tooltip: {
+        backgroundColor: "rgba(10, 10, 10, 0.9)",
+        titleColor: "#00ff41",
+        bodyColor: "#00ff41",
+        borderColor: "rgba(0, 255, 65, 0.3)",
+        borderWidth: 1,
+        titleFont: { family: "'JetBrains Mono', monospace", size: 12 },
+        bodyFont: { family: "'JetBrains Mono', monospace", size: 12 },
+      },
+      legend: { display: false },
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: "rgba(0, 255, 65, 0.5)",
+          font: { family: "'JetBrains Mono', monospace", size: 12, weight: 700 as const },
+        },
+        grid: { color: "rgba(0, 255, 65, 0.06)" },
+        border: { color: "rgba(0, 255, 65, 0.15)" },
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          color: "rgba(0, 255, 65, 0.35)",
+          font: { family: "'JetBrains Mono', monospace", size: 11 },
+          stepSize: Math.ceil(Math.max(...Object.values(fuelCounts), 1) / 4),
+        },
+        grid: { color: "rgba(0, 255, 65, 0.06)" },
+        border: { color: "rgba(0, 255, 65, 0.15)" },
+      },
+    },
+  }), [fuelCounts]);
+
+  return (
+    <div className={styles["stats-panel"]}>
+      <div className={styles["section-label"]}>Fuel Distribution</div>
+      <div className={styles["chart-wrapper"]}>
+        <Bar data={chartData} options={chartOptions} />
+      </div>
+
+      <div className={styles.divider} />
+
+      <div className={styles["filter-line"]}>
+        {activeFilterCount > 0 ? (
+          <>FILTERS: <span className={styles["filter-count"]}>{activeFilterCount}</span> ACTIVE</>
+        ) : (
+          <>ALL TARGETS VISIBLE</>
+        )}
+      </div>
+      <div className={styles["filter-line"]}>
+        SHOWING <span className={styles["filter-count"]}>{filteredStations.length}</span>
+        <span className={styles["filter-dim"]}> / {allStations.length}</span>
+      </div>
+    </div>
+  );
+}

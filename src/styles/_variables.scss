@@ -32,6 +32,11 @@ $placeHolder: #666666;
 $primary-dim: #00cc33;
 $primary-muted: rgba(0, 255, 65, 0.15);
 
+// HUD / Military overlay
+$hud-bracket: rgba(0, 255, 65, 0.4);
+$hud-grid: rgba(0, 255, 65, 0.03);
+$hud-grid-size: 20px;
+
 // Glow effects
 $glow-primary: 0 0 10px rgba(0, 255, 65, 0.15);
 $glow-primary-strong: 0 0 20px rgba(0, 255, 65, 0.25);

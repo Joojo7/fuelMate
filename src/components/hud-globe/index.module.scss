@@ -1,0 +1,64 @@
+@import '../../styles/variables';
+
+.globe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 8px 8px;
+  border-bottom: 1px solid $divider;
+}
+
+.globe-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 65, 0.15);
+}
+
+.globe-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1) sepia(1) saturate(50) hue-rotate(90deg) brightness(0.4);
+  opacity: 0.6;
+}
+
+// Green tint overlay
+.globe-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 255, 64, 0.004);
+  pointer-events: none;
+}
+
+// Scanning line
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 65, 0.4),
+    transparent
+  );
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
+  animation: scan-sweep 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scan-sweep {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+.region-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(0, 255, 65, 0.4);
+  margin-top: 4px;
+}

@@ -12,7 +12,7 @@
 .filter-dropdown {
   top: 50px;
   right: 8px;
-  z-index: $z-index-dropdown;
+  z-index: $z-index-modal;
   width: 320px;
   max-height: 70vh;
   overflow-y: auto;
@@ -20,4 +20,146 @@
 
 .sidebar {
   width: 380px;
+}
+
+.right-sidebar {
+  width: 340px;
+}
+
+.right-sidebar-section {
+  border-bottom: 1px solid var(--divider);
+}
+
+.right-sidebar-section--expanded {
+  max-height: 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.filter-toggle {
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 0.65rem;
+}
+
+.hud-readout {
+  font-size: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(0, 255, 65, 0.35);
+  white-space: nowrap;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+// ─── Tablet toggle buttons ──────────────────────
+.tablet-toggle {
+  padding: 4px 10px;
+  font-size: 0.65rem;
+}
+
+// ─── Tablet backdrop ────────────────────────────
+.tablet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: $z-index-modal-backdrop;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+// ─── Tablet drawers ─────────────────────────────
+.tablet-drawer-left,
+.tablet-drawer-right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: $z-index-modal;
+  width: 340px;
+  max-width: 85vw;
+  border: 1px solid $divider;
+  overflow: hidden;
+  animation: slide-in-left 0.2s ease-out;
+}
+
+.tablet-drawer-left {
+  left: 0;
+  border-right: 1px solid $divider;
+  animation-name: slide-in-left;
+}
+
+.tablet-drawer-right {
+  right: 0;
+  left: auto;
+  border-left: 1px solid $divider;
+  animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+// ─── Tablet HUD panel ──────────────────────────
+.tablet-hud-panel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 50px;
+  z-index: 500;
+  pointer-events: none;
+  overflow-y: auto;
+
+  // Make children position relative within this container
+  > * {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    pointer-events: auto;
+    margin-bottom: 10px;
+    width: fit-content;
+    max-width: 420px;
+  }
+}
+
+// ─── HUD toggle button ─────────────────────────
+.hud-toggle {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 501;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: $border-radius;
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  background: rgba(10, 10, 10, 0.85);
+  color: $primary;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.15);
+  transition: background 0.15s, border-color 0.15s;
+
+  &:hover {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: $primary;
+    box-shadow: $glow-primary;
+  }
 }

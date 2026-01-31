@@ -92,7 +92,7 @@ export default function StationList() {
         {filteredStations.length} stations found
         {isStale && <span className="tm-loading-spinner ms-2" style={{ width: 12, height: 12 }} />}
       </div>
-      {deferredStations.slice(0, 100).map((s) => {
+      {deferredStations.slice(0, 100).map((s, idx) => {
         const timeInfo =
           s.status === "open" || s.status === "closing-soon"
             ? getTimeUntilClose(s)
@@ -108,7 +108,10 @@ export default function StationList() {
           <div key={s.id} className="tm-list-item" onClick={() => handleClick(s)}>
             <div className="d-flex justify-content-between align-items-start">
               <div>
-                <div className={styles["station-name"]}>{s.name}</div>
+                <div className={styles["station-name"]}>
+                  <span className={styles["station-index"]}>STA-{String(idx + 1).padStart(3, "0")}</span>
+                  {s.name}
+                </div>
                 <div className={styles["station-location"]}>
                   {s.city}, {s.state} {s.postcode}
                   {s.country === "NZ" && <span className={styles["country-tag"]}> NZ</span>}

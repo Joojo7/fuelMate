@@ -143,6 +143,7 @@ function fuelMatches(filterName: string, stationFuels: string[]): boolean {
 }
 
 export function applyFilters(stations: Station[], filters: Filters): Station[] {
+  const regionSelected = filters.region || [];
   const allSelected = [
     ...filters.fuels,
     ...filters.ev,
@@ -154,12 +155,15 @@ export function applyFilters(stations: Station[], filters: Filters): Station[] {
     ...(filters.siteType || []),
     ...(filters.accessibility || []),
   ];
-  if (allSelected.length === 0) return stations;
+  if (allSelected.length === 0 && regionSelected.length === 0) return stations;
 
   return stations.filter((s) => {
+    if (regionSelected.length > 0 && !regionSelected.includes(s.state)) {
+      return false;
+    }
+    if (allSelected.length === 0) return true;
     const all = [...s.fuels, ...s.amenities];
     return allSelected.every((f) => {
-      // Check fuel equivalences
       if (filters.fuels.includes(f)) {
         return fuelMatches(f, s.fuels);
       }
