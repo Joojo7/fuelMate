@@ -1,0 +1,69 @@
+@import '../../styles/variables';
+
+.station-name {
+  color: $primary;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.station-address {
+  color: $sub;
+  font-size: 0.7rem;
+}
+
+.close-btn {
+  color: $sub;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.time-info {
+  font-size: 0.7rem;
+  color: $sub;
+}
+
+.telephone {
+  font-size: 0.75rem;
+  color: $light;
+  margin-bottom: 12px;
+}
+
+.tel-link {
+  color: $primary;
+}
+
+.hours-table {
+  font-size: 0.7rem;
+  margin-bottom: 0;
+}
+
+.day-label {
+  color: $primary;
+  font-weight: 600;
+  padding: 1px 8px 1px 0;
+  width: 40px;
+}
+
+.day-value {
+  color: $primary;
+  padding: 1px 0;
+}
+
+.hours-warning {
+  font-size: 0.65rem;
+  color: $warning;
+  margin-top: 4px;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.range-info {
+  font-size: 0.65rem;
+  color: #444444;
+  margin-top: 12px;
+}

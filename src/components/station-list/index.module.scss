@@ -1,0 +1,64 @@
+@import '../../styles/variables';
+
+.header {
+  border-bottom: 1px solid $divider;
+  color: $sub;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.station-name {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: $primary;
+}
+
+.station-location {
+  font-size: 0.7rem;
+  color: $sub;
+}
+
+.station-distance {
+  font-size: 0.65rem;
+  color: $sub;
+  margin-top: 2px;
+}
+
+.time-info {
+  font-size: 0.65rem;
+  color: #444444;
+  margin-top: 2px;
+}
+
+.fuel-chip {
+  font-size: 0.55rem;
+}
+
+.footer {
+  font-size: 0.65rem;
+  color: #444444;
+}
+
+.country-tag {
+  color: $info;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.quick-filters {
+  border-bottom: 1px solid $divider;
+}
+
+.amenity-row {
+  gap: 4px;
+}
+
+.amenity-tag {
+  font-size: 0.55rem;
+  color: $sub;
+  background: $secondary-background;
+  border: 1px solid $divider;
+  border-radius: $border-radius-sm;
+  padding: 1px 5px;
+}

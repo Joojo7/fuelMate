@@ -1,0 +1,257 @@
+@import '../../styles/variables';
+
+// ─── Layout ─────────────────────────────────────
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+// ─── Input group (search + icon + clear) ────────
+.inputGroup {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $sub;
+  pointer-events: none;
+  transition: color 0.2s;
+
+  .inputGroup:focus-within & {
+    color: $primary;
+  }
+}
+
+.searchInput {
+  width: 100%;
+  background: $secondary-background;
+  border: 1px solid $divider;
+  border-radius: $border-radius;
+  color: $primary;
+  font-family: inherit;
+  font-size: 0.8rem;
+  padding: 7px 32px 7px 30px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &::placeholder {
+    color: $placeHolder;
+    font-size: 0.7rem;
+  }
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: $glow-primary;
+  }
+}
+
+.clearBtn {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  background: $sub-background;
+  color: $sub;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s, color 0.15s;
+
+  &:hover {
+    background: $danger-background;
+    color: $danger;
+  }
+}
+
+// ─── Suggestions dropdown ───────────────────────
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: $z-index-dropdown;
+  background: $secondary-background;
+  border: 1px solid $divider;
+  border-radius: $border-radius;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), $glow-primary;
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  background: transparent;
+  color: $light;
+  font-size: 0.72rem;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.12s;
+
+  &:hover,
+  &Active {
+    background: $sub-background;
+  }
+
+  & + & {
+    border-top: 1px solid rgba($divider, 0.5);
+  }
+}
+
+.dropdownItemActive {
+  background: $sub-background;
+  color: $primary;
+}
+
+// ─── Type tags (colored per type) ───────────────
+.typeTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+  padding: 2px 6px;
+  border-radius: $border-radius-sm;
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.typeTag--station {
+  background: rgba(0, 200, 80, 0.12);
+  color: #00c850;
+}
+
+.typeTag--city {
+  background: rgba(0, 170, 255, 0.12);
+  color: #00aaff;
+}
+
+.typeTag--postcode {
+  background: rgba(255, 170, 0, 0.12);
+  color: #ffaa00;
+}
+
+.itemLabel {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+// ─── Controls (toggle + radius) ─────────────────
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.toggleBtn {
+  padding: 4px 10px;
+  border: 1px solid $divider;
+  border-radius: $border-radius-sm;
+  background: transparent;
+  color: $sub;
+  font-family: inherit;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+
+  &:hover {
+    border-color: $primary-dim;
+    color: $primary;
+  }
+}
+
+.toggleBtnActive {
+  background: $primary-muted;
+  border-color: $primary-dim;
+  color: $primary;
+  box-shadow: $glow-primary;
+}
+
+// ─── Segmented radius selector ──────────────────
+.radiusGroup {
+  display: flex;
+  align-items: center;
+  border: 1px solid $divider;
+  border-radius: $border-radius-sm;
+  overflow: hidden;
+}
+
+.radiusBtn {
+  padding: 4px 7px;
+  border: none;
+  border-right: 1px solid $divider;
+  background: transparent;
+  color: $sub;
+  font-family: inherit;
+  font-size: 0.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+
+  &:hover {
+    color: $primary;
+    background: rgba(0, 255, 65, 0.05);
+  }
+
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+.radiusBtnActive {
+  background: $primary-muted;
+  color: $primary;
+}
+
+.radiusUnit {
+  padding: 4px 6px 4px 2px;
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: $sub;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// ─── Responsive ─────────────────────────────────
+@media (max-width: 576px) {
+  .searchBar {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .inputGroup {
+    flex: 1 1 100%;
+  }
+
+  .controls {
+    flex: 1 1 100%;
+    justify-content: space-between;
+  }
+}

@@ -125,6 +125,23 @@ export function filterByRadius(
   );
 }
 
+// Fuel equivalence groups: if any name in a group is in the station's fuels, it matches
+const FUEL_EQUIVALENTS: Record<string, string[]> = {
+  "Unleaded": ["Unlead", "Unleaded 91", "BP 91"],
+  "Premium Unleaded": ["Premium Unleaded", "BP 95", "Premium Unleaded 95"],
+  "BP Ultimate Unleaded": ["BP Ultimate Unleaded", "Ultimate Unleaded 98"],
+  "Diesel": ["Diesel", "BP Diesel"],
+  "BP Ultimate Diesel": ["BP Ultimate Diesel", "Ultimate Diesel"],
+};
+
+function fuelMatches(filterName: string, stationFuels: string[]): boolean {
+  const equivalents = FUEL_EQUIVALENTS[filterName];
+  if (equivalents) {
+    return equivalents.some((e) => stationFuels.includes(e)) || stationFuels.includes(filterName);
+  }
+  return stationFuels.includes(filterName);
+}
+
 export function applyFilters(stations: Station[], filters: Filters): Station[] {
   const allSelected = [
     ...filters.fuels,
@@ -134,13 +151,18 @@ export function applyFilters(stations: Station[], filters: Filters): Station[] {
     ...filters.truckAmenities,
     ...filters.convenience,
     ...filters.loyalty,
+    ...(filters.siteType || []),
+    ...(filters.accessibility || []),
   ];
   if (allSelected.length === 0) return stations;
 
   return stations.filter((s) => {
     const all = [...s.fuels, ...s.amenities];
     return allSelected.every((f) => {
-      if (f === "Unleaded") return all.includes("Unlead") || all.includes("Unleaded");
+      // Check fuel equivalences
+      if (filters.fuels.includes(f)) {
+        return fuelMatches(f, s.fuels);
+      }
       return all.includes(f);
     });
   });

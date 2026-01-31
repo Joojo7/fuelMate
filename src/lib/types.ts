@@ -40,6 +40,8 @@ export interface Filters {
   truckAmenities: string[];
   convenience: string[];
   loyalty: string[];
+  siteType: string[];
+  accessibility: string[];
 }
 
 export interface TripStop {
@@ -60,6 +62,7 @@ export const EV_OPTIONS = ["bp pulse", "EV Charging"];
 export const FOOD_DRINK_OPTIONS = [
   "Wildbean Cafe", "Barista Coffee", "Fast Food",
   "Takeaway Food Offer", "Food Offer Instore",
+  "David Jones Food", "Couch Food", "Hungry As", "Good Mood Food", "Uber Eats",
 ];
 
 export const VEHICLE_SERVICE_OPTIONS = [
@@ -70,13 +73,27 @@ export const TRUCK_OPTIONS = [
   "Truck Parking", "Truck Driver Lounge", "Rigid Access",
   "B-double Access", "Road Train Access", "High Flow Diesel",
   "Ultra High Flow Diesel", "Weigh Bridge",
+  "Truck Suitable Site", "Truck Only", "National Diesel Offer",
 ];
 
 export const CONVENIENCE_OPTIONS = [
   "ATM", "Gift Card", "Toilets", "Shower", "Washing Machine", "Wifi",
+  "Western Union", "LPG Bottle Swap",
 ];
 
-export const LOYALTY_OPTIONS = ["BP Rewards", "AA Smartfuel", "Bpme Enabled"];
+export const LOYALTY_OPTIONS = [
+  "BP Rewards", "AA Smartfuel", "Bpme Enabled",
+  "BP Rewards – earn only", "BP Rewards Unlocked", "BP Rewards Unlocked Shop",
+  "BP Rewards Fuel Offer", "BP Rewards Shop Offer", "PAYBACK", "AHG",
+];
+
+export const SITE_TYPE_OPTIONS = [
+  "Unattended Site", "Motorway Site", "BPMePlus Participating Site",
+];
+
+export const ACCESSIBILITY_OPTIONS = [
+  "Disabled Facilities", "Recycling Facilities",
+];
 
 export const SEARCH_RADIUS_OPTIONS = [5, 10, 25, 50, 100];
 
@@ -89,6 +106,29 @@ export const STATE_TIMEZONES: Record<string, string> = {
   TAS: "Australia/Hobart",
   NT: "Australia/Darwin",
   ACT: "Australia/Sydney",
+  // NZ regions all use Pacific/Auckland
+  Auckland: "Pacific/Auckland",
+  Wellington: "Pacific/Auckland",
+  Canterbury: "Pacific/Auckland",
+  Waikato: "Pacific/Auckland",
+  "Bay of Plenty": "Pacific/Auckland",
+  Otago: "Pacific/Auckland",
+  "Hawke's Bay": "Pacific/Auckland",
+  Manawatu: "Pacific/Auckland",
+  Taranaki: "Pacific/Auckland",
+  Northland: "Pacific/Auckland",
+  Southland: "Pacific/Auckland",
+  Nelson: "Pacific/Auckland",
+  Marlborough: "Pacific/Auckland",
+  Gisborne: "Pacific/Auckland",
+  "West Coast": "Pacific/Auckland",
+  Tasman: "Pacific/Auckland",
+  // NZ suburb-level state fields from CSV
+  Linwood: "Pacific/Auckland",
+  Ilam: "Pacific/Auckland",
+  "New Brighton": "Pacific/Auckland",
+  Albany: "Pacific/Auckland",
+  Harewood: "Pacific/Auckland",
 };
 
 export const ALL_AMENITY_COLUMNS = [

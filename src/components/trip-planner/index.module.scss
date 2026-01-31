@@ -1,0 +1,121 @@
+@import '../../styles/variables';
+
+.point-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: $secondary-background;
+  border: 1px solid $divider;
+  border-radius: $border-radius;
+}
+
+.point-label {
+  font-size: 0.7rem;
+  color: $sub;
+  font-weight: 600;
+  min-width: 36px;
+}
+
+.point-value {
+  flex: 1;
+  font-size: 0.75rem;
+  color: $primary;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.point-placeholder {
+  flex: 1;
+  font-size: 0.75rem;
+  color: $sub;
+  font-style: italic;
+}
+
+.pick-btn {
+  font-size: 0.6rem;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+.pick-active {
+  color: $warning;
+  border-color: $warning;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.range-label {
+  font-size: 0.65rem;
+  color: $sub;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.range-input {
+  width: 90px;
+}
+
+.error {
+  color: $danger;
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+}
+
+.route-summary {
+  font-size: 0.75rem;
+  color: $sub;
+  margin-bottom: 8px;
+}
+
+.no-stops {
+  font-size: 0.75rem;
+  color: $primary;
+}
+
+.waypoint-count {
+  font-size: 0.65rem;
+  color: #444444;
+}
+
+.waypoint-card {
+  border-bottom: none;
+  border: 1px solid $divider;
+  border-radius: $border-radius;
+}
+
+.wp-name {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: $primary;
+}
+
+.wp-location {
+  font-size: 0.65rem;
+  color: $sub;
+}
+
+.wp-eta {
+  font-size: 0.6rem;
+  color: #444444;
+}
+
+.wp-status-online {
+  font-size: 0.6rem;
+  color: $success;
+}
+
+.wp-status-offline {
+  font-size: 0.6rem;
+  color: $danger;
+}
+
+.drop-btn {
+  font-size: 0.55rem;
+  padding: 2px 6px;
+}

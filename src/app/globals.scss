@@ -1,0 +1,463 @@
+// ─── 1. Bootstrap core utilities ──────────────────
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+// ─── 2. Custom variables & typography ─────────────
+@import '../styles/variables';
+@import '../styles/typography';
+
+// ─── 3. Theme colors (map to Bootstrap) ───────────
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  warning: $warning,
+  danger: $danger,
+  info: $info,
+  dark: $dark,
+  light: $sub-background,
+);
+
+// ─── 4. Font ──────────────────────────────────────
+$font-family-base: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+$font-size-base: 0.875rem;
+
+$font-sizes: (
+  1: 1.5rem,
+  2: 1.25rem,
+  3: 1rem,
+  4: 0.875rem,
+  5: 0.8rem,
+  6: 0.75rem,
+  7: 0.7rem,
+  8: 0.65rem,
+);
+
+// ─── 5. Spacing (4px-based) ──────────────────────
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.75,
+  4: $spacer,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 2,
+  8: $spacer * 2.5,
+);
+
+// ─── 6. Border radius ────────────────────────────
+$border-radius: 4px;
+$border-radius-sm: 2px;
+$border-radius-lg: 6px;
+
+// ─── 7. Bootstrap component overrides ────────────
+$body-bg: $primary-background;
+$body-color: $light;
+
+$border-color: $divider;
+
+$input-bg: $secondary-background;
+$input-color: $primary;
+$input-border-color: $divider;
+$input-focus-border-color: $primary;
+$input-focus-box-shadow: $glow-primary;
+$input-placeholder-color: $placeHolder;
+
+$card-bg: $secondary-background;
+$card-border-color: $divider;
+
+$nav-link-color: $sub;
+$nav-tabs-link-active-color: $primary;
+$nav-tabs-link-active-bg: transparent;
+$nav-tabs-border-color: $divider;
+
+$btn-font-weight: 600;
+
+$list-group-bg: transparent;
+$list-group-border-color: $divider;
+$list-group-action-hover-color: $primary;
+$list-group-action-active-bg: $sub-background;
+
+$offcanvas-bg: $secondary-background;
+$offcanvas-color: $light;
+
+$modal-content-bg: $secondary-background;
+$modal-content-border-color: $divider;
+
+// ─── 8. Import full Bootstrap ────────────────────
+@import '~bootstrap/scss/bootstrap';
+
+// ─── 9. CSS Custom Properties ────────────────────
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --accent: #{$accent};
+  --primary-background: #{$primary-background};
+  --secondary-background: #{$secondary-background};
+  --sub-background: #{$sub-background};
+  --success: #{$success};
+  --success-background: #{$success-background};
+  --warning: #{$warning};
+  --warning-background: #{$warning-background};
+  --danger: #{$danger};
+  --danger-background: #{$danger-background};
+  --info: #{$info};
+  --info-background: #{$info-background};
+  --light: #{$light};
+  --dark: #{$dark};
+  --divider: #{$divider};
+  --sub: #{$sub};
+  --placeHolder: #{$placeHolder};
+  --primary-dim: #{$primary-dim};
+  --primary-muted: #{$primary-muted};
+  --glow-primary: #{$glow-primary};
+  --glow-primary-strong: #{$glow-primary-strong};
+  --glow-warning: #{$glow-warning};
+  --glow-danger: #{$glow-danger};
+}
+
+// ─── 10. Base ────────────────────────────────────
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; background: $primary-background; color: $light; }
+
+// ─── 11. Leaflet ─────────────────────────────────
+.leaflet-container { height: 100%; width: 100%; z-index: 1; }
+.leaflet-popup-content-wrapper {
+  background: $secondary-background !important;
+  color: $primary !important;
+  border: 1px solid $divider;
+  box-shadow: $glow-primary;
+  border-radius: $border-radius;
+  font-family: $font-family-base;
+}
+.leaflet-popup-tip { background: $secondary-background !important; }
+
+// ─── 12. Terminal Panel ──────────────────────────
+.tm-panel {
+  background: $secondary-background;
+  border: 1px solid $divider;
+  border-radius: $border-radius;
+  box-shadow: $glow-primary;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+// ─── 13. Status badges ──────────────────────────
+.tm-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: $border-radius-sm;
+  font-size: map-get($font-sizes, 8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: $font-family-base;
+}
+.tm-badge-open {
+  background: $success-background;
+  color: $success;
+  box-shadow: $glow-primary;
+}
+.tm-badge-closing-soon {
+  background: $warning-background;
+  color: $warning;
+  box-shadow: $glow-warning;
+}
+.tm-badge-closed {
+  background: $danger-background;
+  color: $danger;
+  box-shadow: $glow-danger;
+}
+.tm-badge-unknown {
+  background: rgba(102, 102, 102, 0.15);
+  color: $sub;
+}
+.tm-badge-24h {
+  background: $info-background;
+  color: $info;
+}
+
+// ─── Fuel chips (color-coded) ────────────────────
+.tm-fuel-unleaded {
+  background: rgba(0, 200, 80, 0.15);
+  color: #00c850;
+  border-color: rgba(0, 200, 80, 0.3);
+}
+.tm-fuel-diesel {
+  background: rgba(0, 120, 255, 0.15);
+  color: #0078ff;
+  border-color: rgba(0, 120, 255, 0.3);
+}
+.tm-fuel-ev {
+  background: rgba(160, 0, 255, 0.15);
+  color: #a000ff;
+  border-color: rgba(160, 0, 255, 0.3);
+}
+.tm-fuel-gas {
+  background: rgba(255, 140, 0, 0.15);
+  color: #ff8c00;
+  border-color: rgba(255, 140, 0, 0.3);
+}
+.tm-fuel-adblue {
+  background: rgba(0, 170, 255, 0.15);
+  color: #00aaff;
+  border-color: rgba(0, 170, 255, 0.3);
+}
+
+// ─── 14. Chips ───────────────────────────────────
+.tm-chip {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: $border-radius-sm;
+  font-size: map-get($font-sizes, 8);
+  background: $sub-background;
+  color: $light;
+  border: 1px solid $divider;
+  margin: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.tm-chip-active {
+  background: $success-background;
+  color: $success;
+  border-color: $primary-dim;
+}
+
+// ─── 15. Buttons ─────────────────────────────────
+.btn-terminal {
+  background: transparent;
+  color: $primary;
+  border: 1px solid $primary-dim;
+  font-family: $font-family-base;
+  font-weight: 600;
+  font-size: map-get($font-sizes, 6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 6px 14px;
+  border-radius: $border-radius-sm;
+  transition: all 0.2s;
+  cursor: pointer;
+  &:hover {
+    background: $primary-muted;
+    color: $primary;
+    box-shadow: $glow-primary;
+  }
+}
+.btn-terminal-danger {
+  color: $danger;
+  border-color: $danger;
+  &:hover {
+    background: $danger-background;
+    box-shadow: $glow-danger;
+  }
+}
+.btn-terminal-amber {
+  color: $warning;
+  border-color: $warning;
+  &:hover {
+    background: $warning-background;
+    box-shadow: $glow-warning;
+  }
+}
+.btn-terminal-filled {
+  background: $primary;
+  color: $black;
+  border: 1px solid $primary;
+  &:hover {
+    background: $primary-dim;
+    color: $black;
+    box-shadow: $glow-primary-strong;
+  }
+}
+
+// ─── 16. Inputs ──────────────────────────────────
+.form-control, .form-select {
+  background: $secondary-background !important;
+  border: 1px solid $divider !important;
+  color: $primary !important;
+  font-family: $font-family-base;
+  font-size: map-get($font-sizes, 5);
+  border-radius: $border-radius-sm;
+  &::placeholder { color: $placeHolder; }
+  &:focus {
+    border-color: $primary !important;
+    box-shadow: $glow-primary !important;
+    outline: none;
+  }
+}
+.form-check-input {
+  background-color: $secondary-background;
+  border-color: $sub;
+  &:checked {
+    background-color: $primary;
+    border-color: $primary;
+    color: $black;
+  }
+}
+
+// ─── 17. Section headers ─────────────────────────
+.tm-section-title {
+  font-size: map-get($font-sizes, 7);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: $sub;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid $divider;
+  padding-bottom: 4px;
+}
+
+// ─── 18. Station list item ───────────────────────
+.tm-list-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid $divider;
+  cursor: pointer;
+  transition: background 0.15s;
+  &:hover {
+    background: $sub-background;
+    border-left: 2px solid $primary;
+  }
+}
+
+// ─── 19. Detail overlay ─────────────────────────
+.tm-detail-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-dropdown;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: $secondary-background;
+  border-top: 1px solid $primary-dim;
+  box-shadow: 0 -4px 20px rgba(0, 255, 65, 0.1);
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .tm-detail-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: 400px;
+    max-height: 100vh;
+    border-top: none;
+    border-left: 1px solid $primary-dim;
+  }
+}
+
+// ─── 20. Scanline effect ─────────────────────────
+.tm-scanline {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 65, 0.03) 2px,
+      rgba(0, 255, 65, 0.03) 4px
+    );
+    pointer-events: none;
+  }
+}
+
+// ─── 21. Scrollbar ───────────────────────────────
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: $primary-background; }
+::-webkit-scrollbar-thumb { background: $divider; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: $primary-dim; }
+
+// ─── 22. Nav tabs override ───────────────────────
+.nav-tabs {
+  border-bottom: 1px solid $divider;
+  .nav-link {
+    color: $sub;
+    font-size: map-get($font-sizes, 7);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    padding: 8px 12px;
+    &:hover {
+      color: $primary;
+      border-bottom-color: $primary-dim;
+    }
+    &.active {
+      color: $primary;
+      background: transparent;
+      border-bottom-color: $primary;
+    }
+  }
+}
+
+// ─── 23. Navbar ──────────────────────────────────
+.tm-navbar {
+  background: $secondary-background;
+  border-bottom: 1px solid $divider;
+  box-shadow: $glow-primary;
+  padding: 8px 16px;
+}
+
+// ─── 24. Loading ─────────────────────────────────
+.tm-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid $divider;
+  border-top-color: $primary;
+  border-radius: 50%;
+  animation: tm-spin 0.8s linear infinite;
+}
+@keyframes tm-spin {
+  to { transform: rotate(360deg); }
+}
+
+// ─── 25. Blinking cursor ─────────────────────────
+.tm-blink {
+  animation: tm-blink-anim 1s step-end infinite;
+}
+@keyframes tm-blink-anim {
+  50% { opacity: 0; }
+}
+
+// ─── 26. Utility classes ─────────────────────────
+.text-primary-green { color: $primary; }
+.text-sub { color: $sub; }
+.text-dim { color: #444444; }
+.bg-primary-bg { background: $primary-background; }
+.bg-secondary-bg { background: $secondary-background; }
+.border-divider { border-color: $divider !important; }
+.fs-7 { font-size: map-get($font-sizes, 7) !important; }
+.fs-8 { font-size: map-get($font-sizes, 8) !important; }
+.clickable { cursor: pointer; }
+
+// ─── 27. Leaflet popup dark theme ───────────────
+.leaflet-popup-content-wrapper {
+  background: $primary-background;
+  color: $light;
+  border: 1px solid $primary;
+  border-radius: $border-radius;
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.3);
+}
+.leaflet-popup-tip {
+  background: $primary-background;
+}
+.leaflet-popup-close-button {
+  color: $primary !important;
+  font-size: 18px !important;
+  &:hover {
+    color: $light !important;
+  }
+}

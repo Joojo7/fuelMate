@@ -1,0 +1,66 @@
+@import '../../styles/variables';
+
+.filter-container {
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-scroll {
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 4px;
+}
+
+.clear-btn {
+  font-size: 0.6rem;
+  padding: 3px 8px;
+}
+
+.close-btn {
+  color: $sub;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid $divider;
+  padding: 6px 0;
+  color: $sub;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.group-count {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 5px;
+  border-radius: $border-radius-sm;
+  background: $primary-muted;
+  color: $primary;
+  font-size: 0.55rem;
+  font-weight: 700;
+}
+
+.group-chevron {
+  transition: transform 0.2s ease;
+  color: $sub;
+}
+
+.group-chevron-open {
+  transform: rotate(180deg);
+}

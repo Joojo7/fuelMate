@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./globals.scss";
 import { AppProvider } from "@/context/AppContext";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           crossOrigin=""
         />
       </head>
-      <body className="bg-gray-50">
+      <body>
         <AppProvider>{children}</AppProvider>
       </body>
     </html>

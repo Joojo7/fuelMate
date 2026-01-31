@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useApp } from "@/context/AppContext";
+import styles from "./index.module.scss";
 
 export default function Favourites() {
   const { allStations, favourites, toggleFavourite, setSelectedStation, setMapCenter, setMapZoom } = useApp();
@@ -9,37 +10,39 @@ export default function Favourites() {
   const favStations = allStations.filter((s) => favourites.includes(s.id));
 
   return (
-    <div className="p-4">
-      <h3 className="font-bold mb-3">Favourite Stations</h3>
+    <div className="p-3">
+      <div className="tm-section-title">Saved Stations</div>
       {favStations.length === 0 ? (
-        <p className="text-sm text-gray-500">No favourites yet. Tap ☆ on a station to add it.</p>
+        <div className={styles.empty}>
+          No saved stations yet. Tap &quot;Save&quot; on a station to add it here.
+        </div>
       ) : (
-        <div className="space-y-2">
+        <div className="d-flex flex-column gap-2">
           {favStations.map((s) => (
             <div
               key={s.id}
-              className="p-3 bg-gray-50 rounded-lg border cursor-pointer"
+              className={`tm-list-item ${styles["fav-card"]}`}
               onClick={() => {
                 setSelectedStation(s);
                 setMapCenter([s.lat, s.lng]);
                 setMapZoom(15);
               }}
             >
-              <div className="flex justify-between items-start">
+              <div className="d-flex justify-content-between align-items-start">
                 <div>
-                  <p className="font-semibold text-sm">{s.name}</p>
-                  <p className="text-xs text-gray-500">{s.city}, {s.state}</p>
-                  <span className={`badge badge-${s.status || "unknown"} text-[0.65rem] mt-1`}>
+                  <div className={styles["station-name"]}>{s.name}</div>
+                  <div className={styles["station-location"]}>{s.city}, {s.state}</div>
+                  <span className={`tm-badge tm-badge-${s.status || "unknown"} mt-1`}>
                     {s.status === "open" ? "Open" :
                      s.status === "closing-soon" ? "Closing Soon" :
-                     s.status === "closed" ? "Closed" : "?"}
+                     s.status === "closed" ? "Closed" : "N/A"}
                   </span>
                 </div>
                 <button
                   onClick={(e) => { e.stopPropagation(); toggleFavourite(s.id); }}
-                  className="text-yellow-500"
+                  className={`btn-terminal btn-terminal-amber ${styles["untrack-btn"]}`}
                 >
-                  ★
+                  Remove
                 </button>
               </div>
             </div>

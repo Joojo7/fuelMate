@@ -1,0 +1,23 @@
+@import '../styles/variables';
+
+.brand {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+.search-wrapper {
+  max-width: 420px;
+}
+
+.filter-dropdown {
+  top: 50px;
+  right: 8px;
+  z-index: $z-index-dropdown;
+  width: 320px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.sidebar {
+  width: 380px;
+}
