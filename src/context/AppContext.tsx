@@ -1,9 +1,9 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, useCallback, useMemo, ReactNode } from "react";
-import { Station, Filters, StationStatus, CountryCode, COUNTRY_OPTIONS } from "@/lib/types";
 import { fetchCountryStations } from "@/lib/dataLoader";
-import { getStationStatus, applyFilters, searchStations, sortByDistance, filterByRadius, haversineDistance } from "@/lib/stationUtils";
+import { applyFilters, filterByRadius, getStationStatus, haversineDistance, searchStations, sortByDistance } from "@/lib/stationUtils";
+import { COUNTRY_OPTIONS, CountryCode, Filters, Station, StationStatus } from "@/lib/types";
+import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 export interface TripPoint {
   lat: number;
@@ -95,7 +95,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   // Load favourites from localStorage (filters are NOT restored — they are country-specific)
   useEffect(() => {
     try {
-      const savedFavs = localStorage.getItem("fuelmate-favourites");
+      const savedFavs = localStorage.getItem("pitstop-favourites");
       if (savedFavs) setFavourites(JSON.parse(savedFavs));
     } catch {}
   }, []);
@@ -157,7 +157,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const toggleFavourite = useCallback((id: string) => {
     setFavourites((prev) => {
       const next = prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id];
-      localStorage.setItem("fuelmate-favourites", JSON.stringify(next));
+      localStorage.setItem("pitstop-favourites", JSON.stringify(next));
       return next;
     });
   }, []);

@@ -2,6 +2,16 @@
 
 import { useMemo } from "react";
 import { useApp } from "@/context/AppContext";
+import { HUD_GREEN } from "@/lib/constants";
+import {
+  HudPanel,
+  HudSectionLabel,
+  HudDivider,
+  hudBaseChartOptions,
+  hudAxisStyle,
+  hudGridStyle,
+  hudBorderStyle,
+} from "@/components/hud-primitives/hud-primitives";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -59,7 +69,7 @@ export default function HudStats() {
       {
         data: FUEL_TYPES.map((ft) => fuelCounts[ft.key]),
         backgroundColor: "rgba(0, 255, 65, 0.6)",
-        borderColor: "#00ff41",
+        borderColor: HUD_GREEN,
         borderWidth: 1,
         borderRadius: 2,
         hoverBackgroundColor: "rgba(0, 255, 65, 0.85)",
@@ -68,51 +78,33 @@ export default function HudStats() {
   }), [fuelCounts]);
 
   const chartOptions = useMemo(() => ({
-    responsive: true,
-    maintainAspectRatio: false,
-    animation: { duration: 400 } as const,
-    plugins: {
-      tooltip: {
-        backgroundColor: "rgba(10, 10, 10, 0.9)",
-        titleColor: "#00ff41",
-        bodyColor: "#00ff41",
-        borderColor: "rgba(0, 255, 65, 0.3)",
-        borderWidth: 1,
-        titleFont: { family: "'JetBrains Mono', monospace", size: 12 },
-        bodyFont: { family: "'JetBrains Mono', monospace", size: 12 },
-      },
-      legend: { display: false },
-    },
+    ...hudBaseChartOptions,
     scales: {
       x: {
-        ticks: {
-          color: "rgba(0, 255, 65, 0.5)",
-          font: { family: "'JetBrains Mono', monospace", size: 12, weight: 700 as const },
-        },
-        grid: { color: "rgba(0, 255, 65, 0.06)" },
-        border: { color: "rgba(0, 255, 65, 0.15)" },
+        ticks: hudAxisStyle("rgba(0, 255, 65, 0.5)", 12, 700),
+        grid: hudGridStyle,
+        border: hudBorderStyle,
       },
       y: {
         beginAtZero: true,
         ticks: {
-          color: "rgba(0, 255, 65, 0.35)",
-          font: { family: "'JetBrains Mono', monospace", size: 11 },
+          ...hudAxisStyle("rgba(0, 255, 65, 0.35)", 11),
           stepSize: Math.ceil(Math.max(...Object.values(fuelCounts), 1) / 4),
         },
-        grid: { color: "rgba(0, 255, 65, 0.06)" },
-        border: { color: "rgba(0, 255, 65, 0.15)" },
+        grid: hudGridStyle,
+        border: hudBorderStyle,
       },
     },
   }), [fuelCounts]);
 
   return (
-    <div className={styles["stats-panel"]}>
-      <div className={styles["section-label"]}>Fuel Distribution</div>
+    <HudPanel className="h-100" style={{ padding: "24px 30px" }}>
+      <HudSectionLabel>Fuel Distribution</HudSectionLabel>
       <div className={styles["chart-wrapper"]}>
         <Bar data={chartData} options={chartOptions} />
       </div>
 
-      <div className={styles.divider} />
+      <HudDivider />
 
       <div className={styles["filter-line"]}>
         {activeFilterCount > 0 ? (
@@ -125,6 +117,6 @@ export default function HudStats() {
         SHOWING <span className={styles["filter-count"]}>{filteredStations.length}</span>
         <span className={styles["filter-dim"]}> / {allStations.length}</span>
       </div>
-    </div>
+    </HudPanel>
   );
 }

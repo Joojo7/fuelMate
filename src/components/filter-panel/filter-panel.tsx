@@ -9,6 +9,10 @@ import {
   SITE_TYPE_OPTIONS, ACCESSIBILITY_OPTIONS, REGION_OPTIONS_BY_COUNTRY, BRAND_OPTIONS,
   BRAND_LABELS, BRAND_COLORS,
 } from "@/lib/types";
+import {
+  FILTER_TITLE, FILTER_CLEAR, FILTER_OPEN_NOW, FILTER_ON, FILTER_OFF,
+  FILTER_BRAND, FILTER_GROUP_TITLES,
+} from "@/lib/constants";
 import styles from "./index.module.scss";
 
 function FilterGroup({
@@ -84,10 +88,10 @@ export default function FilterPanel({ onClose }: { onClose: () => void }) {
   return (
     <div className={styles["filter-container"]}>
       <div className="d-flex justify-content-between align-items-center mb-3">
-        <span className="tm-section-title mb-0 border-0 pb-0">Filters</span>
+        <span className="tm-section-title mb-0 border-0 pb-0">{FILTER_TITLE}</span>
         <div className="d-flex gap-2">
           <button onClick={clearAll} className={`btn-terminal btn-terminal-danger ${styles["clear-btn"]}`}>
-            Clear All
+            {FILTER_CLEAR}
           </button>
           <button onClick={onClose} className={styles["close-btn"]}>&times;</button>
         </div>
@@ -95,18 +99,18 @@ export default function FilterPanel({ onClose }: { onClose: () => void }) {
 
       <div className={styles["filter-scroll"]}>
         <div className={`d-flex align-items-center justify-content-between mb-2 pb-2 ${styles["open-now-row"]}`}>
-          <span className={styles["open-now-label"]}>OPEN NOW</span>
+          <span className={styles["open-now-label"]}>{FILTER_OPEN_NOW}</span>
           <button
             className={`btn-terminal ${!showAll ? "btn-terminal-filled" : ""} ${styles["open-now-btn"]}`}
             onClick={() => setShowAll(!showAll)}
           >
-            {!showAll ? "ON" : "OFF"}
+            {!showAll ? FILTER_ON : FILTER_OFF}
           </button>
         </div>
         {brandOptions.length > 1 && (
           <div className="mb-2">
             <div className={styles["group-header"]} style={{ cursor: "default" }}>
-              <span>BRAND{(filters.brand || []).length > 0 && (
+              <span>{FILTER_BRAND}{(filters.brand || []).length > 0 && (
                 <span className={styles["group-count"]}>{(filters.brand || []).length}</span>
               )}</span>
             </div>
@@ -136,16 +140,16 @@ export default function FilterPanel({ onClose }: { onClose: () => void }) {
             </div>
           </div>
         )}
-        <FilterGroup title="REGION" options={regionOptions} selected={filters.region || []} onChange={(v) => update("region", v)} defaultOpen />
-        <FilterGroup title="FUEL TYPE" options={FUEL_OPTIONS} selected={filters.fuels} onChange={(v) => update("fuels", v)} />
-        <FilterGroup title="EV" options={EV_OPTIONS} selected={filters.ev} onChange={(v) => update("ev", v)} />
-        <FilterGroup title="FOOD & DRINK" options={FOOD_DRINK_OPTIONS} selected={filters.foodDrink} onChange={(v) => update("foodDrink", v)} />
-        <FilterGroup title="VEHICLE SERVICES" options={VEHICLE_SERVICE_OPTIONS} selected={filters.vehicleServices} onChange={(v) => update("vehicleServices", v)} />
-        <FilterGroup title="TRUCK AMENITIES" options={TRUCK_OPTIONS} selected={filters.truckAmenities} onChange={(v) => update("truckAmenities", v)} />
-        <FilterGroup title="CONVENIENCE" options={CONVENIENCE_OPTIONS} selected={filters.convenience} onChange={(v) => update("convenience", v)} />
-        <FilterGroup title="LOYALTY & PAYMENTS" options={LOYALTY_OPTIONS} selected={filters.loyalty} onChange={(v) => update("loyalty", v)} />
-        <FilterGroup title="SITE TYPE" options={SITE_TYPE_OPTIONS} selected={filters.siteType || []} onChange={(v) => update("siteType", v)} />
-        <FilterGroup title="ACCESSIBILITY" options={ACCESSIBILITY_OPTIONS} selected={filters.accessibility || []} onChange={(v) => update("accessibility", v)} />
+        <FilterGroup title={FILTER_GROUP_TITLES.region} options={regionOptions} selected={filters.region || []} onChange={(v) => update("region", v)} defaultOpen />
+        <FilterGroup title={FILTER_GROUP_TITLES.fuels} options={FUEL_OPTIONS} selected={filters.fuels} onChange={(v) => update("fuels", v)} />
+        <FilterGroup title={FILTER_GROUP_TITLES.ev} options={EV_OPTIONS} selected={filters.ev} onChange={(v) => update("ev", v)} />
+        <FilterGroup title={FILTER_GROUP_TITLES.foodDrink} options={FOOD_DRINK_OPTIONS} selected={filters.foodDrink} onChange={(v) => update("foodDrink", v)} />
+        <FilterGroup title={FILTER_GROUP_TITLES.vehicleServices} options={VEHICLE_SERVICE_OPTIONS} selected={filters.vehicleServices} onChange={(v) => update("vehicleServices", v)} />
+        <FilterGroup title={FILTER_GROUP_TITLES.truckAmenities} options={TRUCK_OPTIONS} selected={filters.truckAmenities} onChange={(v) => update("truckAmenities", v)} />
+        <FilterGroup title={FILTER_GROUP_TITLES.convenience} options={CONVENIENCE_OPTIONS} selected={filters.convenience} onChange={(v) => update("convenience", v)} />
+        <FilterGroup title={FILTER_GROUP_TITLES.loyalty} options={LOYALTY_OPTIONS} selected={filters.loyalty} onChange={(v) => update("loyalty", v)} />
+        <FilterGroup title={FILTER_GROUP_TITLES.siteType} options={SITE_TYPE_OPTIONS} selected={filters.siteType || []} onChange={(v) => update("siteType", v)} />
+        <FilterGroup title={FILTER_GROUP_TITLES.accessibility} options={ACCESSIBILITY_OPTIONS} selected={filters.accessibility || []} onChange={(v) => update("accessibility", v)} />
       </div>
     </div>
   );

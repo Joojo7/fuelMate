@@ -51,7 +51,7 @@ const AMENITY_ICONS: Record<string, string> = {
   "Fast Food": "Food",
 };
 
-export default function StationList() {
+export default function StationList({ onSwitchToMap }: { onSwitchToMap?: () => void } = {}) {
   const { filteredStations, setSelectedStation, setMapCenter, setMapZoom, filters, setFilters } = useApp();
   const deferredStations = useDeferredValue(filteredStations);
   const isStale = deferredStations !== filteredStations;
@@ -60,6 +60,7 @@ export default function StationList() {
     setSelectedStation(station);
     setMapCenter([station.lat, station.lng]);
     setMapZoom(15);
+    onSwitchToMap?.();
   };
 
   const toggleQuickFilter = (qf: typeof QUICK_FILTERS[0]) => {

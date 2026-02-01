@@ -1,48 +1,95 @@
 @import '../styles/variables';
 
+// ─── Header layout ─────────────────────────────
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 10px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.mobile-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 4px;
+}
+
+.mobile-search-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.desktop-row {
+  width: 100%;
+}
+
 .brand {
   font-size: 0.9rem;
   letter-spacing: 0.1em;
-}
-
-// ─── Country selector ───────────────────────────
-.country-select {
-  appearance: none;
-  background: transparent;
-  border: 1px solid rgba(0, 255, 65, 0.3);
-  border-radius: $border-radius;
-  color: $primary;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 4px 20px 4px 8px;
-  cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2300ff41'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 6px center;
-  white-space: nowrap;
-
-  option {
-    background: #0a0a0a;
-    color: $primary;
-  }
-
-  &:hover, &:focus {
-    border-color: $primary;
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 255, 65, 0.2);
-  }
 }
 
 .search-wrapper {
   max-width: 420px;
 }
 
+// ─── Mobile menu ────────────────────────────────
+.mobile-menu-toggle {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+}
+
+.mobile-menu {
+  background: rgba(10, 10, 10, 0.95);
+  border-bottom: 1px solid $divider;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: menu-slide-down 0.15s ease-out;
+}
+
+.mobile-menu-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.mobile-menu-label {
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: rgba(0, 255, 65, 0.4);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.mobile-menu-readout {
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: rgba(0, 255, 65, 0.5);
+  letter-spacing: 0.1em;
+  text-align: right;
+}
+
+@keyframes menu-slide-down {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .filter-dropdown {
-  top: 50px;
+  top: 80px;
   right: 8px;
+
+  @media (min-width: 768px) {
+    top: 50px;
+  }
   z-index: $z-index-modal;
   width: 320px;
   max-height: 70vh;
@@ -55,25 +102,6 @@
 
 .right-sidebar {
   width: 340px;
-}
-
-.right-sidebar-section {
-  border-bottom: 1px solid var(--divider);
-}
-
-.right-sidebar-section--expanded {
-  max-height: 50%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.filter-toggle {
-  border: none;
-  border-radius: 0;
-  text-align: left;
-  padding: 10px 12px;
-  font-size: 0.65rem;
 }
 
 .hud-readout {
@@ -141,8 +169,18 @@
   to { transform: translateX(0); }
 }
 
-// ─── Tablet HUD panel ──────────────────────────
-.tablet-hud-panel {
+// ─── HUD status dock (desktop, right side) ──────
+.hud-status-dock {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 500;
+  width: 280px;
+  pointer-events: none;
+}
+
+// ─── HUD overlay (grid container) ───────────────
+.hud-overlay {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -150,20 +188,23 @@
   bottom: 50px;
   z-index: 500;
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
-  // Make children position relative within this container
-  > * {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
+  @media (max-width: 1199.98px) {
     pointer-events: auto;
-    margin-bottom: 10px;
-    width: fit-content;
-    max-width: 420px;
+    overscroll-behavior: contain;
   }
+}
+
+.hud-overlay-interactive {
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: $border-radius;
+  padding: 8px;
 }
 
 // ─── HUD toggle button ─────────────────────────
@@ -177,7 +218,7 @@
   padding: 6px 12px;
   border-radius: $border-radius;
   border: 1px solid rgba(0, 255, 65, 0.3);
-  background: rgba(10, 10, 10, 0.85);
+  background: rgb(10, 10, 10);
   color: $primary;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.65rem;

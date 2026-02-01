@@ -13,7 +13,7 @@ const TYPE_ICON: Record<string, React.ReactNode> = {
   postcode: <HashIcon size={12} weight="bold" />,
 };
 
-export default function SearchBar() {
+export default function SearchBar({ trailing }: { trailing?: React.ReactNode } = {}) {
   const {
     allStations, setSearchQuery, setSelectedStation,
     setMapCenter, setMapZoom, showAll, setShowAll,
@@ -172,7 +172,7 @@ export default function SearchBar() {
           onClick={() => setRadiusEnabled(!radiusEnabled)}
           title={radiusEnabled ? "Disable radius filter" : "Enable radius filter"}
         >
-          RAD
+          APPLY RADIUS
         </button>
         <div className={`${styles.radiusGroup} ${!radiusEnabled ? styles.radiusGroupDisabled : ""}`}>
           {RADIUS_OPTIONS.map((r) => (
@@ -186,6 +186,7 @@ export default function SearchBar() {
           ))}
           <span className={styles.radiusUnit}>km</span>
         </div>
+        {trailing}
       </div>
     </div>
   );

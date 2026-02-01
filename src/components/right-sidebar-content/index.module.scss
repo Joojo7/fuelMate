@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+
+.right-sidebar-section {
+  border-bottom: 1px solid var(--divider);
+}
+
+.right-sidebar-section--expanded {
+  max-height: 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.filter-toggle {
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 0.65rem;
+}

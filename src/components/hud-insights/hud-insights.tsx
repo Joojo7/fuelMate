@@ -2,6 +2,18 @@
 
 import { useMemo } from "react";
 import { useApp } from "@/context/AppContext";
+import { INSIGHTS_BY_REGION, INSIGHTS_AMENITIES, INSIGHTS_COVERAGE, INSIGHTS_RADIUS, HUD_GREEN } from "@/lib/constants";
+import {
+  HudPanel,
+  HudSectionLabel,
+  HudDivider,
+  HudStatLine,
+  HUD_FONT,
+  hudBaseChartOptions,
+  hudAxisStyle,
+  hudGridStyle,
+  hudBorderStyle,
+} from "@/components/hud-primitives/hud-primitives";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -13,8 +25,7 @@ import {
   Filler,
   Tooltip,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
-import { Radar } from "react-chartjs-2";
+import { Bar, Radar } from "react-chartjs-2";
 import styles from "./index.module.scss";
 
 ChartJS.register(
@@ -22,7 +33,6 @@ ChartJS.register(
   RadialLinearScale, PointElement, LineElement, Filler, Tooltip
 );
 
-// Match against normalized generic amenity/fuel names
 const AMENITY_CATEGORIES: { label: string; match: (a: string) => boolean }[] = [
   { label: "Food", match: (a) => ["Cafe", "Fast Food", "Food Store", "Delivery"].includes(a) },
   { label: "EV", match: (a) => a === "EV Charging" },
@@ -35,24 +45,19 @@ const AMENITY_CATEGORIES: { label: string; match: (a: string) => boolean }[] = [
   { label: "Lube", match: (a) => ["Lube Service", "Service Bay"].includes(a) },
 ];
 
-const FONT = "'JetBrains Mono', monospace";
-
 export default function HudInsights() {
   const { filteredStations, userLocation, mapCenter } = useApp();
 
-  // Regional counts — dynamically built from station data
   const regionData = useMemo(() => {
     const counts: Record<string, number> = {};
     for (const s of filteredStations) {
       const region = s.state || "Unknown";
       counts[region] = (counts[region] || 0) + 1;
     }
-    // Sort by count descending, cap at 12 for readability
     const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 12);
     return { labels: sorted.map(([l]) => l), data: sorted.map(([, v]) => v) };
   }, [filteredStations]);
 
-  // Amenity counts
   const amenityData = useMemo(() => {
     const counts = AMENITY_CATEGORIES.map(() => 0);
     for (const s of filteredStations) {
@@ -64,10 +69,8 @@ export default function HudInsights() {
     return counts;
   }, [filteredStations]);
 
-  // Coverage radius
   const coverageKm = useMemo(() => {
     if (filteredStations.length === 0) return 0;
-    const ref = userLocation || { lat: mapCenter[0], lng: mapCenter[1] };
     let maxDist = 0;
     for (const s of filteredStations) {
       if (s.distance !== undefined && s.distance > maxDist) {
@@ -82,7 +85,7 @@ export default function HudInsights() {
     datasets: [{
       data: regionData.data,
       backgroundColor: "rgba(0, 255, 65, 0.5)",
-      borderColor: "#00ff41",
+      borderColor: HUD_GREEN,
       borderWidth: 1,
       borderRadius: 2,
       hoverBackgroundColor: "rgba(0, 255, 65, 0.8)",
@@ -90,40 +93,22 @@ export default function HudInsights() {
   }), [regionData]);
 
   const barOptions = useMemo(() => ({
+    ...hudBaseChartOptions,
     indexAxis: "y" as const,
-    responsive: true,
-    maintainAspectRatio: false,
-    animation: { duration: 400 } as const,
-    plugins: {
-      tooltip: {
-        backgroundColor: "rgba(10, 10, 10, 0.9)",
-        titleColor: "#00ff41",
-        bodyColor: "#00ff41",
-        borderColor: "rgba(0, 255, 65, 0.3)",
-        borderWidth: 1,
-        titleFont: { family: FONT, size: 12 },
-        bodyFont: { family: FONT, size: 12 },
-      },
-      legend: { display: false },
-    },
     scales: {
       x: {
         beginAtZero: true,
         ticks: {
-          color: "rgba(0, 255, 65, 0.35)",
-          font: { family: FONT, size: 11 },
+          ...hudAxisStyle("rgba(0, 255, 65, 0.35)", 11),
           stepSize: Math.ceil(Math.max(...regionData.data, 1) / 3),
         },
-        grid: { color: "rgba(0, 255, 65, 0.06)" },
-        border: { color: "rgba(0, 255, 65, 0.15)" },
+        grid: hudGridStyle,
+        border: hudBorderStyle,
       },
       y: {
-        ticks: {
-          color: "rgba(0, 255, 65, 0.5)",
-          font: { family: FONT, size: 9, weight: 700 as const },
-        },
+        ticks: hudAxisStyle("rgba(0, 255, 65, 0.5)", 9, 700),
         grid: { display: false },
-        border: { color: "rgba(0, 255, 65, 0.15)" },
+        border: hudBorderStyle,
       },
     },
   }), [regionData]);
@@ -135,29 +120,15 @@ export default function HudInsights() {
       backgroundColor: "rgba(0, 255, 65, 0.12)",
       borderColor: "rgba(0, 255, 65, 0.6)",
       borderWidth: 1.5,
-      pointBackgroundColor: "#00ff41",
-      pointBorderColor: "#00ff41",
+      pointBackgroundColor: HUD_GREEN,
+      pointBorderColor: HUD_GREEN,
       pointRadius: 2,
       pointHoverRadius: 4,
     }],
   }), [amenityData]);
 
   const radarOptions = useMemo(() => ({
-    responsive: true,
-    maintainAspectRatio: false,
-    animation: { duration: 400 } as const,
-    plugins: {
-      tooltip: {
-        backgroundColor: "rgba(10, 10, 10, 0.9)",
-        titleColor: "#00ff41",
-        bodyColor: "#00ff41",
-        borderColor: "rgba(0, 255, 65, 0.3)",
-        borderWidth: 1,
-        titleFont: { family: FONT, size: 12 },
-        bodyFont: { family: FONT, size: 12 },
-      },
-      legend: { display: false },
-    },
+    ...hudBaseChartOptions,
     scales: {
       r: {
         beginAtZero: true,
@@ -169,39 +140,40 @@ export default function HudInsights() {
         angleLines: { color: "rgba(0, 255, 65, 0.1)" },
         pointLabels: {
           color: "rgba(0, 255, 65, 0.5)",
-          font: { family: FONT, size: 10, weight: 700 as const },
+          font: { family: HUD_FONT, size: 10, weight: 700 as const },
         },
       },
     },
   }), [amenityData]);
 
+  const coverageValue = coverageKm < 1
+    ? `${Math.round(coverageKm * 1000)}m`
+    : `${coverageKm.toFixed(0)}km`;
+
   return (
-    <div className={styles.panel}>
+    <HudPanel className="h-100">
       <div className={styles["charts-row"]}>
         <div className={styles["chart-col"]}>
-          <div className={styles["section-label"]}>By Region</div>
+          <HudSectionLabel>{INSIGHTS_BY_REGION}</HudSectionLabel>
           <div className={styles["bar-wrapper"]}>
             <Bar data={barChartData} options={barOptions} />
           </div>
         </div>
         <div className={styles["chart-col"]}>
-          <div className={styles["section-label"]}>Amenities</div>
+          <HudSectionLabel>{INSIGHTS_AMENITIES}</HudSectionLabel>
           <div className={styles["radar-wrapper"]}>
             <Radar data={radarChartData} options={radarOptions} />
           </div>
         </div>
       </div>
 
-      <div className={styles.divider} />
+      <HudDivider />
 
-      <div className={styles["stat-line"]}>
-        COVERAGE: <span className={styles["stat-val"]}>
-          {coverageKm < 1
-            ? `${Math.round(coverageKm * 1000)}m`
-            : `${coverageKm.toFixed(0)}km`}
-        </span>
-        <span className={styles["stat-dim"]}> radius</span>
-      </div>
-    </div>
+      <HudStatLine
+        label={INSIGHTS_COVERAGE}
+        value={coverageValue}
+        dim={INSIGHTS_RADIUS}
+      />
+    </HudPanel>
   );
 }

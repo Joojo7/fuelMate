@@ -1,0 +1,73 @@
+/* Joyride tooltip theme — terminal/HUD aesthetic */
+
+.react-joyride__tooltip {
+  background: #0a0a0a !important;
+  border: 1px solid #00ff41 !important;
+  border-radius: 4px !important;
+  font-family: "Fira Code", "JetBrains Mono", monospace !important;
+  color: #c8c8c8 !important;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.15), 0 4px 16px rgba(0, 0, 0, 0.6) !important;
+  padding: 16px !important;
+  max-width: calc(100vw - 32px) !important;
+
+  h4 {
+    color: #00ff41 !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 8px !important;
+    font-weight: 700 !important;
+  }
+
+  div[role="alert"] {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  button[data-action="primary"] {
+    background: #00ff41 !important;
+    color: #0a0a0a !important;
+    border: none !important;
+    border-radius: 2px !important;
+    font-family: inherit !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+    padding: 6px 16px !important;
+
+    &:hover {
+      background: #00cc33 !important;
+    }
+  }
+
+  button[data-action="back"] {
+    color: #00ff41 !important;
+    font-family: inherit !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+  }
+
+  button[data-action="skip"] {
+    color: #666 !important;
+    font-family: inherit !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+  }
+
+  footer span {
+    color: #444 !important;
+    font-size: 11px !important;
+  }
+}
+
+.react-joyride__spotlight {
+  border: 2px solid rgba(0, 255, 65, 0.4) !important;
+  border-radius: 4px !important;
+}
+
+.react-joyride__beacon {
+  display: none !important;
+}

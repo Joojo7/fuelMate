@@ -1,4 +1,4 @@
-export type CountryCode = "AU" | "MY";
+export type CountryCode = "AU" | "MY" | "GH" | "CI" | "BF";
 
 export interface Station {
   id: string;
@@ -63,11 +63,17 @@ export interface TripStop {
 export const COUNTRY_OPTIONS: { code: CountryCode; label: string; center: [number, number]; zoom: number }[] = [
   { code: "AU", label: "Australia / NZ", center: [-25.2744, 133.7751], zoom: 5 },
   { code: "MY", label: "Malaysia", center: [4.2105, 101.9758], zoom: 7 },
+  { code: "GH", label: "Ghana", center: [7.9465, -1.0232], zoom: 7 },
+  { code: "CI", label: "Côte d'Ivoire", center: [7.54, -5.5471], zoom: 7 },
+  { code: "BF", label: "Burkina Faso", center: [12.3714, -1.5197], zoom: 7 },
 ];
 
 export const BRAND_OPTIONS: Record<CountryCode, string[]> = {
   AU: ["bp"],
   MY: ["shell", "caltex", "caltex-workshop"],
+  GH: ["shell", "totalenergies"],
+  CI: ["shell"],
+  BF: ["shell"],
 };
 
 // Brand display names (for filter labels)
@@ -76,6 +82,7 @@ export const BRAND_LABELS: Record<string, string> = {
   shell: "Shell",
   caltex: "Caltex",
   "caltex-workshop": "Caltex Workshop",
+  totalenergies: "TotalEnergies",
 };
 
 // Brand colors — primary, secondary, accent
@@ -84,6 +91,7 @@ export const BRAND_COLORS: Record<string, { primary: string; secondary: string; 
   shell: { primary: "#fbce07", secondary: "#dd1d21", accent: "#ffffff" },        // Shell yellow, red pecten
   caltex: { primary: "#00a5b5", secondary: "#e21836", accent: "#ffffff" },       // Caltex teal, red star
   "caltex-workshop": { primary: "#00a5b5", secondary: "#e21836", accent: "#f5a623" }, // Same + orange wrench accent
+  totalenergies: { primary: "#ed1c24", secondary: "#002d72", accent: "#ffffff" },    // TotalEnergies red, navy
 };
 
 // ─── Per-country filter options ─────────────────────
@@ -100,6 +108,9 @@ export const REGION_OPTIONS_BY_COUNTRY: Record<CountryCode, string[]> = {
     "Pahang", "Perak", "Perlis", "Penang", "Sabah", "Sarawak",
     "Selangor", "Terengganu", "Kuala Lumpur", "Putrajaya", "Labuan",
   ],
+  GH: [],
+  CI: [],
+  BF: [],
 };
 
 // Generic fuel options (used in filter UI — shown for all countries)
@@ -196,6 +207,15 @@ export const STATE_TIMEZONES: Record<string, string> = {
   "Kuala Lumpur": "Asia/Kuala_Lumpur",
   Putrajaya: "Asia/Kuala_Lumpur",
   Labuan: "Asia/Kuala_Lumpur",
+};
+
+export const COUNTRY_TIMEZONES: Record<string, string> = {
+  AU: "Australia/Sydney",
+  NZ: "Pacific/Auckland",
+  MY: "Asia/Kuala_Lumpur",
+  GH: "Africa/Accra",
+  CI: "Africa/Abidjan",
+  BF: "Africa/Ouagadougou",
 };
 
 export const ALL_AMENITY_COLUMNS = [

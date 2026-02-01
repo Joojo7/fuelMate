@@ -1,8 +1,37 @@
 {
-  "fuels": {},
+  "fuels": {
+    "diesel_fit": "Diesel Fit",
+    "cng": "Cng",
+    "autogas_lpg": "Autogas Lpg",
+    "truck_diesel": "Truck Diesel"
+  },
   "amenities": {
-    "other_third_party_rental": "Other Third Party Rental",
-    "adblue_pack": "Adblue Pack",
-    "adblue_car": "Adblue Car"
+    "bottled_gas": "Bottled Gas",
+    "free_toilet": "Free Toilet",
+    "money_transfer_services": "Money Transfer Services",
+    "other_oil_change": "Other Oil Change",
+    "restaurant": "Restaurant",
+    "pizza": "Pizza",
+    "pizza_hut_express": "Pizza Hut Express",
+    "tyre_centre": "Tyre Centre",
+    "forecourt": "Forecourt",
+    "pharmacy": "Pharmacy",
+    "laundrette": "Laundrette",
+    "hgv_lane": "Hgv Lane",
+    "car_wash_hydrajet": "Car Wash Hydrajet",
+    "alcoholic_beverages_beer": "Alcoholic Beverages Beer",
+    "alcoholic_beverages_spirits": "Alcoholic Beverages Spirits",
+    "alcoholic_beverages_wine": "Alcoholic Beverages Wine",
+    "solar_panels": "Solar Panels",
+    "baby_change_facilities": "Baby Change Facilities",
+    "diagnostics": "Diagnostics",
+    "car_wash_soft_cloth": "Car Wash Soft Cloth",
+    "water_refills": "Water Refills",
+    "pizza_hut": "Pizza Hut",
+    "mobile_payment_cartes_bancaires": "Mobile Payment Cartes Bancaires",
+    "mobile_payment_mastercard": "Mobile Payment Mastercard",
+    "mobile_payment_visa": "Mobile Payment Visa",
+    "kfc": "Kfc",
+    "phone_shop": "Phone Shop"
   }
 }

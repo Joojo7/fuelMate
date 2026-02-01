@@ -1,4 +1,4 @@
-import { Station, StationStatus, Filters, STATE_TIMEZONES } from "./types";
+import { Station, StationStatus, Filters, STATE_TIMEZONES, COUNTRY_TIMEZONES } from "./types";
 
 const DAY_KEYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"] as const;
 
@@ -9,8 +9,7 @@ function getNowInTimezone(tz: string): Date {
 
 function getTimezone(station: Station): string {
   if (STATE_TIMEZONES[station.state]) return STATE_TIMEZONES[station.state];
-  if (station.country_code === "NZ" || station.country === "New Zealand") return "Pacific/Auckland";
-  if (station.country_code === "MY" || station.country === "Malaysia") return "Asia/Kuala_Lumpur";
+  if (COUNTRY_TIMEZONES[station.country_code]) return COUNTRY_TIMEZONES[station.country_code];
   return "Australia/Sydney";
 }
 

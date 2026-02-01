@@ -2,6 +2,13 @@
 
 import { useMemo } from "react";
 import { useApp } from "@/context/AppContext";
+import { HUD_GREEN } from "@/lib/constants";
+import {
+  HudPanel,
+  HudDivider,
+  HudStatLine,
+  hudBaseChartOptions,
+} from "@/components/hud-primitives/hud-primitives";
 import {
   Chart as ChartJS,
   ArcElement,
@@ -13,7 +20,7 @@ import styles from "./index.module.scss";
 ChartJS.register(ArcElement, Tooltip);
 
 export default function HudStatusRing() {
-  const { filteredStations, allStations, userLocation, mapCenter } = useApp();
+  const { filteredStations, userLocation, mapCenter } = useApp();
 
   const statusCounts = useMemo(() => {
     const counts = { open: 0, "closing-soon": 0, closed: 0, unknown: 0 };
@@ -30,7 +37,6 @@ export default function HudStatusRing() {
   );
 
   const nearest = useMemo(() => {
-    const ref = userLocation || { lat: mapCenter[0], lng: mapCenter[1] };
     let best: { name: string; dist: number } | null = null;
     for (const s of filteredStations) {
       if (s.status !== "open" && s.status !== "closing-soon") continue;
@@ -53,38 +59,36 @@ export default function HudStatusRing() {
         "rgba(255, 0, 51, 0.7)",
         "rgba(102, 102, 102, 0.5)",
       ],
-      borderColor: [
-        "#00ff41",
-        "#ffd700",
-        "#ff0033",
-        "#666666",
-      ],
+      borderColor: [HUD_GREEN, "#ffd700", "#ff0033", "#666666"],
       borderWidth: 1,
       hoverOffset: 4,
     }],
   }), [statusCounts]);
 
   const chartOptions = useMemo(() => ({
-    responsive: true,
-    maintainAspectRatio: false,
+    ...hudBaseChartOptions,
     cutout: "65%",
-    animation: { duration: 400 } as const,
     plugins: {
+      ...hudBaseChartOptions.plugins,
       tooltip: {
-        backgroundColor: "rgba(10, 10, 10, 0.9)",
-        titleColor: "#00ff41",
+        ...hudBaseChartOptions.plugins.tooltip,
         bodyColor: "#cccccc",
-        borderColor: "rgba(0, 255, 65, 0.3)",
-        borderWidth: 1,
-        titleFont: { family: "'JetBrains Mono', monospace", size: 12 },
-        bodyFont: { family: "'JetBrains Mono', monospace", size: 12 },
       },
-      legend: { display: false },
     },
   }), []);
 
+  const nearestValue = nearest
+    ? nearest.dist < 1
+      ? `${Math.round(nearest.dist * 1000)}m`
+      : `${nearest.dist.toFixed(1)}km`
+    : null;
+
+  const nearestDim = nearest
+    ? nearest.name.length > 18 ? nearest.name.slice(0, 18) + "..." : nearest.name
+    : null;
+
   return (
-    <div className={styles.panel}>
+    <HudPanel style={{ padding: "12px 14px" }}>
       <div className={styles["chart-row"]}>
         <div className={styles["chart-box"]}>
           <Doughnut data={chartData} options={chartOptions} />
@@ -112,23 +116,21 @@ export default function HudStatusRing() {
         </div>
       </div>
 
-      <div className={styles.divider} />
+      <HudDivider />
 
-      <div className={styles["stat-line"]}>
-        24H STATIONS: <span className={styles["stat-val"]}>{twentyFourCount}</span>
-        <span className={styles["stat-dim"]}> / {filteredStations.length}</span>
-      </div>
+      <HudStatLine
+        label="24H STATIONS"
+        value={twentyFourCount}
+        dim={`/ ${filteredStations.length}`}
+      />
 
       {nearest && (
-        <div className={styles["stat-line"]}>
-          NEAREST: <span className={styles["stat-val"]}>
-            {nearest.dist < 1
-              ? `${Math.round(nearest.dist * 1000)}m`
-              : `${nearest.dist.toFixed(1)}km`}
-          </span>
-          <span className={styles["stat-dim"]}> {nearest.name.length > 18 ? nearest.name.slice(0, 18) + "..." : nearest.name}</span>
-        </div>
+        <HudStatLine
+          label="NEAREST"
+          value={nearestValue}
+          dim={nearestDim}
+        />
       )}
-    </div>
+    </HudPanel>
   );
 }

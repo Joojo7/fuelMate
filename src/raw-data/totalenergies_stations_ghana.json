@@ -1,0 +1,9059 @@
+[
+  {
+    "id": "osm_node_31066312",
+    "osm_id": 31066312,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.4014913,
+    "lon": -0.8372812,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "compressed_air": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_31211477",
+    "osm_id": 31211477,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.378075,
+    "lon": -0.8696714,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_102737152",
+    "osm_id": 102737152,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5652316,
+    "lon": -0.1814228,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_567464508",
+    "osm_id": 567464508,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6423029,
+    "lon": -0.15197,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_711799088",
+    "osm_id": 711799088,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.9726777,
+    "lon": -3.2494326,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Petrol 91/92"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "fuel:1_25": "yes",
+      "fuel:HGV_diesel": "yes",
+      "fuel:diesel": "yes",
+      "fuel:octane_91": "yes",
+      "name": "Total",
+      "operator": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1124532346",
+    "osm_id": 1124532346,
+    "osm_type": "node",
+    "name": "Liberation Road TotalEnergies",
+    "brand": "TotalEnergies",
+    "address": "Liberation Road",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5919865,
+    "lon": -0.1809913,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "addr:street": "Liberation Road",
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "check_date": "2023-01-16",
+      "compressed_air": "yes",
+      "name": "Liberation Road TotalEnergies",
+      "name:it": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1134470934",
+    "osm_id": 1134470934,
+    "osm_type": "node",
+    "name": "Total Mallam 1",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5696699,
+    "lon": -0.2865925,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Mallam 1"
+    }
+  },
+  {
+    "id": "osm_node_1134471645",
+    "osm_id": 1134471645,
+    "osm_type": "node",
+    "name": "Total Apremdo",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.9105021,
+    "lon": -1.7932516,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Apremdo"
+    }
+  },
+  {
+    "id": "osm_node_1134471771",
+    "osm_id": 1134471771,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5618014,
+    "lon": -0.230634,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "check_date": "2023-06-05",
+      "fuel:diesel": "yes",
+      "name": "Total",
+      "payment:cash": "yes",
+      "self_service": "no",
+      "source": "local knowledge",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": "osm_node_1134472196",
+    "osm_id": 1134472196,
+    "osm_type": "node",
+    "name": "Total Inchaban",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.9942836,
+    "lon": -1.6812777,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Inchaban"
+    }
+  },
+  {
+    "id": "osm_node_1134472403",
+    "osm_id": 1134472403,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.3823857,
+    "lon": -0.6441214,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "no",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1134472635",
+    "osm_id": 1134472635,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.1228265,
+    "lon": -1.2685037,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1134472933",
+    "osm_id": 1134472933,
+    "osm_type": "node",
+    "name": "Darkuman Junction TotalEnergies",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5768902,
+    "lon": -0.2544746,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "check_date": "2023-06-10",
+      "name": "Darkuman Junction TotalEnergies"
+    }
+  },
+  {
+    "id": "osm_node_1136415768",
+    "osm_id": 1136415768,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.7008828,
+    "lon": -1.717484,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1136418773",
+    "osm_id": 1136418773,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "Winneba Road",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5379938,
+    "lon": -0.4030458,
+    "phone": "",
+    "website": "",
+    "opening_hours": "Mo-Su 06:00-23:00",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "addr:street": "Winneba Road",
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total",
+      "opening_hours": "Mo-Su 06:00-23:00"
+    }
+  },
+  {
+    "id": "osm_node_1212326433",
+    "osm_id": 1212326433,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6006474,
+    "lon": -0.1972975,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "Pig Farm Junction",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1213932673",
+    "osm_id": 1213932673,
+    "osm_type": "node",
+    "name": "37 Hospital Road Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5906573,
+    "lon": -0.1808573,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "37 Military",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "check_date": "2023-06-05",
+      "fuel:diesel": "yes",
+      "name": "37 Hospital Road Total",
+      "name:it": "Total",
+      "payment:cash": "yes",
+      "self_service": "no",
+      "source": "local knowledge",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": "osm_node_1276373031",
+    "osm_id": 1276373031,
+    "osm_type": "node",
+    "name": "New Town Total",
+    "brand": "Total",
+    "address": "Accra New Town",
+    "city": "Accra New Town",
+    "region": "",
+    "postcode": "",
+    "lat": 5.585714,
+    "lon": -0.2080117,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "addr:suburb": "Accra New Town",
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "New Town Total"
+    }
+  },
+  {
+    "id": "osm_node_1289579718",
+    "osm_id": 1289579718,
+    "osm_type": "node",
+    "name": "TotalEnergies Station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.9385054,
+    "lon": -0.1158995,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1292961874",
+    "osm_id": 1292961874,
+    "osm_type": "node",
+    "name": "Total Kara Tomdè",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.5466697,
+    "lon": 1.1979497,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Kara Tomdè"
+    }
+  },
+  {
+    "id": "osm_node_1300192845",
+    "osm_id": 1300192845,
+    "osm_type": "node",
+    "name": "Total Tarkwa 1",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.3087474,
+    "lon": -1.9934578,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Tarkwa 1"
+    }
+  },
+  {
+    "id": "osm_node_1364922566",
+    "osm_id": 1364922566,
+    "osm_type": "node",
+    "name": "Ring Road Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5726644,
+    "lon": -0.204409,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "check_date": "2023-05-09",
+      "compressed_air": "yes",
+      "fuel:diesel": "yes",
+      "name": "Ring Road Total",
+      "name:it": "Total",
+      "operator": "Total",
+      "payment:cash": "yes",
+      "source": "local knowledge",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": "osm_node_1378720252",
+    "osm_id": 1378720252,
+    "osm_type": "node",
+    "name": "Total Amanfrom West II",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5382961,
+    "lon": -0.399653,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "en:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total Amanfrom West II"
+    }
+  },
+  {
+    "id": "osm_node_1405374139",
+    "osm_id": 1405374139,
+    "osm_type": "node",
+    "name": "Total Sakaman",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5738735,
+    "lon": -0.2778822,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Sakaman"
+    }
+  },
+  {
+    "id": "osm_node_1410209943",
+    "osm_id": 1410209943,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.3300678,
+    "lon": -3.1834037,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1508412434",
+    "osm_id": 1508412434,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.647492,
+    "lon": -0.178974,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1508412436",
+    "osm_id": 1508412436,
+    "osm_type": "node",
+    "name": "Total Haatso",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6678005,
+    "lon": -0.2055111,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Haatso"
+    }
+  },
+  {
+    "id": "osm_node_1535294604",
+    "osm_id": 1535294604,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5295591,
+    "lon": -0.6993924,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1540112725",
+    "osm_id": 1540112725,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5637586,
+    "lon": -0.1406268,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1601716632",
+    "osm_id": 1601716632,
+    "osm_type": "node",
+    "name": "Total Mallam 2",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.569807,
+    "lon": -0.2848093,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Mallam 2"
+    }
+  },
+  {
+    "id": "osm_node_1662928061",
+    "osm_id": 1662928061,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5262859,
+    "lon": -0.6988772,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Super 95"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "fuel:diesel": "yes",
+      "fuel:octane_95": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1685195498",
+    "osm_id": 1685195498,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5383432,
+    "lon": -0.7028973,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Super 95"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "fuel:diesel": "yes",
+      "fuel:octane_95": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1686172379",
+    "osm_id": 1686172379,
+    "osm_type": "node",
+    "name": "TotalEnergies Station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5654234,
+    "lon": -0.2077917,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1707502691",
+    "osm_id": 1707502691,
+    "osm_type": "node",
+    "name": "Total Tokoin Hôpital",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1415784,
+    "lon": 1.2081918,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "fuel:biodiesel": "no",
+      "fuel:biogas": "no",
+      "name": "Total Tokoin Hôpital"
+    }
+  },
+  {
+    "id": "osm_node_1709322223",
+    "osm_id": 1709322223,
+    "osm_type": "node",
+    "name": "Total La Paix",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1338563,
+    "lon": 1.2490973,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total Énergies",
+      "name": "Total La Paix"
+    }
+  },
+  {
+    "id": "osm_node_1728032263",
+    "osm_id": 1728032263,
+    "osm_type": "node",
+    "name": "Fly Over Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5674138,
+    "lon": -0.2119701,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Fly Over Total"
+    }
+  },
+  {
+    "id": "osm_node_1747677233",
+    "osm_id": 1747677233,
+    "osm_type": "node",
+    "name": "Kanda Overhead Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5735839,
+    "lon": -0.1980178,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "check_date": "2024-11-04",
+      "check_date:compressed_air": "2024-11-04",
+      "compressed_air": "yes",
+      "fuel:diesel": "yes",
+      "name": "Kanda Overhead Total",
+      "payment:cash": "yes",
+      "source": "local knowledge",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": "osm_node_1750874051",
+    "osm_id": 1750874051,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6720415,
+    "lon": -0.0460014,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1751288527",
+    "osm_id": 1751288527,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6878093,
+    "lon": -0.014853,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1799091458",
+    "osm_id": 1799091458,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.3964372,
+    "lon": -0.8262402,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "compressed_air": "yes",
+      "fuel:diesel": "yes",
+      "name": "Total",
+      "operator": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1823949480",
+    "osm_id": 1823949480,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.7086597,
+    "lon": -1.5990267,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_1853413139",
+    "osm_id": 1853413139,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6141089,
+    "lon": 0.4687759,
+    "phone": "",
+    "website": "",
+    "opening_hours": "Mo-Su,PH 06:00-12:00",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total",
+      "opening_hours": "Mo-Su,PH 06:00-12:00"
+    }
+  },
+  {
+    "id": "osm_node_1879842669",
+    "osm_id": 1879842669,
+    "osm_type": "node",
+    "name": "Total Rond Point Port",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1424398,
+    "lon": 1.2754567,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Rond Point Port"
+    }
+  },
+  {
+    "id": "osm_node_1880261673",
+    "osm_id": 1880261673,
+    "osm_type": "node",
+    "name": "Daboya Road Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.4041736,
+    "lon": -0.8467909,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "compressed_air": "yes",
+      "name": "Daboya Road Total"
+    }
+  },
+  {
+    "id": "osm_node_1901501756",
+    "osm_id": 1901501756,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 8.0528204,
+    "lon": -1.7267254,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2003070719",
+    "osm_id": 2003070719,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6859609,
+    "lon": -0.0327551,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2005296411",
+    "osm_id": 2005296411,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.9128719,
+    "lon": -1.7846403,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2024377644",
+    "osm_id": 2024377644,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.9022281,
+    "lon": -1.7674961,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2026025341",
+    "osm_id": 2026025341,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.3300878,
+    "lon": -2.3247177,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2093786862",
+    "osm_id": 2093786862,
+    "osm_type": "node",
+    "name": "Total Apenkwa",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6087714,
+    "lon": -0.2262072,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Apenkwa",
+      "source": "survey summer 2017 - AccraMobile3 project"
+    }
+  },
+  {
+    "id": "osm_node_2199502890",
+    "osm_id": 2199502890,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.3318518,
+    "lon": -2.3262362,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2258802324",
+    "osm_id": 2258802324,
+    "osm_type": "node",
+    "name": "Total Atakpamé PTT",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.5326048,
+    "lon": 1.1243871,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Atakpamé PTT",
+      "source": "survey"
+    }
+  },
+  {
+    "id": "osm_node_2268322644",
+    "osm_id": 2268322644,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1074564,
+    "lon": -0.0120248,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2278895792",
+    "osm_id": 2278895792,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.8451764,
+    "lon": -0.1773691,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2295812209",
+    "osm_id": 2295812209,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.7194002,
+    "lon": -0.8663451,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Petrol 91/92"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "fuel:diesel": "yes",
+      "fuel:octane_91": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2319250449",
+    "osm_id": 2319250449,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6069745,
+    "lon": 0.4729958,
+    "phone": "",
+    "website": "",
+    "opening_hours": "Mo-Su,PH 00:00+",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "Ho Dome",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total",
+      "opening_hours": "Mo-Su,PH 00:00+"
+    }
+  },
+  {
+    "id": "osm_node_2319487619",
+    "osm_id": 2319487619,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.1503593,
+    "lon": 0.4709426,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2330379912",
+    "osm_id": 2330379912,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 11.0597178,
+    "lon": -0.2420586,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2406172513",
+    "osm_id": 2406172513,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6830019,
+    "lon": -0.0141998,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2536811102",
+    "osm_id": 2536811102,
+    "osm_type": "node",
+    "name": "TotalEnergies Station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.9547628,
+    "lon": 1.0561284,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "source": "survey"
+    }
+  },
+  {
+    "id": "osm_node_2559882872",
+    "osm_id": 2559882872,
+    "osm_type": "node",
+    "name": "Total Tsotsi",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1954582,
+    "lon": 1.1891842,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Tsotsi",
+      "source": "Bing;Survey"
+    }
+  },
+  {
+    "id": "osm_node_2581068663",
+    "osm_id": 2581068663,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1213365,
+    "lon": 0.0486041,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2594489230",
+    "osm_id": 2594489230,
+    "osm_type": "node",
+    "name": "Total Entente",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1318905,
+    "lon": 1.2435771,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total Énergies",
+      "name": "Total Entente"
+    }
+  },
+  {
+    "id": "osm_node_2616304074",
+    "osm_id": 2616304074,
+    "osm_type": "node",
+    "name": "Total Tarkwa II",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.2536059,
+    "lon": -2.0047576,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Tarkwa II"
+    }
+  },
+  {
+    "id": "osm_node_2621563941",
+    "osm_id": 2621563941,
+    "osm_type": "node",
+    "name": "TotalEnergies",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.4058244,
+    "lon": -1.9616585,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Petrol 91/92"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "fuel:diesel": "yes",
+      "fuel:octane_92": "yes",
+      "name": "TotalEnergies"
+    }
+  },
+  {
+    "id": "osm_node_2621634139",
+    "osm_id": 2621634139,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.708013,
+    "lon": -1.6371915,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "Bantama",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2621634142",
+    "osm_id": 2621634142,
+    "osm_type": "node",
+    "name": "Total Suame R/A",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.7099803,
+    "lon": -1.6278528,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Petrol 91/92"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "fuel:diesel": "yes",
+      "fuel:octane_92": "yes",
+      "name": "Total Suame R/A"
+    }
+  },
+  {
+    "id": "osm_node_2622097849",
+    "osm_id": 2622097849,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6378454,
+    "lon": -0.0037742,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2641892847",
+    "osm_id": 2641892847,
+    "osm_type": "node",
+    "name": "T-Oil",
+    "brand": "T-Oil",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.170782,
+    "lon": 1.1931071,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [
+      "Shop"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "T-Oil",
+      "fuel:diesel": "yes",
+      "name": "T-Oil",
+      "name:fr": "T-oil",
+      "operator": "Total",
+      "shop": "yes",
+      "source": "Bing; survey"
+    }
+  },
+  {
+    "id": "osm_node_2702371549",
+    "osm_id": 2702371549,
+    "osm_type": "node",
+    "name": "Total Palais des Congrès",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1328696,
+    "lon": 1.2168035,
+    "phone": "",
+    "website": "",
+    "opening_hours": "24/7",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [
+      "Shop"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "fuel:diesel": "yes",
+      "name": "Total Palais des Congrès",
+      "opening_hours": "24/7",
+      "operator": "Total",
+      "shop": "yes",
+      "source": "survey"
+    }
+  },
+  {
+    "id": "osm_node_2711489914",
+    "osm_id": 2711489914,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5530216,
+    "lon": -0.1838825,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2857639701",
+    "osm_id": 2857639701,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5608719,
+    "lon": -0.2215187,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2880456702",
+    "osm_id": 2880456702,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.2718063,
+    "lon": 0.0538509,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2926170811",
+    "osm_id": 2926170811,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5484576,
+    "lon": -0.2045506,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_2974339888",
+    "osm_id": 2974339888,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6887609,
+    "lon": -0.2662661,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_3109297585",
+    "osm_id": 3109297585,
+    "osm_type": "node",
+    "name": "TotalEnergies Adabraka",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5653554,
+    "lon": -0.2146411,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "TotalEnergies Adabraka"
+    }
+  },
+  {
+    "id": "osm_node_3109313734",
+    "osm_id": 3109313734,
+    "osm_type": "node",
+    "name": "Total Liberia Road",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5559751,
+    "lon": -0.2037138,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total Liberia Road"
+    }
+  },
+  {
+    "id": "osm_node_3123797175",
+    "osm_id": 3123797175,
+    "osm_type": "node",
+    "name": "Tesano Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.598288,
+    "lon": -0.2334419,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "Tesano",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Tesano Total",
+      "self_service": "no"
+    }
+  },
+  {
+    "id": "osm_node_3124789187",
+    "osm_id": 3124789187,
+    "osm_type": "node",
+    "name": "Total Kpalimé 1",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.8988138,
+    "lon": 0.6355725,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Kpalimé 1"
+    }
+  },
+  {
+    "id": "osm_node_3188482438",
+    "osm_id": 3188482438,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1135873,
+    "lon": 1.1950034,
+    "phone": "",
+    "website": "",
+    "opening_hours": "24/7",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [
+      "Shop"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "Aflao",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "fuel:HGV_diesel": "yes",
+      "fuel:diesel": "yes",
+      "name": "Total",
+      "opening_hours": "24/7",
+      "shop": "yes"
+    }
+  },
+  {
+    "id": "osm_node_3221294848",
+    "osm_id": 3221294848,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.183123,
+    "lon": -1.6815304,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_3284469837",
+    "osm_id": 3284469837,
+    "osm_type": "node",
+    "name": "Total Agbalépédogan",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1983652,
+    "lon": 1.2007814,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "fuel:diesel": "yes",
+      "name": "Total Agbalépédogan"
+    }
+  },
+  {
+    "id": "osm_node_3352833684",
+    "osm_id": 3352833684,
+    "osm_type": "node",
+    "name": "Total Guerin Kouka",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.6872665,
+    "lon": 0.6081214,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Guerin Kouka",
+      "operator": "Total"
+    }
+  },
+  {
+    "id": "osm_node_3613258860",
+    "osm_id": 3613258860,
+    "osm_type": "node",
+    "name": "Station Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.801848,
+    "lon": -3.1682668,
+    "phone": "",
+    "website": "",
+    "opening_hours": "24/7",
+    "fuel_types": [
+      "Diesel",
+      "LPG"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "fuel:1_25": "yes",
+      "fuel:GTL_diesel": "yes",
+      "fuel:HGV_diesel": "yes",
+      "fuel:cng": "yes",
+      "fuel:diesel": "yes",
+      "fuel:lpg": "yes",
+      "name": "Station Total",
+      "opening_hours": "24/7"
+    }
+  },
+  {
+    "id": "osm_node_3676893997",
+    "osm_id": 3676893997,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6450393,
+    "lon": 0.0147164,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_3678130684",
+    "osm_id": 3678130684,
+    "osm_type": "node",
+    "name": "Total Nungua",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.612632,
+    "lon": -0.0742069,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Nungua"
+    }
+  },
+  {
+    "id": "osm_node_3678130685",
+    "osm_id": 3678130685,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6218986,
+    "lon": -0.0705011,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_3688136106",
+    "osm_id": 3688136106,
+    "osm_type": "node",
+    "name": "Total Sogakope",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.0015636,
+    "lon": 0.6001414,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Sogakope"
+    }
+  },
+  {
+    "id": "osm_node_3731304735",
+    "osm_id": 3731304735,
+    "osm_type": "node",
+    "name": "TotalEnergies Pobiman",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.734982,
+    "lon": -0.3134225,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "name": "TotalEnergies Pobiman"
+    }
+  },
+  {
+    "id": "osm_node_3731304740",
+    "osm_id": 3731304740,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.3418223,
+    "lon": -1.0013403,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_3731855130",
+    "osm_id": 3731855130,
+    "osm_type": "node",
+    "name": "Total Kara II",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.533405,
+    "lon": 1.1995598,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "fuel:diesel": "yes",
+      "name": "Total Kara II"
+    }
+  },
+  {
+    "id": "osm_node_3782645140",
+    "osm_id": 3782645140,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "Takoradi",
+    "city": "Takoradi",
+    "region": "",
+    "postcode": "",
+    "lat": 4.8997516,
+    "lon": -1.7600477,
+    "phone": "",
+    "website": "",
+    "opening_hours": "7:00-22:00",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "addr:city": "Takoradi",
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total",
+      "opening_hours": "7:00-22:00",
+      "operator": "Total"
+    }
+  },
+  {
+    "id": "osm_node_3807057246",
+    "osm_id": 3807057246,
+    "osm_type": "node",
+    "name": "Total Fréau Jardin",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1321705,
+    "lon": 1.2237087,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Fréau Jardin"
+    }
+  },
+  {
+    "id": "osm_node_3818011861",
+    "osm_id": 3818011861,
+    "osm_type": "node",
+    "name": "TotalEnergies Station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.9150118,
+    "lon": -1.7516347,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total"
+    }
+  },
+  {
+    "id": "osm_node_3822302620",
+    "osm_id": 3822302620,
+    "osm_type": "node",
+    "name": "Total Hanoukopé",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1360661,
+    "lon": 1.218909,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "name": "Total Hanoukopé"
+    }
+  },
+  {
+    "id": "osm_node_3822542860",
+    "osm_id": 3822542860,
+    "osm_type": "node",
+    "name": "Total Onyadze",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.3602315,
+    "lon": -0.7064851,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Onyadze"
+    }
+  },
+  {
+    "id": "osm_node_3838547757",
+    "osm_id": 3838547757,
+    "osm_type": "node",
+    "name": "Total Atomic Junction",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6670238,
+    "lon": -0.1783964,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Atomic Junction"
+    }
+  },
+  {
+    "id": "osm_node_3840310625",
+    "osm_id": 3840310625,
+    "osm_type": "node",
+    "name": "Total Energies",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.7299936,
+    "lon": -3.4894273,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "fuel:diesel": "no",
+      "name": "Total Energies",
+      "source": "bing;survey"
+    }
+  },
+  {
+    "id": "osm_node_3908767732",
+    "osm_id": 3908767732,
+    "osm_type": "node",
+    "name": "Total Sokodé Marché",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 8.9861758,
+    "lon": 1.1403709,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Sokodé Marché",
+      "source": "survey"
+    }
+  },
+  {
+    "id": "osm_node_3947345027",
+    "osm_id": 3947345027,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.8406192,
+    "lon": 0.2304608,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_3993662833",
+    "osm_id": 3993662833,
+    "osm_type": "node",
+    "name": "Total Aburi",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.830709,
+    "lon": -0.1840219,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Aburi"
+    }
+  },
+  {
+    "id": "osm_node_3993947776",
+    "osm_id": 3993947776,
+    "osm_type": "node",
+    "name": "Total Tabligbo 1",
+    "brand": "Total",
+    "address": "Tabligbo",
+    "city": "Tabligbo",
+    "region": "",
+    "postcode": "",
+    "lat": 6.5883293,
+    "lon": 1.4998293,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "addr:city": "Tabligbo",
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Tabligbo 1"
+    }
+  },
+  {
+    "id": "osm_node_3997866185",
+    "osm_id": 3997866185,
+    "osm_type": "node",
+    "name": "Total Akossombo",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1658294,
+    "lon": 1.2024289,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Akossombo"
+    }
+  },
+  {
+    "id": "osm_node_4008406400",
+    "osm_id": 4008406400,
+    "osm_type": "node",
+    "name": "Total Adidogomé",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1845952,
+    "lon": 1.1674781,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [
+      "Shop"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "compressed_air": "no",
+      "fuel:diesel": "yes",
+      "name": "Total Adidogomé",
+      "shop": "yes"
+    }
+  },
+  {
+    "id": "osm_node_4035478049",
+    "osm_id": 4035478049,
+    "osm_type": "node",
+    "name": "Total Apowa",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.8939508,
+    "lon": -1.8308369,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Apowa"
+    }
+  },
+  {
+    "id": "osm_node_4061676923",
+    "osm_id": 4061676923,
+    "osm_type": "node",
+    "name": "Total Bè Lagune",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1479045,
+    "lon": 1.2442384,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "name": "Total Bè Lagune"
+    }
+  },
+  {
+    "id": "osm_node_4081276981",
+    "osm_id": 4081276981,
+    "osm_type": "node",
+    "name": "Total Kégué",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.2044683,
+    "lon": 1.2423067,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Kégué"
+    }
+  },
+  {
+    "id": "osm_node_4081276988",
+    "osm_id": 4081276988,
+    "osm_type": "node",
+    "name": "Total Jean Paul 2 B",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1545981,
+    "lon": 1.2325421,
+    "phone": "",
+    "website": "",
+    "opening_hours": "Mo-Su 01:00-00:00",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Jean Paul 2 B",
+      "opening_hours": "Mo-Su 01:00-00:00"
+    }
+  },
+  {
+    "id": "osm_node_4102790956",
+    "osm_id": 4102790956,
+    "osm_type": "node",
+    "name": "Total Bè Marché",
+    "brand": "TOTAL",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1407426,
+    "lon": 1.2399098,
+    "phone": "",
+    "website": "",
+    "opening_hours": "24/7",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Shop"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TOTAL",
+      "fuel:1_25": "no",
+      "fuel:HGV_diesel": "no",
+      "fuel:diesel": "no",
+      "name": "Total Bè Marché",
+      "name:am": "Total Bè Marché",
+      "opening_hours": "24/7",
+      "payment:dkv": "no",
+      "payment:routex": "no",
+      "payment:uta": "no",
+      "shop": "yes"
+    }
+  },
+  {
+    "id": "osm_node_4113293992",
+    "osm_id": 4113293992,
+    "osm_type": "node",
+    "name": "Effiakuma Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.9187985,
+    "lon": -1.7681909,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Effiakuma Total",
+      "source": "survey"
+    }
+  },
+  {
+    "id": "osm_node_4148340525",
+    "osm_id": 4148340525,
+    "osm_type": "node",
+    "name": "Total Avénou",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.173316,
+    "lon": 1.1869387,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Shop"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Avénou",
+      "shop": "yes",
+      "source": "Bing;Survey"
+    }
+  },
+  {
+    "id": "osm_node_4161814112",
+    "osm_id": 4161814112,
+    "osm_type": "node",
+    "name": "TotalEnergies Bujumbura",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5221396,
+    "lon": -0.4719171,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "compressed_air": "yes",
+      "name": "TotalEnergies Bujumbura"
+    }
+  },
+  {
+    "id": "osm_node_4176791442",
+    "osm_id": 4176791442,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.5849164,
+    "lon": -1.9374645,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4178751939",
+    "osm_id": 4178751939,
+    "osm_type": "node",
+    "name": "Total Sokodé Barrière",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 8.9926686,
+    "lon": 1.1374921,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Sokodé Barrière",
+      "source": "bing;survey"
+    }
+  },
+  {
+    "id": "osm_node_4208881434",
+    "osm_id": 4208881434,
+    "osm_type": "node",
+    "name": "Total Sokodé Entrée",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 8.9821063,
+    "lon": 1.1398205,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [
+      "Shop"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "fuel:diesel": "yes",
+      "name": "Total Sokodé Entrée",
+      "shop": "yes",
+      "source": "Survey"
+    }
+  },
+  {
+    "id": "osm_node_4211075887",
+    "osm_id": 4211075887,
+    "osm_type": "node",
+    "name": "Total Anié 2",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.756629,
+    "lon": 1.1931386,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total Anié 2",
+      "source": "Bing;Survey"
+    }
+  },
+  {
+    "id": "osm_node_4251078615",
+    "osm_id": 4251078615,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.8904766,
+    "lon": -1.9667481,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total",
+      "source": "Microsoft Bing orbital imagery"
+    }
+  },
+  {
+    "id": "osm_node_4278309331",
+    "osm_id": 4278309331,
+    "osm_type": "node",
+    "name": "Total Dadzi",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1384623,
+    "lon": 1.229107,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Dadzi"
+    }
+  },
+  {
+    "id": "osm_node_4305848900",
+    "osm_id": 4305848900,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5597292,
+    "lon": -0.2305402,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4305848901",
+    "osm_id": 4305848901,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5766449,
+    "lon": -0.2278321,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "Palace I",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "check_date": "2023-06-23",
+      "fuel:diesel": "yes",
+      "name": "Total",
+      "payment:cash": "yes",
+      "source": "local knowledge",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": "osm_node_4305848902",
+    "osm_id": 4305848902,
+    "osm_type": "node",
+    "name": "Total Palace II",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5769506,
+    "lon": -0.2281088,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "Palace II",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "check_date": "2023-05-16",
+      "fuel:diesel": "yes",
+      "name": "Total Palace II",
+      "payment:cash": "yes",
+      "source": "local knowledge"
+    }
+  },
+  {
+    "id": "osm_node_4313597215",
+    "osm_id": 4313597215,
+    "osm_type": "node",
+    "name": "Amanfro Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.7578092,
+    "lon": -0.1454,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Amanfro Total"
+    }
+  },
+  {
+    "id": "osm_node_4331612325",
+    "osm_id": 4331612325,
+    "osm_type": "node",
+    "name": "Total Energie Minamadou 1",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.225577,
+    "lon": 1.193604,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Shop"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "fuel:diesel": "no",
+      "name": "Total Energie Minamadou 1",
+      "shop": "yes"
+    }
+  },
+  {
+    "id": "osm_node_4332726837",
+    "osm_id": 4332726837,
+    "osm_type": "node",
+    "name": "Total Energie Minamadou 2",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.2242607,
+    "lon": 1.1922081,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Energie Minamadou 2"
+    }
+  },
+  {
+    "id": "osm_node_4343342478",
+    "osm_id": 4343342478,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.3077104,
+    "lon": 1.2159401,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total",
+      "note": "position not very accurate, please correct",
+      "source": "survey(GPS2016)"
+    }
+  },
+  {
+    "id": "osm_node_4343616960",
+    "osm_id": 4343616960,
+    "osm_type": "node",
+    "name": "Total Notsè I",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.9495181,
+    "lon": 1.1735458,
+    "phone": "+22822236819",
+    "website": "https://www.totaltogo.com",
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "name": "Total Notsè I",
+      "opening_hours": "Mo-Su 06:00-22:00",
+      "phone": "+22822236819",
+      "source": "survey",
+      "website": "https://www.totaltogo.com"
+    }
+  },
+  {
+    "id": "osm_node_4369634547",
+    "osm_id": 4369634547,
+    "osm_type": "node",
+    "name": "Christiansburg Road Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5497982,
+    "lon": -0.1874912,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Christiansburg Road Total"
+    }
+  },
+  {
+    "id": "osm_node_4396251847",
+    "osm_id": 4396251847,
+    "osm_type": "node",
+    "name": "TotalEnergies Station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.6956099,
+    "lon": 1.1983668,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "source": "GPS"
+    }
+  },
+  {
+    "id": "osm_node_4396308201",
+    "osm_id": 4396308201,
+    "osm_type": "node",
+    "name": "Total Blitta",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 8.343571,
+    "lon": 1.0093665,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Blitta",
+      "name:fr": "Total Blitta",
+      "source": "survey"
+    }
+  },
+  {
+    "id": "osm_node_4396308260",
+    "osm_id": 4396308260,
+    "osm_type": "node",
+    "name": "Total Bafilo",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.3829413,
+    "lon": 1.2347669,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Bafilo",
+      "source": "Bing"
+    }
+  },
+  {
+    "id": "osm_node_4400503918",
+    "osm_id": 4400503918,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.7032098,
+    "lon": -0.1710179,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Shop"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total",
+      "shop": "yes"
+    }
+  },
+  {
+    "id": "osm_node_4457227763",
+    "osm_id": 4457227763,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.884308,
+    "lon": -1.7518055,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4468933009",
+    "osm_id": 4468933009,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6431392,
+    "lon": -0.0598068,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4516053237",
+    "osm_id": 4516053237,
+    "osm_type": "node",
+    "name": "TotalEnergies Station",
+    "brand": "Total Adéta",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.1284159,
+    "lon": 0.7315445,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total Adéta"
+    }
+  },
+  {
+    "id": "osm_node_4516053285",
+    "osm_id": 4516053285,
+    "osm_type": "node",
+    "name": "TotalEnergies Station",
+    "brand": "Station Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.2022509,
+    "lon": 0.6929805,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Station Total"
+    }
+  },
+  {
+    "id": "osm_node_4589020434",
+    "osm_id": 4589020434,
+    "osm_type": "node",
+    "name": "Total Kara I",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.5461366,
+    "lon": 1.1904334,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Kara I"
+    }
+  },
+  {
+    "id": "osm_node_4589021985",
+    "osm_id": 4589021985,
+    "osm_type": "node",
+    "name": "Total Kara III",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.5457382,
+    "lon": 1.190513,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Kara III"
+    }
+  },
+  {
+    "id": "osm_node_4636308510",
+    "osm_id": 4636308510,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5498461,
+    "lon": -0.2649134,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4640519696",
+    "osm_id": 4640519696,
+    "osm_type": "node",
+    "name": "Station d'essence Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1339803,
+    "lon": 1.2345716,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Station d'essence Total"
+    }
+  },
+  {
+    "id": "osm_node_4739889923",
+    "osm_id": 4739889923,
+    "osm_type": "node",
+    "name": "TotalEnergies",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5578513,
+    "lon": -0.2988796,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "McCarthy Hill",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "TotalEnergies"
+    }
+  },
+  {
+    "id": "osm_node_4816602706",
+    "osm_id": 4816602706,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.0354307,
+    "lon": -2.4886775,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4829692465",
+    "osm_id": 4829692465,
+    "osm_type": "node",
+    "name": "TOTAL Tchamba",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.0224742,
+    "lon": 1.4145417,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "TOTAL Tchamba"
+    }
+  },
+  {
+    "id": "osm_node_4830568714",
+    "osm_id": 4830568714,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6095494,
+    "lon": -0.0756423,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4841367955",
+    "osm_id": 4841367955,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.5548846,
+    "lon": -0.7711692,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4872676080",
+    "osm_id": 4872676080,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1044315,
+    "lon": -0.2492309,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4881656355",
+    "osm_id": 4881656355,
+    "osm_type": "node",
+    "name": "Total Suame",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.7152159,
+    "lon": -1.6289726,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Suame"
+    }
+  },
+  {
+    "id": "osm_node_4881656382",
+    "osm_id": 4881656382,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.767425,
+    "lon": -1.6444208,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4881656397",
+    "osm_id": 4881656397,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.8263012,
+    "lon": -1.6472089,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4881949950",
+    "osm_id": 4881949950,
+    "osm_type": "node",
+    "name": "Total Anloga Junction",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6891152,
+    "lon": -1.5968531,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Super 95"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "fuel:diesel": "yes",
+      "fuel:octane_95": "yes",
+      "name": "Total Anloga Junction"
+    }
+  },
+  {
+    "id": "osm_node_4881949990",
+    "osm_id": 4881949990,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.7055368,
+    "lon": -1.6100711,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4881950005",
+    "osm_id": 4881950005,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6896553,
+    "lon": -1.6135935,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4883636323",
+    "osm_id": 4883636323,
+    "osm_type": "node",
+    "name": "Total Agoè-Assiyéyé",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.2344544,
+    "lon": 1.1952717,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Agoè-Assiyéyé"
+    }
+  },
+  {
+    "id": "osm_node_4910911756",
+    "osm_id": 4910911756,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1965165,
+    "lon": -1.6939309,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Petrol 91/92"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "fuel:diesel": "yes",
+      "fuel:octane_91": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4910912015",
+    "osm_id": 4910912015,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.0361512,
+    "lon": -1.7593997,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4910912741",
+    "osm_id": 4910912741,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5689578,
+    "lon": -2.016139,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4910912742",
+    "osm_id": 4910912742,
+    "osm_type": "node",
+    "name": "Total Boobooboo",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.3288252,
+    "lon": -1.9804747,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Boobooboo"
+    }
+  },
+  {
+    "id": "osm_node_4937184121",
+    "osm_id": 4937184121,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6553604,
+    "lon": -1.5902656,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total",
+      "source": "Mapillary"
+    }
+  },
+  {
+    "id": "osm_node_4937184136",
+    "osm_id": 4937184136,
+    "osm_type": "node",
+    "name": "Total Lake Road",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6656186,
+    "lon": -1.6038269,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "Lake Road",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total Lake Road"
+    }
+  },
+  {
+    "id": "osm_node_4987993763",
+    "osm_id": 4987993763,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5358766,
+    "lon": -0.2297983,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_4990549679",
+    "osm_id": 4990549679,
+    "osm_type": "node",
+    "name": "Baatsona Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6274238,
+    "lon": -0.0872952,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Baatsona Total"
+    }
+  },
+  {
+    "id": "osm_node_5013209304",
+    "osm_id": 5013209304,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5738101,
+    "lon": -0.2835055,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total",
+      "source": "survey summer 2017 - AccraMobile3 project"
+    }
+  },
+  {
+    "id": "osm_node_5026822851",
+    "osm_id": 5026822851,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5569932,
+    "lon": -0.2402535,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total",
+      "source": "survey summer 2017 - AccraMobile3 project"
+    }
+  },
+  {
+    "id": "osm_node_5027909232",
+    "osm_id": 5027909232,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5370683,
+    "lon": -0.4036309,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5029458061",
+    "osm_id": 5029458061,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6832274,
+    "lon": -0.1311433,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5033060367",
+    "osm_id": 5033060367,
+    "osm_type": "node",
+    "name": "Total Bonsa",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.178696,
+    "lon": -2.0476136,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Bonsa",
+      "note": "construction"
+    }
+  },
+  {
+    "id": "osm_node_5033062635",
+    "osm_id": 5033062635,
+    "osm_type": "node",
+    "name": "Total Bronyibima",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.1036862,
+    "lon": -1.3633278,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Bronyibima"
+    }
+  },
+  {
+    "id": "osm_node_5091727771",
+    "osm_id": 5091727771,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.9492853,
+    "lon": -1.7617733,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5122710446",
+    "osm_id": 5122710446,
+    "osm_type": "node",
+    "name": "Total Kabou",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.4539938,
+    "lon": 0.8123972,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Kabou",
+      "source": "Bing;Survey"
+    }
+  },
+  {
+    "id": "osm_node_5152163719",
+    "osm_id": 5152163719,
+    "osm_type": "node",
+    "name": "Total Marina",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1275632,
+    "lon": 1.2366204,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Marina",
+      "operator": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5152163945",
+    "osm_id": 5152163945,
+    "osm_type": "node",
+    "name": "Total B.T.C.I",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1369426,
+    "lon": 1.2263019,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total B.T.C.I"
+    }
+  },
+  {
+    "id": "osm_node_5152164124",
+    "osm_id": 5152164124,
+    "osm_type": "node",
+    "name": "Total Boulevard 2",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1310635,
+    "lon": 1.2123209,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Boulevard 2"
+    }
+  },
+  {
+    "id": "osm_node_5152164163",
+    "osm_id": 5152164163,
+    "osm_type": "node",
+    "name": "Total Adjololo",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1273432,
+    "lon": 1.2069082,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Adjololo"
+    }
+  },
+  {
+    "id": "osm_node_5152210450",
+    "osm_id": 5152210450,
+    "osm_type": "node",
+    "name": "Total Jean Paul 2 A",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.153498,
+    "lon": 1.2328358,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Jean Paul 2 A"
+    }
+  },
+  {
+    "id": "osm_node_5152210463",
+    "osm_id": 5152210463,
+    "osm_type": "node",
+    "name": "Total Amoutiévé",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1429216,
+    "lon": 1.2299632,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Amoutiévé"
+    }
+  },
+  {
+    "id": "osm_node_5199353226",
+    "osm_id": 5199353226,
+    "osm_type": "node",
+    "name": "Total Avenor",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.580926,
+    "lon": -0.2169137,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "compressed_air": "yes",
+      "name": "Total Avenor"
+    }
+  },
+  {
+    "id": "osm_node_5209798221",
+    "osm_id": 5209798221,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6189382,
+    "lon": -0.2303217,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5209798224",
+    "osm_id": 5209798224,
+    "osm_type": "node",
+    "name": "Achimota Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6171027,
+    "lon": -0.230074,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Achimota Total"
+    }
+  },
+  {
+    "id": "osm_node_5246405191",
+    "osm_id": 5246405191,
+    "osm_type": "node",
+    "name": "Total Mango",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.3390224,
+    "lon": 0.4693806,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Mango"
+    }
+  },
+  {
+    "id": "osm_node_5246405192",
+    "osm_id": 5246405192,
+    "osm_type": "node",
+    "name": "Total Dapaong 1",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.8639031,
+    "lon": 0.2050093,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Dapaong 1"
+    }
+  },
+  {
+    "id": "osm_node_5246405193",
+    "osm_id": 5246405193,
+    "osm_type": "node",
+    "name": "Total Dapaong 2",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.8811167,
+    "lon": 0.1929098,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Dapaong 2"
+    }
+  },
+  {
+    "id": "osm_node_5246405198",
+    "osm_id": 5246405198,
+    "osm_type": "node",
+    "name": "Total Cinkassé 1",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 11.0967576,
+    "lon": 0.022261,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Cinkassé 1"
+    }
+  },
+  {
+    "id": "osm_node_5246405199",
+    "osm_id": 5246405199,
+    "osm_type": "node",
+    "name": "Total Cinkassé 2",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 11.1102558,
+    "lon": 0.0215945,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Cinkassé 2"
+    }
+  },
+  {
+    "id": "osm_node_5246501016",
+    "osm_id": 5246501016,
+    "osm_type": "node",
+    "name": "Total Anié 1",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.763884,
+    "lon": 1.1933589,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total Anié 1",
+      "source": "Bing;Survey"
+    }
+  },
+  {
+    "id": "osm_node_5246501341",
+    "osm_id": 5246501341,
+    "osm_type": "node",
+    "name": "Total Bandjeli",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.4219081,
+    "lon": 0.6243341,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Bandjeli"
+    }
+  },
+  {
+    "id": "osm_node_5246501350",
+    "osm_id": 5246501350,
+    "osm_type": "node",
+    "name": "TotalEnergies Bassar",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.2614154,
+    "lon": 0.7796799,
+    "phone": "",
+    "website": "",
+    "opening_hours": "PH,Mo-Su 06:00-12:00",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "name": "TotalEnergies Bassar",
+      "opening_hours": "PH,Mo-Su 06:00-12:00"
+    }
+  },
+  {
+    "id": "osm_node_5246501351",
+    "osm_id": 5246501351,
+    "osm_type": "node",
+    "name": "Total Sokodé Kédia",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.0084332,
+    "lon": 1.1356983,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Sokodé Kédia",
+      "source": "Bing;Survey"
+    }
+  },
+  {
+    "id": "osm_node_5246524605",
+    "osm_id": 5246524605,
+    "osm_type": "node",
+    "name": "Total Tabligbo 2",
+    "brand": "Total",
+    "address": "Tabligbo",
+    "city": "Tabligbo",
+    "region": "",
+    "postcode": "",
+    "lat": 6.5880861,
+    "lon": 1.4992515,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "addr:city": "Tabligbo",
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Tabligbo 2"
+    }
+  },
+  {
+    "id": "osm_node_5246524613",
+    "osm_id": 5246524613,
+    "osm_type": "node",
+    "name": "Total Danyi",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.2026131,
+    "lon": 0.6934905,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Danyi"
+    }
+  },
+  {
+    "id": "osm_node_5246524614",
+    "osm_id": 5246524614,
+    "osm_type": "node",
+    "name": "Total Badou",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.5857104,
+    "lon": 0.6091323,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Badou"
+    }
+  },
+  {
+    "id": "osm_node_5246524615",
+    "osm_id": 5246524615,
+    "osm_type": "node",
+    "name": "Total Témédja",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.5210651,
+    "lon": 1.06168,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Témédja"
+    }
+  },
+  {
+    "id": "osm_node_5246524622",
+    "osm_id": 5246524622,
+    "osm_type": "node",
+    "name": "Total Agbonou",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.5126449,
+    "lon": 1.1587197,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Agbonou"
+    }
+  },
+  {
+    "id": "osm_node_5246802344",
+    "osm_id": 5246802344,
+    "osm_type": "node",
+    "name": "Total Adéticopé",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.3238068,
+    "lon": 1.2190224,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Adéticopé"
+    }
+  },
+  {
+    "id": "osm_node_5246802354",
+    "osm_id": 5246802354,
+    "osm_type": "node",
+    "name": "Total Tsévié 3",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.4117696,
+    "lon": 1.2095133,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "compressed_air": "yes",
+      "name": "Total Tsévié 3",
+      "source": "survey;bing"
+    }
+  },
+  {
+    "id": "osm_node_5246802355",
+    "osm_id": 5246802355,
+    "osm_type": "node",
+    "name": "Total Tsévié 2",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.428221,
+    "lon": 1.213139,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Tsévié 2"
+    }
+  },
+  {
+    "id": "osm_node_5246802366",
+    "osm_id": 5246802366,
+    "osm_type": "node",
+    "name": "Total Tsévié 1",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.4298562,
+    "lon": 1.2128688,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Tsévié 1",
+      "source": "Bing;Survey"
+    }
+  },
+  {
+    "id": "osm_node_5246818295",
+    "osm_id": 5246818295,
+    "osm_type": "node",
+    "name": "Total Route de l'Aéroport",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1618902,
+    "lon": 1.2443136,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Route de l'Aéroport"
+    }
+  },
+  {
+    "id": "osm_node_5246818308",
+    "osm_id": 5246818308,
+    "osm_type": "node",
+    "name": "Total Tokoin Centre",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1548054,
+    "lon": 1.2173185,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Tokoin Centre",
+      "source": "Bing;Survey"
+    }
+  },
+  {
+    "id": "osm_node_5246818316",
+    "osm_id": 5246818316,
+    "osm_type": "node",
+    "name": "Total Lomé 2",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1919212,
+    "lon": 1.2090889,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Lomé 2"
+    }
+  },
+  {
+    "id": "osm_node_5246818318",
+    "osm_id": 5246818318,
+    "osm_type": "node",
+    "name": "Total Agoè",
+    "brand": "TOTAL",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.2158851,
+    "lon": 1.2090459,
+    "phone": "",
+    "website": "",
+    "opening_hours": "24/7",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Agoè",
+      "opening_hours": "24/7",
+      "operator": "TOTAL"
+    }
+  },
+  {
+    "id": "osm_node_5246912660",
+    "osm_id": 5246912660,
+    "osm_type": "node",
+    "name": "Total Adakpamé",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1701323,
+    "lon": 1.2911001,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total Énergies",
+      "name": "Total Adakpamé"
+    }
+  },
+  {
+    "id": "osm_node_5246912678",
+    "osm_id": 5246912678,
+    "osm_type": "node",
+    "name": "Total Baguida",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1635316,
+    "lon": 1.3247457,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Baguida"
+    }
+  },
+  {
+    "id": "osm_node_5246912684",
+    "osm_id": 5246912684,
+    "osm_type": "node",
+    "name": "Total Champs de Course",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1432663,
+    "lon": 1.2170624,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Champs de Course"
+    }
+  },
+  {
+    "id": "osm_node_5249527073",
+    "osm_id": 5249527073,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.4399601,
+    "lon": -0.0065825,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5286238588",
+    "osm_id": 5286238588,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.0625783,
+    "lon": -2.5061649,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5300316092",
+    "osm_id": 5300316092,
+    "osm_type": "node",
+    "name": "Total Lapaz",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6060726,
+    "lon": -0.2473221,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Lapaz"
+    }
+  },
+  {
+    "id": "osm_node_5302044220",
+    "osm_id": 5302044220,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.535999,
+    "lon": -0.417254,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5307412980",
+    "osm_id": 5307412980,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.4550727,
+    "lon": -1.5778748,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5321471071",
+    "osm_id": 5321471071,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5505857,
+    "lon": -0.1830311,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5338507126",
+    "osm_id": 5338507126,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.713357,
+    "lon": -1.6164811,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5400928139",
+    "osm_id": 5400928139,
+    "osm_type": "node",
+    "name": "Total Agoè Zongo",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.2499684,
+    "lon": 1.2089252,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total Agoè Zongo"
+    }
+  },
+  {
+    "id": "osm_node_5535390808",
+    "osm_id": 5535390808,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.537536,
+    "lon": -0.7024198,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5535787465",
+    "osm_id": 5535787465,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.2220334,
+    "lon": -0.3656354,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5613945434",
+    "osm_id": 5613945434,
+    "osm_type": "node",
+    "name": "Total Gas",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.1283907,
+    "lon": 0.7315568,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Gas"
+    }
+  },
+  {
+    "id": "osm_node_5620041202",
+    "osm_id": 5620041202,
+    "osm_type": "node",
+    "name": "TotalEnergies",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.2326387,
+    "lon": 0.9982914,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "name": "TotalEnergies"
+    }
+  },
+  {
+    "id": "osm_node_5717931134",
+    "osm_id": 5717931134,
+    "osm_type": "node",
+    "name": "North Kaneshie Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5784899,
+    "lon": -0.2279609,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "North Kaneshie",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "North Kaneshie Total"
+    }
+  },
+  {
+    "id": "osm_node_5717951944",
+    "osm_id": 5717951944,
+    "osm_type": "node",
+    "name": "Total Konongo",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6232912,
+    "lon": -1.2178745,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "fuel:diesel": "no",
+      "name": "Total Konongo"
+    }
+  },
+  {
+    "id": "osm_node_5720517421",
+    "osm_id": 5720517421,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6059818,
+    "lon": -0.1157119,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5763910819",
+    "osm_id": 5763910819,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1635196,
+    "lon": -0.5572169,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5775921568",
+    "osm_id": 5775921568,
+    "osm_type": "node",
+    "name": "Total Liberty Avenue",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5590821,
+    "lon": -0.2129975,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "compressed_air": "yes",
+      "name": "Total Liberty Avenue"
+    }
+  },
+  {
+    "id": "osm_node_5827471608",
+    "osm_id": 5827471608,
+    "osm_type": "node",
+    "name": "TOTAL",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 11.1697651,
+    "lon": -1.1460314,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "TOTAL",
+      "source": "Note 1348244"
+    }
+  },
+  {
+    "id": "osm_node_5842077817",
+    "osm_id": 5842077817,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.9350801,
+    "lon": -1.758534,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_5930907628",
+    "osm_id": 5930907628,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5226051,
+    "lon": -0.4693061,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6016612077",
+    "osm_id": 6016612077,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.5734741,
+    "lon": 0.3748884,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6016612083",
+    "osm_id": 6016612083,
+    "osm_type": "node",
+    "name": "TotalEnergies",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6095847,
+    "lon": 0.4584106,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "TotalEnergies"
+    }
+  },
+  {
+    "id": "osm_node_6016629704",
+    "osm_id": 6016629704,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.0990187,
+    "lon": 0.0266236,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "en:Royal Dutch Shell",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6019717337",
+    "osm_id": 6019717337,
+    "osm_type": "node",
+    "name": "TotalEnergies",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6836968,
+    "lon": -0.0246199,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "name": "TotalEnergies"
+    }
+  },
+  {
+    "id": "osm_node_6032338550",
+    "osm_id": 6032338550,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.7672466,
+    "lon": 0.0633398,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6033604198",
+    "osm_id": 6033604198,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6888324,
+    "lon": -1.6005925,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6037787230",
+    "osm_id": 6037787230,
+    "osm_type": "node",
+    "name": "TotalEnergies Kwamo",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.7179993,
+    "lon": -1.4928563,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "TotalEnergies Kwamo"
+    }
+  },
+  {
+    "id": "osm_node_6037962036",
+    "osm_id": 6037962036,
+    "osm_type": "node",
+    "name": "Total Barima",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6911374,
+    "lon": -1.5527195,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Barima"
+    }
+  },
+  {
+    "id": "osm_node_6042190386",
+    "osm_id": 6042190386,
+    "osm_type": "node",
+    "name": "Total 2",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.0930087,
+    "lon": -0.2591438,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total 2"
+    }
+  },
+  {
+    "id": "osm_node_6054762958",
+    "osm_id": 6054762958,
+    "osm_type": "node",
+    "name": "Total Sogbossito",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.2505335,
+    "lon": 1.1771843,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Sogbossito"
+    }
+  },
+  {
+    "id": "osm_node_6086840965",
+    "osm_id": 6086840965,
+    "osm_type": "node",
+    "name": "Total Nsawam Junction",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.7912707,
+    "lon": -0.3387139,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Nsawam Junction"
+    }
+  },
+  {
+    "id": "osm_node_6091142239",
+    "osm_id": 6091142239,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6960368,
+    "lon": -1.6695791,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6202824571",
+    "osm_id": 6202824571,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 4.9015423,
+    "lon": -1.767443,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6215800485",
+    "osm_id": 6215800485,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5452956,
+    "lon": -0.2130002,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6229990117",
+    "osm_id": 6229990117,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.4623513,
+    "lon": -2.3059431,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6278189442",
+    "osm_id": 6278189442,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.7059231,
+    "lon": -1.6265103,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6284646800",
+    "osm_id": 6284646800,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.776089,
+    "lon": -0.3294041,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "en:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6299269212",
+    "osm_id": 6299269212,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5355779,
+    "lon": -0.2109694,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6327490939",
+    "osm_id": 6327490939,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1054957,
+    "lon": -0.2486261,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6328451071",
+    "osm_id": 6328451071,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 11.146446,
+    "lon": -3.0628105,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6398641723",
+    "osm_id": 6398641723,
+    "osm_type": "node",
+    "name": "Korle Bu Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5354164,
+    "lon": -0.2288776,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Korle Bu Total"
+    }
+  },
+  {
+    "id": "osm_node_6401502137",
+    "osm_id": 6401502137,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.610844,
+    "lon": -1.5532947,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "fuel:diesel": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6433598686",
+    "osm_id": 6433598686,
+    "osm_type": "node",
+    "name": "Total Teshie",
+    "brand": "Total",
+    "address": "Teshie Road",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5831933,
+    "lon": -0.1043209,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "addr:street": "Teshie Road",
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Teshie"
+    }
+  },
+  {
+    "id": "osm_node_6480239857",
+    "osm_id": 6480239857,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 8.0380901,
+    "lon": -2.8035111,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6506200180",
+    "osm_id": 6506200180,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.1167313,
+    "lon": -1.2355463,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6506345918",
+    "osm_id": 6506345918,
+    "osm_type": "node",
+    "name": "Total fuelling station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.1065096,
+    "lon": -1.2431979,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total fuelling station"
+    }
+  },
+  {
+    "id": "osm_node_6521248727",
+    "osm_id": 6521248727,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.1037687,
+    "lon": -1.2502158,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "compressed_air": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6528152485",
+    "osm_id": 6528152485,
+    "osm_type": "node",
+    "name": "Total Kotobabi",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5987245,
+    "lon": -0.1980935,
+    "phone": "",
+    "website": "",
+    "opening_hours": "24/7",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total Kotobabi",
+      "opening_hours": "24/7"
+    }
+  },
+  {
+    "id": "osm_node_6535889148",
+    "osm_id": 6535889148,
+    "osm_type": "node",
+    "name": "Total Techiman I",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.5780445,
+    "lon": -1.9357346,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Techiman I"
+    }
+  },
+  {
+    "id": "osm_node_6535921330",
+    "osm_id": 6535921330,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.5518257,
+    "lon": -1.9362592,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6535945476",
+    "osm_id": 6535945476,
+    "osm_type": "node",
+    "name": "Total Buipe",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 8.7763866,
+    "lon": -1.4562224,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Buipe"
+    }
+  },
+  {
+    "id": "osm_node_6544042021",
+    "osm_id": 6544042021,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.4474162,
+    "lon": -0.8450095,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Petrol 91/92"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "fuel:diesel": "yes",
+      "fuel:octane_91": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6544045989",
+    "osm_id": 6544045989,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.3734591,
+    "lon": -0.8748935,
+    "phone": "",
+    "website": "",
+    "opening_hours": "PH,Mo-Sa 08:00-18:00",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "compressed_air": "yes",
+      "name": "Total",
+      "opening_hours": "PH,Mo-Sa 08:00-18:00"
+    }
+  },
+  {
+    "id": "osm_node_6544047311",
+    "osm_id": 6544047311,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.3369029,
+    "lon": -0.8003193,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6544207689",
+    "osm_id": 6544207689,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.4772118,
+    "lon": -0.8462029,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Petrol 91/92"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "fuel:diesel": "yes",
+      "fuel:octane_91": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6544209504",
+    "osm_id": 6544209504,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.89524,
+    "lon": -1.0832493,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6546844494",
+    "osm_id": 6546844494,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 11.0477557,
+    "lon": -0.2699214,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6564972630",
+    "osm_id": 6564972630,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5577304,
+    "lon": -0.2395682,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6679613111",
+    "osm_id": 6679613111,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.731052,
+    "lon": -1.6142578,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6702616093",
+    "osm_id": 6702616093,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.3442293,
+    "lon": -2.2526074,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6703690154",
+    "osm_id": 6703690154,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6893847,
+    "lon": -0.195304,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6761805332",
+    "osm_id": 6761805332,
+    "osm_type": "node",
+    "name": "TotalEnergies Station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.7649778,
+    "lon": 1.1071596,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6761805337",
+    "osm_id": 6761805337,
+    "osm_type": "node",
+    "name": "TotalEnergies Station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.964256,
+    "lon": 1.1718477,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6761805349",
+    "osm_id": 6761805349,
+    "osm_type": "node",
+    "name": "TotalEnergies Station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1798263,
+    "lon": 1.1954753,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total"
+    }
+  },
+  {
+    "id": "osm_node_6936372670",
+    "osm_id": 6936372670,
+    "osm_type": "node",
+    "name": "Total Pine Avenue",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6944771,
+    "lon": -1.6355391,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Pine Avenue"
+    }
+  },
+  {
+    "id": "osm_node_7052413778",
+    "osm_id": 7052413778,
+    "osm_type": "node",
+    "name": "Total Elubo",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.287931,
+    "lon": -2.7722335,
+    "phone": "",
+    "website": "",
+    "opening_hours": "24/7",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total Elubo",
+      "opening_hours": "24/7"
+    }
+  },
+  {
+    "id": "osm_node_7115119148",
+    "osm_id": 7115119148,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.7558507,
+    "lon": -0.8613397,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Petrol 91/92"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "fuel:diesel": "yes",
+      "fuel:octane_91": "yes",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_7124399382",
+    "osm_id": 7124399382,
+    "osm_type": "node",
+    "name": "Total Atlantique",
+    "brand": "TotalEnergies",
+    "address": "Route Nationale Lomé - Aného",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1801946,
+    "lon": 1.3860918,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "addr:street": "Route Nationale Lomé - Aného",
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "name": "Total Atlantique"
+    }
+  },
+  {
+    "id": "osm_node_7273684610",
+    "osm_id": 7273684610,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5568562,
+    "lon": -0.2119898,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_7395651748",
+    "osm_id": 7395651748,
+    "osm_type": "node",
+    "name": "Total Fuel Station",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.3975786,
+    "lon": -0.1433425,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Fuel Station"
+    }
+  },
+  {
+    "id": "osm_node_7471973435",
+    "osm_id": 7471973435,
+    "osm_type": "node",
+    "name": "Total Atomic Energy Road",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.667417,
+    "lon": -0.2180598,
+    "phone": "",
+    "website": "",
+    "opening_hours": "Mo-Su,PH 06:00-18:00+",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "compressed_air": "no",
+      "name": "Total Atomic Energy Road",
+      "opening_hours": "Mo-Su,PH 06:00-18:00+"
+    }
+  },
+  {
+    "id": "osm_node_7495057065",
+    "osm_id": 7495057065,
+    "osm_type": "node",
+    "name": "Total Energies Service Station Ofankor",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6553536,
+    "lon": -0.2630107,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Energies Service Station Ofankor"
+    }
+  },
+  {
+    "id": "osm_node_7787682625",
+    "osm_id": 7787682625,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.037161,
+    "lon": -1.4147551,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_7787682627",
+    "osm_id": 7787682627,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.9446705,
+    "lon": -1.4859577,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_8907831983",
+    "osm_id": 8907831983,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.9940156,
+    "lon": 0.2927525,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_8957051669",
+    "osm_id": 8957051669,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.0247513,
+    "lon": -2.4887838,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_9089484951",
+    "osm_id": 9089484951,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.6425,
+    "lon": -2.8924053,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_9089642169",
+    "osm_id": 9089642169,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5328128,
+    "lon": -0.4311731,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_9102633342",
+    "osm_id": 9102633342,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.7901715,
+    "lon": -2.4238873,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_9106479459",
+    "osm_id": 9106479459,
+    "osm_type": "node",
+    "name": "Total Wassa Agona",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.213493,
+    "lon": -2.0264307,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total Wassa Agona"
+    }
+  },
+  {
+    "id": "osm_node_9498756262",
+    "osm_id": 9498756262,
+    "osm_type": "node",
+    "name": "Bekwai Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6605905,
+    "lon": -1.6427984,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Bekwai Total"
+    }
+  },
+  {
+    "id": "osm_node_9501815236",
+    "osm_id": 9501815236,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6993711,
+    "lon": -1.7683917,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_9507693268",
+    "osm_id": 9507693268,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6442715,
+    "lon": -1.5719716,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_9546083300",
+    "osm_id": 9546083300,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6605781,
+    "lon": -1.6054349,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_9602370482",
+    "osm_id": 9602370482,
+    "osm_type": "node",
+    "name": "Total Amasaman",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.701588,
+    "lon": -0.2955392,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Amasaman"
+    }
+  },
+  {
+    "id": "osm_node_9701879694",
+    "osm_id": 9701879694,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6994212,
+    "lon": -2.446777,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_9761536282",
+    "osm_id": 9761536282,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6992754,
+    "lon": -1.6118031,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_9795938382",
+    "osm_id": 9795938382,
+    "osm_type": "node",
+    "name": "Total Apedokoè",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.210098,
+    "lon": 1.1368996,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Apedokoè"
+    }
+  },
+  {
+    "id": "osm_node_10246602429",
+    "osm_id": 10246602429,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6840288,
+    "lon": -1.6107645,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_10246602436",
+    "osm_id": 10246602436,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.0848619,
+    "lon": -2.024283,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "en:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_10553104690",
+    "osm_id": 10553104690,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.1089205,
+    "lon": -2.110261,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_10584603016",
+    "osm_id": 10584603016,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.7086751,
+    "lon": -1.6269631,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_10695797025",
+    "osm_id": 10695797025,
+    "osm_type": "node",
+    "name": "Total, Asawase",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6970434,
+    "lon": -1.6075336,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total, Asawase"
+    }
+  },
+  {
+    "id": "osm_node_10979237810",
+    "osm_id": 10979237810,
+    "osm_type": "node",
+    "name": "Total Dzifa-kpota",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.1650094,
+    "lon": 1.2706855,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Dzifa-kpota"
+    }
+  },
+  {
+    "id": "osm_node_11177977895",
+    "osm_id": 11177977895,
+    "osm_type": "node",
+    "name": "KOTOBABI TOTAL FILLING STATION",
+    "brand": "TotalEnergies",
+    "address": "Kotobabi Road",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5987494,
+    "lon": -0.1983079,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "addr:street": "Kotobabi Road",
+      "amenity": "fuel",
+      "name": "KOTOBABI TOTAL FILLING STATION"
+    }
+  },
+  {
+    "id": "osm_node_12188950355",
+    "osm_id": 12188950355,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.8729298,
+    "lon": -1.9864159,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_12191880368",
+    "osm_id": 12191880368,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.8089796,
+    "lon": -0.3480357,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_12193632510",
+    "osm_id": 12193632510,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.4546991,
+    "lon": -1.5758451,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_12540778695",
+    "osm_id": 12540778695,
+    "osm_type": "node",
+    "name": "TotalEnergies",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.2020012,
+    "lon": 1.2081112,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "name": "TotalEnergies"
+    }
+  },
+  {
+    "id": "osm_node_12883314510",
+    "osm_id": 12883314510,
+    "osm_type": "node",
+    "name": "Total Energies",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6993871,
+    "lon": -1.6190432,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "name": "Total Energies"
+    }
+  },
+  {
+    "id": "osm_node_13042645494",
+    "osm_id": 13042645494,
+    "osm_type": "node",
+    "name": "Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.1666298,
+    "lon": -1.1983877,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "check_date": "2025-08-02",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_node_13326863521",
+    "osm_id": 13326863521,
+    "osm_type": "node",
+    "name": "Tuba Total Energies Service Station",
+    "brand": "TotalEnergies",
+    "address": "Tuba Road, Kasoa",
+    "city": "Kasoa",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5331311,
+    "lon": -0.3857821,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Petrol 91/92"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "addr:city": "Kasoa",
+      "addr:street": "Tuba Road",
+      "amenity": "fuel",
+      "fuel:diesel": "yes",
+      "fuel:octane_91": "yes",
+      "name": "Tuba Total Energies Service Station"
+    }
+  },
+  {
+    "id": "osm_node_13360088955",
+    "osm_id": 13360088955,
+    "osm_type": "node",
+    "name": "TotalEnergies",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.9233913,
+    "lon": -0.9885947,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel",
+      "Petrol 91/92"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "branch": "Akim Oda",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "check_date": "2025-12-07",
+      "fuel:diesel": "yes",
+      "fuel:octane_91": "yes",
+      "name": "TotalEnergies"
+    }
+  },
+  {
+    "id": "osm_node_13447980203",
+    "osm_id": 13447980203,
+    "osm_type": "node",
+    "name": "TotalEnergies",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.0407784,
+    "lon": -0.4487403,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "name": "TotalEnergies"
+    }
+  },
+  {
+    "id": "osm_way_309661691",
+    "osm_id": 309661691,
+    "osm_type": "way",
+    "name": "TotalEnergies Station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.2686713,
+    "lon": 1.2100774,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [
+      "Air"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "compressed_air": "yes",
+      "source": "bing; survey (user Screentoosmall)"
+    }
+  },
+  {
+    "id": "osm_way_322778120",
+    "osm_id": 322778120,
+    "osm_type": "way",
+    "name": "Total Kpalimé PTT",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.9073372,
+    "lon": 0.6325059,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total Kpalimé PTT"
+    }
+  },
+  {
+    "id": "osm_way_436472538",
+    "osm_id": 436472538,
+    "osm_type": "way",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.9625461,
+    "lon": 1.1716415,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Total",
+      "source": "survey"
+    }
+  },
+  {
+    "id": "osm_way_441943234",
+    "osm_id": 441943234,
+    "osm_type": "way",
+    "name": "TotalEnergies Station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 9.382897,
+    "lon": 1.2347501,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "source": "bing;survey"
+    }
+  },
+  {
+    "id": "osm_way_441960476",
+    "osm_id": 441960476,
+    "osm_type": "way",
+    "name": "TotalEnergies Station",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.5199995,
+    "lon": 1.1474917,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "fuel:diesel": "yes",
+      "operator": "Total"
+    }
+  },
+  {
+    "id": "osm_way_457878758",
+    "osm_id": 457878758,
+    "osm_type": "way",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.7530778,
+    "lon": -0.1479814,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_way_486144992",
+    "osm_id": 486144992,
+    "osm_type": "way",
+    "name": "Station Service Total Agnibilékrou",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 7.1274289,
+    "lon": -3.2013589,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "name": "Station Service Total Agnibilékrou"
+    }
+  },
+  {
+    "id": "osm_way_490882253",
+    "osm_id": 490882253,
+    "osm_type": "way",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5880693,
+    "lon": -0.0993171,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_way_492078966",
+    "osm_id": 492078966,
+    "osm_type": "way",
+    "name": "Total",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.5535348,
+    "lon": -0.7693874,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_way_492078967",
+    "osm_id": 492078967,
+    "osm_type": "way",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.5539412,
+    "lon": -0.7702109,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_way_615490718",
+    "osm_id": 615490718,
+    "osm_type": "way",
+    "name": "Total 1",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.0915751,
+    "lon": -0.2581103,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Diesel"
+    ],
+    "amenities": [
+      "Shop"
+    ],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:TotalEnergies",
+      "fuel:HGV_diesel": "yes",
+      "fuel:adblue": "yes",
+      "fuel:diesel": "yes",
+      "fuel:e85": "yes",
+      "name": "Total 1",
+      "operator": "Total Ghana",
+      "shop": "yes",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": "osm_way_720628249",
+    "osm_id": 720628249,
+    "osm_type": "way",
+    "name": "Total Bolga 3",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.783781,
+    "lon": -0.8474446,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total Bolga 3"
+    }
+  },
+  {
+    "id": "osm_way_729307290",
+    "osm_id": 729307290,
+    "osm_type": "way",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 10.7798131,
+    "lon": -0.8537788,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_way_759113287",
+    "osm_id": 759113287,
+    "osm_type": "way",
+    "name": "Total",
+    "brand": "Total",
+    "address": "Tindaan Zoko Street, Bolgatanga, Bolgatanga Municipal District",
+    "city": "Bolgatanga",
+    "region": "Bolgatanga Municipal District",
+    "postcode": "",
+    "lat": 10.801417,
+    "lon": -0.8467299,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "addr:city": "Bolgatanga",
+      "addr:country": "GH",
+      "addr:district": "Bolgatanga Municipal District",
+      "addr:street": "Tindaan Zoko Street",
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_way_772655800",
+    "osm_id": 772655800,
+    "osm_type": "way",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.5477285,
+    "lon": -0.2179206,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "name": "Total"
+    }
+  },
+  {
+    "id": "osm_way_777942075",
+    "osm_id": 777942075,
+    "osm_type": "way",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.53542,
+    "lon": -0.2109996,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "brand:wikipedia": "fr:Total (entreprise)",
+      "building:levels": "1",
+      "name": "Total",
+      "roof:shape": "flat"
+    }
+  },
+  {
+    "id": "osm_way_936843948",
+    "osm_id": 936843948,
+    "osm_type": "way",
+    "name": "Total Tankstelle",
+    "brand": "TotalEnergies",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 5.6890711,
+    "lon": -0.0292391,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "TotalEnergies",
+      "brand:wikidata": "Q154037",
+      "name": "Total Tankstelle"
+    }
+  },
+  {
+    "id": "osm_way_1135379331",
+    "osm_id": 1135379331,
+    "osm_type": "way",
+    "name": "Total",
+    "brand": "Total",
+    "address": "",
+    "city": "",
+    "region": "",
+    "postcode": "",
+    "lat": 6.6727646,
+    "lon": -1.5957919,
+    "phone": "",
+    "website": "",
+    "opening_hours": "",
+    "fuel_types": [
+      "Petrol",
+      "Diesel"
+    ],
+    "amenities": [],
+    "raw_tags": {
+      "amenity": "fuel",
+      "brand": "Total",
+      "brand:wikidata": "Q154037",
+      "building": "yes",
+      "name": "Total"
+    }
+  }
+]
