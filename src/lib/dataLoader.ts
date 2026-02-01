@@ -1,5 +1,28 @@
 import { Station, WeeklyHours, CountryCode, BRAND_OPTIONS } from "./types";
 
+// ─── State name normalization (cross-brand consistency) ──
+
+const STATE_NORMALIZE: Record<string, string> = {
+  "W.P. Kuala Lumpur": "Kuala Lumpur",
+  "W.P. Labuan": "Labuan",
+  "W.P. Putrajaya": "Putrajaya",
+  "Pulau Pinang": "Penang",
+  "Trengganu": "Terengganu",
+  "Wilayah Persekutuan Kuala Lumpur": "Kuala Lumpur",
+  "Wilayah Persekutuan Labuan": "Labuan",
+  "Wilayah Persekutuan Putrajaya": "Putrajaya",
+  "Selangor/KL/Negeri Sembilan": "Selangor",
+  "Melaka/Negeri Sembilan": "Melaka",
+  "Kelantan/Terengganu": "Kelantan",
+  "Pahang/Terengganu": "Pahang",
+  "Perak/Selangor": "Perak",
+  "Perlis/Kedah": "Perlis",
+};
+
+function normalizeState(state: string): string {
+  return STATE_NORMALIZE[state] || state;
+}
+
 // ─── BP CSV URLs (proxied via API route for caching) ──
 
 const AU_CSV_URL = "/api/stations/bp?country=AU";
@@ -279,6 +302,7 @@ export async function fetchCountryStations(country: CountryCode): Promise<Statio
     for (const s of [bpStations, ...otherResults].flat()) {
       if (!seen.has(s.id)) {
         seen.add(s.id);
+        s.state = normalizeState(s.state);
         all.push(s);
       }
     }
@@ -299,6 +323,7 @@ export async function fetchCountryStations(country: CountryCode): Promise<Statio
   for (const s of results.flat()) {
     if (!seen.has(s.id)) {
       seen.add(s.id);
+      s.state = normalizeState(s.state);
       all.push(s);
     }
   }
