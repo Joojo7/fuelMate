@@ -71,7 +71,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [favourites, setFavourites] = useState<string[]>([]);
   const [filters, setFiltersState] = useState<Filters>(EMPTY_FILTERS);
   const [searchQuery, setSearchQuery] = useState("");
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   const [radiusEnabled, setRadiusEnabled] = useState(true);
   const [searchRadius, setSearchRadius] = useState(25);
   const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);

@@ -97,14 +97,14 @@ export const BRAND_LABELS: Record<string, string> = {
 
 // Brand colors — primary, secondary, accent
 export const BRAND_COLORS: Record<string, { primary: string; secondary: string; accent: string }> = {
-  bp: { primary: "#009b3a", secondary: "#ffcc00", accent: "#ffffff" },           // BP green, yellow shield
+  bp: { primary: "#00e253", secondary: "#ffcc00", accent: "#ffffff" },           // BP green, yellow shield
   shell: { primary: "#fbce07", secondary: "#dd1d21", accent: "#ffffff" },        // Shell yellow, red pecten
   caltex: { primary: "#00a5b5", secondary: "#e21836", accent: "#ffffff" },       // Caltex teal, red star
   "caltex-workshop": { primary: "#00a5b5", secondary: "#e21836", accent: "#f5a623" }, // Same + orange wrench accent
   totalenergies: { primary: "#ed1c24", secondary: "#002d72", accent: "#ffffff" },    // TotalEnergies red, navy
-  goil: { primary: "#00529b", secondary: "#e30613", accent: "#ffd700" },             // GOIL blue, red, gold
-  ampol: { primary: "#0033a0", secondary: "#e31837", accent: "#ffffff" },             // Ampol blue, red
-  staroil: { primary: "#ff6600", secondary: "#003366", accent: "#ffffff" },             // Star Oil orange, navy
+  goil: { primary: "#ff8c00", secondary: "#e30613", accent: "#ffd700" },             // GOIL bright orange, red, gold
+  ampol: { primary: "#003ab9", secondary: "#e31837", accent: "#ffffff" },             // Ampol blue, red
+  staroil: { primary: "#0091ff", secondary: "#003366", accent: "#ffffff" },             // Star Oil orange, navy
   petronas: { primary: "#00685e", secondary: "#003f5c", accent: "#ffffff" },             // Petronas dark green, dark blue
 };
 

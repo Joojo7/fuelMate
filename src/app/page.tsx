@@ -25,6 +25,7 @@ import {
   FILTERS_LABEL,
   HUD_CLOSE, HUD_OPEN,
   DISCLAIMER_STORAGE_KEY,
+  FILTER_OPEN_NOW,
   FUEL_PREF_STORAGE_KEY,
   MENU_ICON,
   type Tab, TAB_LABELS,
@@ -38,7 +39,7 @@ import styles from "./page.module.scss";
 const MapView = dynamic(() => import("@/components/map-view"), { ssr: false });
 
 export default function Home() {
-  const { loading, selectedStation, filteredStations, mapCenter, activeCountry, setActiveCountry, lastFetchTime, fetchError, retryFetch, filters, setFilters } = useApp();
+  const { loading, selectedStation, filteredStations, mapCenter, activeCountry, setActiveCountry, lastFetchTime, fetchError, retryFetch, filters, setFilters, showAll, setShowAll } = useApp();
   const [activeTab, setActiveTab] = useState<Tab>("map");
   const [showFilters, setShowFilters] = useState(false);
   const [showLeftDrawer, setShowLeftDrawer] = useState(false);
@@ -110,6 +111,12 @@ export default function Home() {
             {BRAND_NAME}
           </h1>
           <CountryPicker {...countryPickerProps} />
+          <button
+            className={`btn-terminal ${!showAll ? "btn-terminal-filled" : ""} ${styles["open-now-toggle"]}`}
+            onClick={() => setShowAll(!showAll)}
+          >
+            {FILTER_OPEN_NOW}
+          </button>
         </div>
 
         {/* Mobile: search row */}
@@ -146,6 +153,13 @@ export default function Home() {
           <div className={`flex-grow-1 ${styles["search-wrapper"]}`} data-tour="search">
             <SearchBar />
           </div>
+
+          <button
+            className={`btn-terminal ${!showAll ? "btn-terminal-filled" : ""} ${styles["open-now-toggle"]}`}
+            onClick={() => setShowAll(!showAll)}
+          >
+            {FILTER_OPEN_NOW}
+          </button>
 
           <div className={styles["hud-readout"]}>
             LAT: {mapCenter[0].toFixed(4)} | LNG: {mapCenter[1].toFixed(4)} | TARGETS: {filteredStations.length} | <Link href="/privacy" className={styles["legal-link"]}>LEGAL</Link>

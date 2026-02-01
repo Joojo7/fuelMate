@@ -35,7 +35,7 @@ export const STATUS_LABELS: Record<string, string> = {
 // Filter panel
 export const FILTER_TITLE = "Filters";
 export const FILTER_CLEAR = "Clear All";
-export const FILTER_OPEN_NOW = "OPEN NOW";
+export const FILTER_OPEN_NOW = "STORES OPENED NOW";
 export const FILTER_ON = "ON";
 export const FILTER_OFF = "OFF";
 export const FILTER_BRAND = "BRAND";
