@@ -1,6 +1,6 @@
 "use client";
 
-import { fetchCountryStations } from "@/lib/dataLoader";
+import { fetchCountryStations, prefetchOtherCountries } from "@/lib/dataLoader";
 import { applyFilters, filterByRadius, getStationStatus, haversineDistance, searchStations, sortByDistance } from "@/lib/stationUtils";
 import { COUNTRY_OPTIONS, CountryCode, Filters, Station, StationStatus } from "@/lib/types";
 import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from "react";
@@ -23,6 +23,8 @@ interface AppState {
   searchRadius: number;
   userLocation: { lat: number; lng: number } | null;
   loading: boolean;
+  lastFetchTime: Date | null;
+  fetchError: string | null;
   mapCenter: [number, number];
   mapZoom: number;
   activeCountry: CountryCode;
@@ -45,6 +47,7 @@ interface AppContextValue extends AppState {
   setMapCenter: (c: [number, number]) => void;
   setMapZoom: (z: number) => void;
   refreshStatus: () => void;
+  retryFetch: () => void;
   setActiveCountry: (c: CountryCode) => void;
   setTripPickMode: (m: "origin" | "destination" | null) => void;
   setTripOrigin: (p: TripPoint | null) => void;
@@ -61,13 +64,8 @@ const EMPTY_FILTERS: Filters = {
   siteType: [], accessibility: [],
 };
 
-function getInitialCountry(): CountryCode {
-  if (typeof window === "undefined") return "AU";
-  return (localStorage.getItem("pitstop-country") as CountryCode) || "AU";
-}
-
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [activeCountry, setActiveCountryState] = useState<CountryCode>(getInitialCountry);
+  const [activeCountry, setActiveCountryState] = useState<CountryCode>("AU");
   const [allStations, setAllStations] = useState<Station[]>([]);
   const [selectedStation, setSelectedStation] = useState<Station | null>(null);
   const [favourites, setFavourites] = useState<string[]>([]);
@@ -78,41 +76,67 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [searchRadius, setSearchRadius] = useState(25);
   const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [loading, setLoading] = useState(true);
-  const [mapCenter, setMapCenter] = useState<[number, number]>(() => {
-    const opt = COUNTRY_OPTIONS.find((c) => c.code === getInitialCountry());
-    return opt ? opt.center : [-25.2744, 133.7751];
-  });
-  const [mapZoom, setMapZoom] = useState(() => {
-    const opt = COUNTRY_OPTIONS.find((c) => c.code === getInitialCountry());
-    return opt ? opt.zoom : 5;
-  });
+  const [lastFetchTime, setLastFetchTime] = useState<Date | null>(null);
+  const [fetchError, setFetchError] = useState<string | null>(null);
+  const [mapCenter, setMapCenter] = useState<[number, number]>([-25.2744, 133.7751]);
+  const [mapZoom, setMapZoom] = useState(5);
   const [tripPickMode, setTripPickMode] = useState<"origin" | "destination" | null>(null);
   const [tripOrigin, setTripOrigin] = useState<TripPoint | null>(null);
   const [tripDestination, setTripDestination] = useState<TripPoint | null>(null);
   const [searchCircle, setSearchCircle] = useState<{ lat: number; lng: number; radius: number } | null>(null);
   const [tripStops, setTripStops] = useState<Station[]>([]);
 
-  // Load favourites from localStorage (filters are NOT restored — they are country-specific)
+  // Load persisted state from localStorage after hydration
   useEffect(() => {
+    try {
+      const savedCountry = localStorage.getItem("pitstop-country") as CountryCode | null;
+      if (savedCountry && COUNTRY_OPTIONS.some((c) => c.code === savedCountry)) {
+        setActiveCountryState(savedCountry);
+        const opt = COUNTRY_OPTIONS.find((c) => c.code === savedCountry);
+        if (opt) {
+          setMapCenter(opt.center);
+          setMapZoom(opt.zoom);
+        }
+      }
+    } catch {}
     try {
       const savedFavs = localStorage.getItem("pitstop-favourites");
       if (savedFavs) setFavourites(JSON.parse(savedFavs));
+    } catch {}
+    try {
+      const savedFuels = localStorage.getItem("pitstop-fuel-pref");
+      if (savedFuels) {
+        const fuels: string[] = JSON.parse(savedFuels);
+        if (fuels.length > 0) setFiltersState((prev) => ({ ...prev, fuels }));
+      }
     } catch {}
   }, []);
 
   // Load stations when country changes
   useEffect(() => {
+    let cancelled = false;
     setLoading(true);
     setAllStations([]);
     setSelectedStation(null);
+    setFetchError(null);
     fetchCountryStations(activeCountry).then((stations) => {
+      if (cancelled) return;
       const withStatus = stations.map((s) => ({
         ...s,
         status: getStationStatus(s) as StationStatus,
       }));
       setAllStations(withStatus);
+      setLastFetchTime(new Date());
+      setFetchError(null);
       setLoading(false);
-    }).catch(() => setLoading(false));
+      prefetchOtherCountries(activeCountry);
+    }).catch(() => {
+      if (cancelled) return;
+      setFetchError("Unable to load station data. Check your connection and retry.");
+      setLastFetchTime(null);
+      setLoading(false);
+    });
+    return () => { cancelled = true; };
   }, [activeCountry]);
 
   const setActiveCountry = useCallback((c: CountryCode) => {
@@ -141,6 +165,24 @@ export function AppProvider({ children }: { children: ReactNode }) {
       );
     }
   }, []);
+
+  const retryFetch = useCallback(() => {
+    setLoading(true);
+    setFetchError(null);
+    fetchCountryStations(activeCountry).then((stations) => {
+      const withStatus = stations.map((s) => ({
+        ...s,
+        status: getStationStatus(s) as StationStatus,
+      }));
+      setAllStations(withStatus);
+      setLastFetchTime(new Date());
+      setLoading(false);
+    }).catch(() => {
+      setFetchError("Unable to load station data. Check your connection and retry.");
+      setLastFetchTime(null);
+      setLoading(false);
+    });
+  }, [activeCountry]);
 
   const refreshStatus = useCallback(() => {
     setAllStations((prev) =>
@@ -201,11 +243,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
       value={{
         allStations, filteredStations, selectedStation, favourites,
         filters, searchQuery, showAll, radiusEnabled, searchRadius, userLocation,
-        loading, mapCenter, mapZoom, activeCountry,
+        loading, lastFetchTime, fetchError, mapCenter, mapZoom, activeCountry,
         tripPickMode, tripOrigin, tripDestination, searchCircle, tripStops,
         setSelectedStation, toggleFavourite, setFilters,
         setSearchQuery, setShowAll, setRadiusEnabled, setSearchRadius,
-        setUserLocation, setMapCenter, setMapZoom, refreshStatus,
+        setUserLocation, setMapCenter, setMapZoom, refreshStatus, retryFetch,
         setActiveCountry,
         setTripPickMode, setTripOrigin, setTripDestination, setSearchCircle, setTripStops,
       }}

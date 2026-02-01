@@ -1,9 +1,12 @@
 "use client";
 
 import { TOUR_STEPS, TOUR_STORAGE_KEY } from "@/lib/constants";
+import dynamic from "next/dynamic";
 import { useCallback, useEffect, useState } from "react";
-import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
+import type { CallBackProps, Step } from "react-joyride";
 import "./tour-theme.scss";
+
+const Joyride = dynamic(() => import("react-joyride"), { ssr: false });
 
 const STEPS: Step[] = [
   {
@@ -65,7 +68,7 @@ export default function OnboardingTour() {
 
   const handleCallback = useCallback((data: CallBackProps) => {
     const { status } = data;
-    if (status === STATUS.FINISHED || status === STATUS.SKIPPED) {
+    if (status === "finished" || status === "skipped") {
       setRun(false);
       localStorage.setItem(TOUR_STORAGE_KEY, "true");
     }

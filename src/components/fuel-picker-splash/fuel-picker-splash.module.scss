@@ -1,0 +1,120 @@
+@import '../../styles/variables';
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: $light;
+  font-family: 'JetBrains Mono', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card {
+  max-width: 520px;
+  width: 100%;
+  margin: 24px 16px;
+  padding: 28px 24px 24px;
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: $border-radius;
+  background: $secondary-background;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.05);
+  text-align: center;
+}
+
+.heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $primary;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.subheading {
+  font-size: 0.6rem;
+  color: $sub;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.fuel-btn {
+  padding: 8px 14px;
+  border: 1px solid $divider;
+  border-radius: $border-radius;
+  background: transparent;
+  color: $light;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+
+  &:hover {
+    border-color: $primary-dim;
+    color: $primary;
+  }
+}
+
+.fuel-btn-selected {
+  border-color: $primary;
+  background: rgba(0, 255, 65, 0.1);
+  color: $primary;
+  box-shadow: $glow-primary;
+}
+
+.continue-btn {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid $primary;
+  border-radius: $border-radius;
+  background: rgba(0, 255, 65, 0.08);
+  color: $primary;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+  margin-bottom: 12px;
+
+  &:hover {
+    background: rgba(0, 255, 65, 0.15);
+    box-shadow: $glow-primary;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+.skip {
+  font-size: 0.55rem;
+  color: $sub;
+  letter-spacing: 0.1em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+
+  &:hover {
+    color: $primary;
+  }
+}

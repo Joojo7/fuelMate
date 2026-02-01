@@ -42,8 +42,16 @@ const AMENITY_MAP: Record<string, string> = {
 
 // ─── Normalizer ──────────────────────────────────────
 
+/** Ghana's eastern border with Togo (latitude-dependent longitude limit). */
+function isInGhana(lat: number, lng: number): boolean {
+  if (lng < -3.3 || lat < 4.5 || lat > 11.5) return false;
+  const maxLng = 1.2 - (Math.max(lat, 6) - 6) * (1.03 / 5);
+  return lng <= maxLng;
+}
+
 function normalizeTotal(raw: TotalRaw): NormalizedStation | null {
   if (!raw.lat || !raw.lon) return null;
+  if (!isInGhana(raw.lat, raw.lon)) return null;
 
   const fuels = Array.from(new Set(
     (raw.fuel_types || []).map((f) => mapValue(f, FUEL_MAP, "fuels"))

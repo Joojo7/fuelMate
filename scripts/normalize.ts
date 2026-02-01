@@ -16,6 +16,9 @@ import { BrandNormalizer, NormalizedStation } from "./normalizers/types";
 import { shellMalaysia, shellWestAfrica } from "./normalizers/shell";
 import { caltexB2C, caltexB2B } from "./normalizers/caltex";
 import { totalenergiesGhana } from "./normalizers/totalenergies";
+import { ampolAustralia } from "./normalizers/ampol";
+import { staroilGhana } from "./normalizers/staroil";
+import { petronasMalaysia } from "./normalizers/petronas";
 
 // ─── Registry ────────────────────────────────────────
 
@@ -25,6 +28,9 @@ const NORMALIZERS: BrandNormalizer[] = [
   caltexB2C,
   caltexB2B,
   totalenergiesGhana,
+  ampolAustralia,
+  staroilGhana,
+  petronasMalaysia,
 ];
 
 // ─── Pipeline ────────────────────────────────────────

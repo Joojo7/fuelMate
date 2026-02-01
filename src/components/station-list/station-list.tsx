@@ -2,6 +2,7 @@
 
 import React, { useDeferredValue } from "react";
 import { useApp } from "@/context/AppContext";
+import StationListSkeleton from "@/components/station-list-skeleton";
 import { BRAND_LABELS, BRAND_COLORS } from "@/lib/types";
 import { getTimeUntilClose, getNextOpenTime } from "@/lib/stationUtils";
 import styles from "./index.module.scss";
@@ -52,7 +53,7 @@ const AMENITY_ICONS: Record<string, string> = {
 };
 
 export default function StationList({ onSwitchToMap }: { onSwitchToMap?: () => void } = {}) {
-  const { filteredStations, setSelectedStation, setMapCenter, setMapZoom, filters, setFilters } = useApp();
+  const { filteredStations, loading, setSelectedStation, setMapCenter, setMapZoom, filters, setFilters } = useApp();
   const deferredStations = useDeferredValue(filteredStations);
   const isStale = deferredStations !== filteredStations;
 
@@ -72,6 +73,8 @@ export default function StationList({ onSwitchToMap }: { onSwitchToMap?: () => v
       setFilters({ ...filters, fuels: active ? filters.fuels.filter((f) => f !== qf.fuelKey) : [...filters.fuels, qf.fuelKey] });
     }
   };
+
+  if (loading) return <StationListSkeleton />;
 
   return (
     <div>

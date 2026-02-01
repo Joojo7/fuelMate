@@ -1,6 +1,6 @@
 "use client";
 
-import { COUNTRY_OPTIONS, type CountryCode } from "@/lib/types";
+import { COUNTRY_FLAGS, COUNTRY_OPTIONS, type CountryCode } from "@/lib/types";
 import styles from "./index.module.scss";
 
 interface CountryPickerProps {
@@ -27,7 +27,7 @@ export default function CountryPicker({
         onClick={() => setShowCountryPicker(!showCountryPicker)}
         onBlur={() => setTimeout(() => setShowCountryPicker(false), 150)}
       >
-        <span className={styles["country-code-tag"]}>{activeCountry}</span>
+        <span className={styles["country-flag"]}>{COUNTRY_FLAGS[activeCountry]}</span>
         {activeCountryLabel}
         <span className={`${styles["country-caret"]} ${showCountryPicker ? styles["country-caret-open"] : ""}`}>&#9660;</span>
       </button>
@@ -39,7 +39,7 @@ export default function CountryPicker({
               className={`${styles["country-item"]} ${c.code === activeCountry ? styles["country-item-active"] : ""}`}
               onMouseDown={() => { setActiveCountry(c.code); setShowCountryPicker(false); onSelect?.(); }}
             >
-              <span className={styles["country-code-tag"]}>{c.code}</span>
+              <span className={styles["country-flag"]}>{COUNTRY_FLAGS[c.code]}</span>
               {c.label}
             </button>
           ))}

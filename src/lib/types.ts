@@ -1,4 +1,4 @@
-export type CountryCode = "AU" | "MY" | "GH" | "CI" | "BF";
+export type CountryCode = "AU" | "MY" | "GH" | "CI" | "BF" | "TG";
 
 export interface Station {
   id: string;
@@ -60,20 +60,26 @@ export interface TripStop {
 
 // ─── Country / Brand config ─────────────────────────
 
+export const COUNTRY_FLAGS: Record<CountryCode, string> = {
+  AU: "🇦🇺", MY: "🇲🇾", GH: "🇬🇭", CI: "🇨🇮", BF: "🇧🇫", TG: "🇹🇬",
+};
+
 export const COUNTRY_OPTIONS: { code: CountryCode; label: string; center: [number, number]; zoom: number }[] = [
   { code: "AU", label: "Australia / NZ", center: [-25.2744, 133.7751], zoom: 5 },
   { code: "MY", label: "Malaysia", center: [4.2105, 101.9758], zoom: 7 },
   { code: "GH", label: "Ghana", center: [7.9465, -1.0232], zoom: 7 },
   { code: "CI", label: "Côte d'Ivoire", center: [7.54, -5.5471], zoom: 7 },
   { code: "BF", label: "Burkina Faso", center: [12.3714, -1.5197], zoom: 7 },
+  { code: "TG", label: "Togo", center: [8.6195, 1.2080], zoom: 7 },
 ];
 
 export const BRAND_OPTIONS: Record<CountryCode, string[]> = {
-  AU: ["bp"],
-  MY: ["shell", "caltex", "caltex-workshop"],
-  GH: ["shell", "totalenergies"],
+  AU: ["bp", "ampol"],
+  MY: ["shell", "caltex", "caltex-workshop", "petronas"],
+  GH: ["shell", "totalenergies", "goil", "staroil"],
   CI: ["shell"],
   BF: ["shell"],
+  TG: ["totalenergies"],
 };
 
 // Brand display names (for filter labels)
@@ -83,6 +89,10 @@ export const BRAND_LABELS: Record<string, string> = {
   caltex: "Caltex",
   "caltex-workshop": "Caltex Workshop",
   totalenergies: "TotalEnergies",
+  goil: "GOIL",
+  ampol: "Ampol",
+  staroil: "Star Oil",
+  petronas: "Petronas",
 };
 
 // Brand colors — primary, secondary, accent
@@ -92,6 +102,10 @@ export const BRAND_COLORS: Record<string, { primary: string; secondary: string; 
   caltex: { primary: "#00a5b5", secondary: "#e21836", accent: "#ffffff" },       // Caltex teal, red star
   "caltex-workshop": { primary: "#00a5b5", secondary: "#e21836", accent: "#f5a623" }, // Same + orange wrench accent
   totalenergies: { primary: "#ed1c24", secondary: "#002d72", accent: "#ffffff" },    // TotalEnergies red, navy
+  goil: { primary: "#00529b", secondary: "#e30613", accent: "#ffd700" },             // GOIL blue, red, gold
+  ampol: { primary: "#0033a0", secondary: "#e31837", accent: "#ffffff" },             // Ampol blue, red
+  staroil: { primary: "#ff6600", secondary: "#003366", accent: "#ffffff" },             // Star Oil orange, navy
+  petronas: { primary: "#00685e", secondary: "#003f5c", accent: "#ffffff" },             // Petronas dark green, dark blue
 };
 
 // ─── Per-country filter options ─────────────────────
@@ -111,6 +125,7 @@ export const REGION_OPTIONS_BY_COUNTRY: Record<CountryCode, string[]> = {
   GH: [],
   CI: [],
   BF: [],
+  TG: [],
 };
 
 // Generic fuel options (used in filter UI — shown for all countries)

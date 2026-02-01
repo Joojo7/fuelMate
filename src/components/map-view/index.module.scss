@@ -27,6 +27,17 @@
 .status-closed { color: $danger; }
 .status-unknown { color: $sub; }
 
+.popup-distance {
+  font-size: 0.65rem;
+  color: $primary-dim;
+}
+
+.popup-fuels {
+  font-size: 0.6rem;
+  color: $sub;
+  letter-spacing: 0.03em;
+}
+
 .map-wrapper {
   position: relative;
 }

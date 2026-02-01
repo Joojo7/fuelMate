@@ -7,18 +7,8 @@ import {
   HudPanel,
   HudDivider,
   HudStatLine,
-  hudBaseChartOptions,
 } from "@/components/hud-primitives/hud-primitives";
-import {
-  Chart as ChartJS,
-  RadialLinearScale,
-  ArcElement,
-  Tooltip,
-} from "chart.js";
-import { PolarArea } from "react-chartjs-2";
 import styles from "./index.module.scss";
-
-ChartJS.register(RadialLinearScale, ArcElement, Tooltip);
 
 export default function HudBrandDist() {
   const { filteredStations } = useApp();
@@ -38,60 +28,37 @@ export default function HudBrandDist() {
   }, [filteredStations]);
 
   const topBrand = brandData[0];
-
-  const chartData = useMemo(() => ({
-    labels: brandData.map((b) => b.label),
-    datasets: [{
-      data: brandData.map((b) => b.count),
-      backgroundColor: brandData.map((b) => `${b.color}99`),
-      borderColor: brandData.map((b) => b.color),
-      borderWidth: 2,
-      hoverBackgroundColor: brandData.map((b) => `${b.color}cc`),
-    }],
-  }), [brandData]);
-
-  const chartOptions = useMemo(() => ({
-    ...hudBaseChartOptions,
-    scales: {
-      r: { display: false },
-    },
-    plugins: {
-      ...hudBaseChartOptions.plugins,
-      tooltip: {
-        ...hudBaseChartOptions.plugins.tooltip,
-        callbacks: {
-          label: (ctx: { label?: string; raw?: unknown }) => {
-            const val = ctx.raw as number;
-            const pct = filteredStations.length
-              ? ((val / filteredStations.length) * 100).toFixed(1)
-              : "0";
-            return `${ctx.label}: ${val} (${pct}%)`;
-          },
-        },
-      },
-    },
-  }), [filteredStations.length]);
+  const maxCount = topBrand?.count || 1;
 
   if (brandData.length === 0) return null;
 
   return (
     <HudPanel style={{ padding: "12px 14px" }}>
-      <div className={styles["chart-row"]}>
-        <div className={styles["chart-box"]}>
-          <PolarArea data={chartData} options={chartOptions} />
-        </div>
-        <div className={styles.legend}>
-          {brandData.map((b) => (
-            <div key={b.brand} className={styles["legend-item"]}>
-              <span className={styles["legend-dot"]} style={{ background: b.color, boxShadow: `0 0 4px ${b.color}` }} />
-              <span className={styles["legend-count"]}>{b.count}</span>
-              {b.label}
-              <span className={styles["legend-pct"]}>
-                {filteredStations.length ? ((b.count / filteredStations.length) * 100).toFixed(0) : 0}%
-              </span>
+      <div className={styles["gauge-stack"]}>
+        {brandData.map((b) => {
+          const pct = (b.count / maxCount) * 100;
+          const pctOfTotal = filteredStations.length
+            ? ((b.count / filteredStations.length) * 100).toFixed(0)
+            : "0";
+          return (
+            <div key={b.brand} className={styles["gauge-row"]}>
+              <span className={styles["gauge-label"]} style={{ color: b.color }}>{b.label}</span>
+              <div className={styles["gauge-track"]}>
+                <div
+                  className={styles["gauge-fill"]}
+                  style={{
+                    width: `${pct}%`,
+                    background: b.color,
+                    boxShadow: `0 0 10px ${b.color}, 0 0 20px ${b.color}88`,
+                  }}
+                />
+                <div className={styles["gauge-scanline"]} />
+              </div>
+              <span className={styles["gauge-val"]}>{b.count}</span>
+              <span className={styles["gauge-pct"]}>{pctOfTotal}%</span>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
 
       <HudDivider />

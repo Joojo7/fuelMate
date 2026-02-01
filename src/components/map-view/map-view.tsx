@@ -5,10 +5,11 @@ import { MAX_VISIBLE_STATIONS, USER_LOCATION_COLOR } from "@/lib/constants";
 import { MoonIcon, SunIcon } from "@phosphor-icons/react";
 import L from "leaflet";
 import { useCallback, useMemo, useRef, useState } from "react";
+import MarkerClusterGroup from "react-leaflet-cluster";
 import { Circle, CircleMarker, MapContainer, Marker, Popup } from "react-leaflet";
 import styles from "./index.module.scss";
 import MapEvents from "./map-events";
-import { destinationIcon, originIcon } from "./map-icons";
+import { createClusterIcon, destinationIcon, originIcon } from "./map-icons";
 import PickModeCursor from "./pick-mode-cursor";
 import RecenterMap from "./recenter-map";
 import SmartTileLayer from "./smart-tile-layer";
@@ -119,9 +120,15 @@ export default function MapView() {
           />
         )}
 
-        {visibleStations.map((s) => (
-          <StationMarker key={s.id} station={s} />
-        ))}
+        <MarkerClusterGroup
+          chunkedLoading
+          maxClusterRadius={60}
+          iconCreateFunction={createClusterIcon}
+        >
+          {visibleStations.map((s) => (
+            <StationMarker key={s.id} station={s} />
+          ))}
+        </MarkerClusterGroup>
       </MapContainer>
     </div>
   );

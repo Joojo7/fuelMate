@@ -81,7 +81,9 @@
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
-  right: 0;
+  min-width: 360px;
+  width: max(100%, 50vw);
+  max-width: calc(100vw - 24px);
   z-index: $z-index-dropdown;
   background: $secondary-background;
   border: 1px solid $divider;

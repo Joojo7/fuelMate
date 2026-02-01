@@ -1,12 +1,9 @@
-import Papa from "papaparse";
 import { Station, WeeklyHours, CountryCode, BRAND_OPTIONS } from "./types";
 
-// ─── BP CSV URLs ─────────────────────────────────────
+// ─── BP CSV URLs (proxied via API route for caching) ──
 
-const AU_CSV_URL =
-  "https://bp-prod-bparalretailapi-temp-downloads-prod.s3-eu-west-1.amazonaws.com/csvs/AU.csv";
-const NZ_CSV_URL =
-  "https://bp-prod-bparalretailapi-temp-downloads-prod.s3-eu-west-1.amazonaws.com/csvs/NZ.csv";
+const AU_CSV_URL = "/api/stations/bp?country=AU";
+const NZ_CSV_URL = "/api/stations/bp?country=NZ";
 
 // ─── BP fuel normalization ───────────────────────────
 
@@ -213,7 +210,8 @@ function parseRow(row: Record<string, string>, idx: number, country: string): St
   };
 }
 
-function parseCSV(text: string, country: string): Promise<Station[]> {
+async function parseCSV(text: string, country: string): Promise<Station[]> {
+  const Papa = (await import("papaparse")).default;
   return new Promise((resolve, reject) => {
     Papa.parse<Record<string, string>>(text, {
       header: true,
@@ -234,14 +232,10 @@ function parseCSV(text: string, country: string): Promise<Station[]> {
 }
 
 async function fetchAndParse(url: string, country: string): Promise<Station[]> {
-  try {
-    const res = await fetch(url);
-    if (!res.ok) return [];
-    const text = await res.text();
-    return await parseCSV(text, country);
-  } catch {
-    return [];
-  }
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Failed to fetch ${country} data (${res.status})`);
+  const text = await res.text();
+  return await parseCSV(text, country);
 }
 
 // ─── BP AU/NZ live fetch ─────────────────────────────
@@ -263,21 +257,40 @@ async function fetchBpStations(): Promise<Station[]> {
   return all;
 }
 
+async function fetchJsonBrand(country: CountryCode, brand: string): Promise<Station[]> {
+  const res = await fetch(`/data/${country.toLowerCase()}/${brand}.json`);
+  if (!res.ok) throw new Error(`Failed to fetch ${brand} data for ${country} (${res.status})`);
+  return (await res.json()) as Station[];
+}
+
 // ─── Generic country loader ──────────────────────────
 
 export async function fetchCountryStations(country: CountryCode): Promise<Station[]> {
-  if (country === "AU") return fetchBpStations();
+  if (country === "AU") {
+    // BP comes from live CSV; other AU brands from static JSON
+    const otherBrands = BRAND_OPTIONS.AU.filter((b) => b !== "bp");
+    const [bpStations, ...otherResults] = await Promise.all([
+      fetchBpStations(),
+      ...otherBrands.map((brand) => fetchJsonBrand("AU", brand)),
+    ]);
+
+    const seen = new Set<string>();
+    const all: Station[] = [];
+    for (const s of [bpStations, ...otherResults].flat()) {
+      if (!seen.has(s.id)) {
+        seen.add(s.id);
+        all.push(s);
+      }
+    }
+    return all;
+  }
 
   const brands = BRAND_OPTIONS[country];
   const results = await Promise.all(
     brands.map(async (brand) => {
-      try {
-        const res = await fetch(`/data/${country.toLowerCase()}/${brand}.json`);
-        if (!res.ok) return [];
-        return (await res.json()) as Station[];
-      } catch {
-        return [];
-      }
+      const res = await fetch(`/data/${country.toLowerCase()}/${brand}.json`);
+      if (!res.ok) throw new Error(`Failed to fetch ${brand} data for ${country} (${res.status})`);
+      return (await res.json()) as Station[];
     })
   );
 
@@ -290,4 +303,30 @@ export async function fetchCountryStations(country: CountryCode): Promise<Statio
     }
   }
   return all;
+}
+
+// ─── Prefetch other countries in background ─────────
+
+const prefetched = new Set<string>();
+
+export function prefetchOtherCountries(current: CountryCode): void {
+  const others = (Object.keys(BRAND_OPTIONS) as CountryCode[]).filter((c) => c !== current);
+
+  for (const country of others) {
+    if (prefetched.has(country)) continue;
+    prefetched.add(country);
+
+    if (country === "AU") {
+      fetch(AU_CSV_URL, { priority: "low" } as RequestInit).catch(() => {});
+      fetch(NZ_CSV_URL, { priority: "low" } as RequestInit).catch(() => {});
+      for (const brand of BRAND_OPTIONS.AU.filter((b) => b !== "bp")) {
+        fetch(`/data/au/${brand}.json`, { priority: "low" } as RequestInit).catch(() => {});
+      }
+    } else {
+      const brands = BRAND_OPTIONS[country];
+      for (const brand of brands) {
+        fetch(`/data/${country.toLowerCase()}/${brand}.json`, { priority: "low" } as RequestInit).catch(() => {});
+      }
+    }
+  }
 }

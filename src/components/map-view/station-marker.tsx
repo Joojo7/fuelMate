@@ -40,6 +40,24 @@ export default function StationMarker({ station }: { station: Station }) {
         <span className={`${styles["popup-status"]} ${statusClass}`}>
           {STATUS_LABELS[station.status || "unknown"] || "Unknown"}
         </span>
+        {station.distance != null && (
+          <>
+            <br />
+            <span className={styles["popup-distance"]}>
+              {station.distance < 1
+                ? `${Math.round(station.distance * 1000)} m`
+                : `${station.distance.toFixed(1)} km`}
+            </span>
+          </>
+        )}
+        {station.fuels.length > 0 && (
+          <>
+            <br />
+            <span className={styles["popup-fuels"]}>
+              {station.fuels.slice(0, 3).join(" · ")}
+            </span>
+          </>
+        )}
       </Popup>
     </Marker>
   );

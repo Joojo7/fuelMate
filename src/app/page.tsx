@@ -1,9 +1,13 @@
 "use client";
 
 import CountryPicker from "@/components/country-picker";
+import DataStatusBanner from "@/components/data-status-banner";
+import DisclaimerSplash from "@/components/disclaimer-splash";
+import FuelPickerSplash from "@/components/fuel-picker-splash";
 import OnboardingTour from "@/components/onboarding-tour";
 import Favourites from "@/components/favourites";
 import FilterPanel from "@/components/filter-panel";
+import MapSkeleton from "@/components/map-skeleton";
 import HudBrandDist from "@/components/hud-brand-dist";
 import HudInsights from "@/components/hud-insights";
 import HudStats from "@/components/hud-stats/hud-stats";
@@ -20,27 +24,53 @@ import {
   DETAIL_LABEL,
   FILTERS_LABEL,
   HUD_CLOSE, HUD_OPEN,
-  LOADING_TEXT, MENU_ICON,
+  DISCLAIMER_STORAGE_KEY,
+  FUEL_PREF_STORAGE_KEY,
+  MENU_ICON,
   type Tab, TAB_LABELS,
 } from "@/lib/constants";
 import { COUNTRY_OPTIONS } from "@/lib/types";
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import Link from "next/link";
+import { useCallback, useEffect, useState } from "react";
 import styles from "./page.module.scss";
 
 const MapView = dynamic(() => import("@/components/map-view"), { ssr: false });
 
 export default function Home() {
-  const { loading, selectedStation, filteredStations, mapCenter, activeCountry, setActiveCountry } = useApp();
+  const { loading, selectedStation, filteredStations, mapCenter, activeCountry, setActiveCountry, lastFetchTime, fetchError, retryFetch, filters, setFilters } = useApp();
   const [activeTab, setActiveTab] = useState<Tab>("map");
-  const [showFilters, setShowFilters] = useState(() =>
-    typeof window !== "undefined" && window.innerWidth >= 1200
-  );
+  const [showFilters, setShowFilters] = useState(false);
   const [showLeftDrawer, setShowLeftDrawer] = useState(false);
   const [showRightDrawer, setShowRightDrawer] = useState(false);
   const [showHud, setShowHud] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showCountryPicker, setShowCountryPicker] = useState(false);
+  const [disclaimerState, setDisclaimerState] = useState<"pending" | "accepted" | "not_accepted">("pending");
+  const [fuelPrefState, setFuelPrefState] = useState<"pending" | "done" | "not_done">("pending");
+
+  useEffect(() => {
+    setDisclaimerState(
+      localStorage.getItem(DISCLAIMER_STORAGE_KEY) === "true" ? "accepted" : "not_accepted"
+    );
+    setFuelPrefState(
+      localStorage.getItem(FUEL_PREF_STORAGE_KEY) ? "done" : "not_done"
+    );
+    if (window.innerWidth >= 1200) setShowFilters(true);
+  }, []);
+
+  const handleAcceptDisclaimer = useCallback(() => {
+    localStorage.setItem(DISCLAIMER_STORAGE_KEY, "true");
+    setDisclaimerState("accepted");
+  }, []);
+
+  const handleFuelPrefComplete = useCallback((selectedFuels: string[]) => {
+    localStorage.setItem(FUEL_PREF_STORAGE_KEY, JSON.stringify(selectedFuels));
+    if (selectedFuels.length > 0) {
+      setFilters({ ...filters, fuels: selectedFuels });
+    }
+    setFuelPrefState("done");
+  }, [filters, setFilters]);
 
   const activeCountryLabel = COUNTRY_OPTIONS.find((c) => c.code === activeCountry)?.label ?? activeCountry;
 
@@ -52,22 +82,26 @@ export default function Home() {
     setActiveCountry,
   };
 
-  if (loading) {
-    return (
-      <div className="d-flex align-items-center justify-content-center vh-100">
-        <div className="text-center">
-          <div className="tm-loading-spinner mx-auto mb-3" />
-          <div className="text-primary-green fs-5">
-            {LOADING_TEXT}<span className="tm-blink">...</span>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const showOverlay = disclaimerState === "pending" || disclaimerState === "not_accepted" || fuelPrefState === "not_done";
 
   return (
     <div className="d-flex flex-column vh-100">
-      <OnboardingTour />
+      {disclaimerState === "pending" && (
+        <div className="d-flex align-items-center justify-content-center vh-100" style={{ position: "fixed", inset: 0, zIndex: 9999, background: "#0a0a0a" }}>
+          <div className="tm-loading-spinner mx-auto" />
+        </div>
+      )}
+
+      {disclaimerState === "not_accepted" && (
+        <DisclaimerSplash onAccept={handleAcceptDisclaimer} />
+      )}
+
+      {disclaimerState === "accepted" && fuelPrefState === "not_done" && (
+        <FuelPickerSplash onComplete={handleFuelPrefComplete} />
+      )}
+
+
+      {!showOverlay && <OnboardingTour />}
       {/* Header — mobile: stacked brand + search row; md+: single row */}
       <header className={`tm-navbar tm-scanline ${styles["header"]}`}>
         {/* Mobile: brand + country picker row */}
@@ -114,7 +148,7 @@ export default function Home() {
           </div>
 
           <div className={styles["hud-readout"]}>
-            LAT: {mapCenter[0].toFixed(4)} | LNG: {mapCenter[1].toFixed(4)} | TARGETS: {filteredStations.length}
+            LAT: {mapCenter[0].toFixed(4)} | LNG: {mapCenter[1].toFixed(4)} | TARGETS: {filteredStations.length} | <Link href="/privacy" className={styles["legal-link"]}>LEGAL</Link>
           </div>
 
           <button
@@ -133,6 +167,8 @@ export default function Home() {
           </button>
         </div>
       </header>
+
+      <DataStatusBanner fetchError={fetchError} retryFetch={retryFetch} lastFetchTime={lastFetchTime} />
 
       {/* Mobile dropdown menu */}
       {showMobileMenu && (
@@ -215,6 +251,7 @@ export default function Home() {
 
         {/* Map — always visible on md+, conditional on mobile */}
         <div className={`flex-grow-1 position-relative ${activeTab !== "map" ? "d-none d-md-block" : ""}`} data-tour="map">
+          {loading && <MapSkeleton />}
           <MapView />
 
           {/* HUD status ring — desktop, docked to right beside sidebar */}

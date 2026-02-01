@@ -1,0 +1,72 @@
+@import '../../styles/variables';
+
+.wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 800;
+  background: $primary-background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 65, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.crosshair-h,
+.crosshair-v {
+  position: absolute;
+  background: rgba(0, 255, 65, 0.15);
+}
+
+.crosshair-h {
+  width: 40px;
+  height: 1px;
+  top: 0;
+  left: -20px;
+}
+
+.crosshair-v {
+  width: 1px;
+  height: 40px;
+  top: -20px;
+  left: 0;
+}
+
+.pin {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 255, 65, 0.2);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  animation: tm-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes tm-shimmer {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.label {
+  position: absolute;
+  bottom: 20%;
+  font-size: 0.65rem;
+  color: rgba(0, 255, 65, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}

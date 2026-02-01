@@ -439,6 +439,27 @@ html, body { height: 100%; background: $primary-background; color: $light; }
 .fs-8 { font-size: map-get($font-sizes, 8) !important; }
 .clickable { cursor: pointer; }
 
+// ─── 27. Skeleton loaders ───────────────────────
+.tm-skeleton {
+  background: $divider;
+  border-radius: $border-radius-sm;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 255, 65, 0.04) 50%, transparent 100%);
+    animation: tm-shimmer 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes tm-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 // ─── HUD Utilities ─────────────────────────────
 
 // HUD corner brackets
@@ -509,7 +530,19 @@ html, body { height: 100%; background: $primary-background; color: $light; }
   50% { opacity: 0.4; box-shadow: 0 0 2px $primary; }
 }
 
-// ─── 27. Leaflet popup dark theme ───────────────
+// ─── 27. Leaflet marker cluster overrides ────────
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  background: transparent !important;
+}
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+  background: transparent !important;
+}
+
+// ─── 28. Leaflet popup dark theme ───────────────
 .leaflet-popup-content-wrapper {
   background: $primary-background;
   color: $light;

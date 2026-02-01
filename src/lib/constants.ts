@@ -106,3 +106,25 @@ export const INSIGHTS_BY_REGION = "By Region";
 export const INSIGHTS_AMENITIES = "Amenities";
 export const INSIGHTS_COVERAGE = "COVERAGE";
 export const INSIGHTS_RADIUS = "radius";
+
+// Data status
+export const FETCH_ERROR_TEXT = "SIGNAL LOST — Unable to load station data";
+export const RETRY_LABEL = "RETRY";
+export const SYNCED_LABEL = "SYNCED";
+export const DISCLAIMER_STORAGE_KEY = "pitstop-disclaimer-accepted";
+
+// Fuel preference onboarding
+export const FUEL_PREF_STORAGE_KEY = "pitstop-fuel-pref";
+export const FUEL_PREF_HEADING = "What fuel do you use?";
+export const FUEL_PREF_SUBHEADING = "Select one or more to personalise your results";
+export const FUEL_PREF_CONTINUE = "CONTINUE";
+export const FUEL_PREF_SKIP = "SKIP — SHOW ALL STATIONS";
+export const FUEL_PREF_OPTIONS = [
+  "Unleaded 91",
+  "Unleaded 95",
+  "Unleaded 98",
+  "Diesel",
+  "Premium Diesel",
+  "LPG / Autogas",
+  "EV Charging",
+];

@@ -16,7 +16,6 @@ export default function HudGlobe() {
         <div className={styles["globe-overlay"]} />
         <div className={styles["scan-line"]} />
       </div>
-      <div className={styles["region-label"]}>REGION: AU / NZ</div>
     </div>
   );
 }

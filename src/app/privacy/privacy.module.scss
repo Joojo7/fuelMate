@@ -1,0 +1,148 @@
+@import '../../styles/variables';
+
+.container {
+  min-height: 100vh;
+  background: $primary-background;
+  color: $light;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.nav {
+  padding: 12px 20px;
+  border-bottom: 1px solid $divider;
+}
+
+.back-link {
+  color: $primary;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.15s;
+
+  &:hover {
+    color: #fff;
+    text-shadow: $glow-primary;
+  }
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $primary;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.updated {
+  font-size: 0.6rem;
+  color: $sub;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $primary;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+.subheading {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(0, 255, 65, 0.6);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.warning {
+  border: 1px solid rgba(255, 0, 51, 0.4);
+  background: rgba(255, 0, 51, 0.05);
+  border-radius: 4px;
+  padding: 16px;
+
+  p {
+    font-size: 0.7rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #ccc;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: #ff4455;
+    }
+  }
+}
+
+.section p {
+  font-size: 0.7rem;
+  line-height: 1.7;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+
+  li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+    line-height: 1.7;
+    color: #aaa;
+
+    &::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: $primary;
+      font-weight: 700;
+    }
+
+    strong {
+      color: #ccc;
+    }
+
+    a {
+      color: $primary;
+      text-decoration: underline;
+      text-decoration-color: rgba(0, 255, 65, 0.3);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid $divider;
+}

@@ -16,6 +16,9 @@ const BRAND_LOGO_SVG: Record<string, string> = {
   caltex: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#00a5b5"/><path d="M7 2 L8.2 5.5 L12 5.5 L9 7.8 L10 11.5 L7 9 L4 11.5 L5 7.8 L2 5.5 L5.8 5.5 Z" fill="#e21836"/></svg>`,
   "caltex-workshop": `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#00a5b5"/><path d="M4 3.5C4.8 2.7 6 2.5 7 3L5.5 4.5L5.5 6L7 6L8.5 4.5C9 5.5 8.8 6.7 8 7.5L10.5 10C10.8 10.3 10.8 10.8 10.5 11.1L10.1 11.5C9.8 11.8 9.3 11.8 9 11.5L6.5 9C5.7 9.8 4.5 10 3.5 9.5L5 8L5 6.5L3.5 6.5L2 8C1.5 7 1.7 5.8 2.5 5L4 3.5Z" fill="#f5a623"/></svg>`,
   totalenergies: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#ed1c24"/><text x="7" y="9.5" font-size="5" font-weight="bold" fill="#fff" text-anchor="middle" font-family="sans-serif">TE</text></svg>`,
+  ampol: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#0033a0"/><text x="7" y="9.5" font-size="4.5" font-weight="bold" fill="#fff" text-anchor="middle" font-family="sans-serif">A</text></svg>`,
+  staroil: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#ff6600"/><path d="M7 2 L8.2 5.5 L12 5.5 L9 7.8 L10 11.5 L7 9 L4 11.5 L5 7.8 L2 5.5 L5.8 5.5 Z" fill="#fff"/></svg>`,
+  petronas: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#00685e"/><text x="7" y="9.5" font-size="4.5" font-weight="bold" fill="#fff" text-anchor="middle" font-family="sans-serif">P</text></svg>`,
 };
 
 const GAS_PUMP_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#0a0a0a" viewBox="0 0 256 256"><path d="M241,69.66,221.66,50.34a8,8,0,0,0-11.32,11.32L229.66,81A8,8,0,0,1,232,86.63V168a8,8,0,0,1-16,0V128a24,24,0,0,0-24-24H176V56a24,24,0,0,0-24-24H72A24,24,0,0,0,48,56V208H32a8,8,0,0,0,0,16H192a8,8,0,0,0,0-16H176V120h16a8,8,0,0,1,8,8v40a24,24,0,0,0,48,0V86.63A23.85,23.85,0,0,0,241,69.66ZM64,56a8,8,0,0,1,8-8h80a8,8,0,0,1,8,8v72a8,8,0,0,1-8,8H72a8,8,0,0,1-8-8Z"/></svg>`;
@@ -112,6 +115,31 @@ export function getStationIcon(brand: string, status: string, selected = false):
   const icon = createStationIcon(color, brand, selected ? 42 : 30, selected);
   iconCache.set(key, icon);
   return icon;
+}
+
+// ─── Cluster icon factory ───────────────────────────
+
+export function createClusterIcon(cluster: { getChildCount: () => number }): L.DivIcon {
+  const count = cluster.getChildCount();
+  const size = count < 20 ? 36 : count < 50 ? 42 : 50;
+  return L.divIcon({
+    className: "",
+    html: `<div style="
+      width:${size}px;height:${size}px;
+      display:flex;align-items:center;justify-content:center;
+      border-radius:50%;
+      background:#0a0a0a;
+      border:2px solid ${HUD_GREEN};
+      box-shadow:0 0 12px rgba(0,255,65,0.25), 0 2px 6px rgba(0,0,0,0.5);
+      color:${HUD_GREEN};
+      font-family:'JetBrains Mono',monospace;
+      font-size:${size < 42 ? 11 : 13}px;
+      font-weight:700;
+      letter-spacing:0.05em;
+    ">${count}</div>`,
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+  });
 }
 
 // ─── Trip pin icons (singleton) ─────────────────────
