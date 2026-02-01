@@ -5,3 +5,5 @@ out/
 .env.local
 *.tsbuildinfo
 next-env.d.ts
+.claude/PRE_LAUNCH_REVIEW.md
+src/raw-data

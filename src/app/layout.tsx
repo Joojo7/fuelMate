@@ -1,5 +1,6 @@
 import { AppProvider } from "@/context/AppContext";
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.scss";
 
 const SITE_TITLE = "Pitstop — Fuel Station Finder & Trip Planner";
@@ -51,6 +52,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
           href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
           crossOrigin=""
+        />
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="c4309b9c-bd60-4f64-97ff-082ea3d99ae4"
+          strategy="afterInteractive"
         />
       </head>
       <body>
