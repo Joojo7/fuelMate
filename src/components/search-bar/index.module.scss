@@ -29,6 +29,14 @@
   }
 }
 
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: translateY(-50%) rotate(360deg); }
+}
+
 .searchInput {
   width: 100%;
   background: $secondary-background;
@@ -166,6 +174,11 @@
 .typeTag--postcode {
   background: rgba(255, 170, 0, 0.12);
   color: #ffaa00;
+}
+
+.typeTag--place {
+  background: rgba(200, 100, 255, 0.12);
+  color: #c864ff;
 }
 
 .itemLabel {

@@ -32,6 +32,7 @@ interface AppState {
   tripOrigin: TripPoint | null;
   tripDestination: TripPoint | null;
   searchCircle: { lat: number; lng: number; radius: number } | null;
+  searchPin: { lat: number; lng: number; label: string } | null;
   tripStops: Station[];
 }
 
@@ -53,6 +54,7 @@ interface AppContextValue extends AppState {
   setTripOrigin: (p: TripPoint | null) => void;
   setTripDestination: (p: TripPoint | null) => void;
   setSearchCircle: (c: { lat: number; lng: number; radius: number } | null) => void;
+  setSearchPin: (p: { lat: number; lng: number; label: string } | null) => void;
   setTripStops: (stops: Station[]) => void;
 }
 
@@ -84,6 +86,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [tripOrigin, setTripOrigin] = useState<TripPoint | null>(null);
   const [tripDestination, setTripDestination] = useState<TripPoint | null>(null);
   const [searchCircle, setSearchCircle] = useState<{ lat: number; lng: number; radius: number } | null>(null);
+  const [searchPin, setSearchPin] = useState<{ lat: number; lng: number; label: string } | null>(null);
   const [tripStops, setTripStops] = useState<Station[]>([]);
 
   // Load persisted state from localStorage after hydration
@@ -152,18 +155,23 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setSearchQuery("");
   }, []);
 
-  // Detect user location
+  // Track user location (live updates)
   useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          setUserLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude });
+    if (!navigator.geolocation) return;
+    let initialCentered = false;
+    const watchId = navigator.geolocation.watchPosition(
+      (pos) => {
+        setUserLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude });
+        if (!initialCentered) {
           setMapCenter([pos.coords.latitude, pos.coords.longitude]);
           setMapZoom(11);
-        },
-        () => {}
-      );
-    }
+          initialCentered = true;
+        }
+      },
+      () => {},
+      { enableHighAccuracy: false, maximumAge: 15_000, timeout: 10_000 }
+    );
+    return () => navigator.geolocation.clearWatch(watchId);
   }, []);
 
   const retryFetch = useCallback(() => {
@@ -244,12 +252,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
         allStations, filteredStations, selectedStation, favourites,
         filters, searchQuery, showAll, radiusEnabled, searchRadius, userLocation,
         loading, lastFetchTime, fetchError, mapCenter, mapZoom, activeCountry,
-        tripPickMode, tripOrigin, tripDestination, searchCircle, tripStops,
+        tripPickMode, tripOrigin, tripDestination, searchCircle, searchPin, tripStops,
         setSelectedStation, toggleFavourite, setFilters,
         setSearchQuery, setShowAll, setRadiusEnabled, setSearchRadius,
         setUserLocation, setMapCenter, setMapZoom, refreshStatus, retryFetch,
         setActiveCountry,
-        setTripPickMode, setTripOrigin, setTripDestination, setSearchCircle, setTripStops,
+        setTripPickMode, setTripOrigin, setTripDestination, setSearchCircle, setSearchPin, setTripStops,
       }}
     >
       {children}

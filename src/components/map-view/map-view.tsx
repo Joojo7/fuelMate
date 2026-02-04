@@ -9,7 +9,7 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 import { Circle, CircleMarker, MapContainer, Marker, Popup } from "react-leaflet";
 import styles from "./index.module.scss";
 import MapEvents from "./map-events";
-import { createClusterIcon, destinationIcon, originIcon } from "./map-icons";
+import { createClusterIcon, destinationIcon, originIcon, searchPinIcon } from "./map-icons";
 import PickModeCursor from "./pick-mode-cursor";
 import RecenterMap from "./recenter-map";
 import SmartTileLayer from "./smart-tile-layer";
@@ -31,7 +31,7 @@ const SEARCH_CIRCLE_PATH: L.PathOptions = {
 };
 
 export default function MapView() {
-  const { filteredStations, selectedStation, mapCenter, mapZoom, userLocation, tripPickMode, tripOrigin, tripDestination, searchCircle, tripStops } = useApp();
+  const { filteredStations, selectedStation, mapCenter, mapZoom, userLocation, tripPickMode, tripOrigin, tripDestination, searchCircle, searchPin, tripStops } = useApp();
   const mapKeyRef = useRef(`map-${Date.now()}`);
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== "undefined") {
@@ -118,6 +118,12 @@ export default function MapView() {
             radius={searchCircle.radius}
             pathOptions={SEARCH_CIRCLE_PATH}
           />
+        )}
+
+        {searchPin && (
+          <Marker position={[searchPin.lat, searchPin.lng]} icon={searchPinIcon}>
+            <Popup>{searchPin.label}</Popup>
+          </Marker>
         )}
 
         <MarkerClusterGroup

@@ -1,39 +1,59 @@
 "use client";
 
-import React, { useState, useMemo, useRef, useCallback } from "react";
-import { MagnifyingGlassIcon, XIcon, MapPinIcon, BuildingsIcon, HashIcon } from "@phosphor-icons/react";
+import React, { useState, useMemo, useRef, useCallback, useEffect } from "react";
+import { MagnifyingGlassIcon, XIcon, MapPinIcon, BuildingsIcon, HashIcon, GlobeIcon, SpinnerIcon } from "@phosphor-icons/react";
 import { useApp } from "@/context/AppContext";
+import { geocodeSearch, type GeocodeSuggestion } from "@/lib/geocode";
 import styles from "./index.module.scss";
 
 const RADIUS_OPTIONS = [5, 10, 25, 50, 100] as const;
+const GEOCODE_DEBOUNCE_MS = 400;
 
 const TYPE_ICON: Record<string, React.ReactNode> = {
   station: <MapPinIcon size={12} weight="bold" />,
   city: <BuildingsIcon size={12} weight="bold" />,
   postcode: <HashIcon size={12} weight="bold" />,
+  place: <GlobeIcon size={12} weight="bold" />,
 };
 
 export default function SearchBar({ trailing }: { trailing?: React.ReactNode } = {}) {
   const {
     allStations, setSearchQuery, setSelectedStation,
     setMapCenter, setMapZoom, showAll, setShowAll,
-    searchRadius, setSearchRadius, setSearchCircle,
-    radiusEnabled, setRadiusEnabled,
+    searchRadius, setSearchRadius, setSearchCircle, setSearchPin,
+    radiusEnabled, setRadiusEnabled, activeCountry, setUserLocation,
   } = useApp();
 
   const [input, setInput] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [geoResults, setGeoResults] = useState<GeocodeSuggestion[]>([]);
+  const [geoLoading, setGeoLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Debounced geocode search, bounded by active country
+  useEffect(() => {
+    if (input.length < 3) { setGeoResults([]); setGeoLoading(false); return; }
+    setGeoLoading(true);
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      geocodeSearch(input, activeCountry)
+        .then(setGeoResults)
+        .catch(() => setGeoResults([]))
+        .finally(() => setGeoLoading(false));
+    }, GEOCODE_DEBOUNCE_MS);
+    return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
+  }, [input, activeCountry]);
 
   const suggestions = useMemo(() => {
     if (input.length < 2) return [];
     const q = input.toLowerCase();
     const seen = new Set<string>();
-    const results: { label: string; type: string; station?: typeof allStations[0] }[] = [];
+    const results: { label: string; type: string; station?: typeof allStations[0]; lat?: number; lng?: number }[] = [];
 
     for (const s of allStations) {
-      if (results.length >= 8) break;
+      if (results.length >= 6) break;
       if (s.name.toLowerCase().includes(q) && !seen.has(s.name)) {
         seen.add(s.name);
         results.push({ label: `${s.name} — ${s.city}, ${s.state}`, type: "station", station: s });
@@ -45,8 +65,15 @@ export default function SearchBar({ trailing }: { trailing?: React.ReactNode } =
         results.push({ label: `${s.postcode} — ${s.city}, ${s.state}`, type: "postcode" });
       }
     }
+
+    // Append geocoded place results (avoid duplicates with station results)
+    for (const geo of geoResults) {
+      if (results.length >= 10) break;
+      results.push({ label: geo.label, type: "place", lat: geo.lat, lng: geo.lng });
+    }
+
     return results;
-  }, [input, allStations]);
+  }, [input, allStations, geoResults]);
 
   const handleSelect = useCallback((sug: typeof suggestions[0]) => {
     setInput(sug.label);
@@ -58,19 +85,36 @@ export default function SearchBar({ trailing }: { trailing?: React.ReactNode } =
       setMapCenter([sug.station.lat, sug.station.lng]);
       setMapZoom(15);
       setSearchCircle(null);
-    } else {
-      // Extract just the city name or postcode for searching
-      const cityOrPostcode = sug.type === "city"
-        ? sug.label.split(",")[0].trim()
-        : sug.label.split(" — ")[0].trim();
-      setSearchQuery(cityOrPostcode);
+      setSearchPin(null);
+    } else if (sug.type === "place" && sug.lat != null && sug.lng != null) {
+      setSearchQuery("");
+      setSelectedStation(null);
+      setMapCenter([sug.lat, sug.lng]);
+      setMapZoom(13);
+      setSearchCircle({ lat: sug.lat, lng: sug.lng, radius: searchRadius * 1000 });
+      setSearchPin({ lat: sug.lat, lng: sug.lng, label: sug.label });
+      setRadiusEnabled(true);
+      setUserLocation({ lat: sug.lat, lng: sug.lng });
+    } else if (sug.type === "city") {
+      const cityName = sug.label.split(",")[0].trim();
+      setSearchQuery(cityName);
+      setSearchCircle(null);
 
-      // Find center of the city/postcode by averaging matching station coords
-      const matching = allStations.filter((s) =>
-        sug.type === "city"
-          ? s.city.toLowerCase() === cityOrPostcode.toLowerCase()
-          : s.postcode === cityOrPostcode
-      );
+      const matching = allStations.filter((s) => s.city.toLowerCase() === cityName.toLowerCase());
+      if (matching.length > 0) {
+        const avgLat = matching.reduce((sum, s) => sum + s.lat, 0) / matching.length;
+        const avgLng = matching.reduce((sum, s) => sum + s.lng, 0) / matching.length;
+        setMapCenter([avgLat, avgLng]);
+        setMapZoom(12);
+        setSearchPin({ lat: avgLat, lng: avgLng, label: sug.label });
+      }
+    } else {
+      // Postcode — show radius circle
+      const postcode = sug.label.split(" — ")[0].trim();
+      setSearchQuery(postcode);
+      setSearchPin(null);
+
+      const matching = allStations.filter((s) => s.postcode === postcode);
       if (matching.length > 0) {
         const avgLat = matching.reduce((sum, s) => sum + s.lat, 0) / matching.length;
         const avgLng = matching.reduce((sum, s) => sum + s.lng, 0) / matching.length;
@@ -79,7 +123,7 @@ export default function SearchBar({ trailing }: { trailing?: React.ReactNode } =
         setSearchCircle({ lat: avgLat, lng: avgLng, radius: searchRadius * 1000 });
       }
     }
-  }, [setSelectedStation, setMapCenter, setMapZoom, setSearchQuery, setSearchCircle, allStations, searchRadius]);
+  }, [setSelectedStation, setMapCenter, setMapZoom, setSearchQuery, setSearchCircle, setSearchPin, setRadiusEnabled, setUserLocation, allStations, searchRadius]);
 
   const handleClear = () => {
     setInput("");
@@ -87,6 +131,7 @@ export default function SearchBar({ trailing }: { trailing?: React.ReactNode } =
     setShowSuggestions(false);
     setActiveIndex(-1);
     setSearchCircle(null);
+    setSearchPin(null);
     inputRef.current?.focus();
   };
 
@@ -111,12 +156,15 @@ export default function SearchBar({ trailing }: { trailing?: React.ReactNode } =
     <div className={styles.searchBar}>
       {/* Search input */}
       <div className={styles.inputGroup}>
-        <MagnifyingGlassIcon size={14} weight="bold" className={styles.searchIcon} />
+        {geoLoading
+          ? <SpinnerIcon size={14} weight="bold" className={`${styles.searchIcon} ${styles.spinner}`} />
+          : <MagnifyingGlassIcon size={14} weight="bold" className={styles.searchIcon} />
+        }
         <input
           ref={inputRef}
           type="text"
           className={styles.searchInput}
-          placeholder="Search station, city, or postcode..."
+          placeholder="Search station, city, postcode, or place..."
           value={input}
           onChange={(e) => {
             setInput(e.target.value);

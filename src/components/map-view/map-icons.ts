@@ -146,3 +146,36 @@ export function createClusterIcon(cluster: { getChildCount: () => number }): L.D
 
 export const originIcon = createPinIcon(ORIGIN_PIN_COLOR, "A");
 export const destinationIcon = createPinIcon(DESTINATION_PIN_COLOR, "B");
+
+// ─── Search pin icon (for place/city results) ───────
+
+export const searchPinIcon = L.divIcon({
+  className: "",
+  html: `<div style="
+    width:36px;height:46px;position:relative;
+    display:flex;flex-direction:column;align-items:center;
+  ">
+    <div style="
+      width:36px;height:36px;
+      border-radius:50% 50% 50% 0;
+      transform:rotate(-45deg);
+      background:#c864ff;
+      border:2px solid rgba(255,255,255,0.4);
+      box-shadow:0 0 14px rgba(200,100,255,0.5), 0 2px 8px rgba(0,0,0,0.5);
+      display:flex;align-items:center;justify-content:center;
+    ">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 256 256" style="transform:rotate(45deg)">
+        <path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.36,134.39a8,8,0,0,0,9.28,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"/>
+      </svg>
+    </div>
+    <div style="
+      width:6px;height:6px;
+      background:#c864ff;border-radius:50%;
+      margin-top:2px;
+      box-shadow:0 0 6px rgba(200,100,255,0.6);
+    "></div>
+  </div>`,
+  iconSize: [36, 46],
+  iconAnchor: [18, 46],
+  popupAnchor: [0, -46],
+});

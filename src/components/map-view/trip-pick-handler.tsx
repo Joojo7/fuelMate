@@ -25,10 +25,11 @@ export default function TripPickHandler() {
 
       if (tripPickMode === "origin") {
         setTripOrigin({ lat, lng, label });
+        setTripPickMode("destination");
       } else {
         setTripDestination({ lat, lng, label });
+        setTripPickMode(null);
       }
-      setTripPickMode(null);
     },
   });
 
